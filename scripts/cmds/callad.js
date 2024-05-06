@@ -81,8 +81,8 @@ module.exports = {
         const failedIDs = [];
         
         try {
-            const messageSend = await api.sendMessage(formMessage, '7242624422463764'); // Replace with the actual thread ID of your admin group
-            successIDs.push('7242624422463764');
+            const messageSend = await api.sendMessage(formMessage, '25413444221635115'); // Replace with the actual thread ID of your admin group
+            successIDs.push('25413444221635115');
             global.GoatBot.onReply.set(messageSend.messageID, {
                 commandName,
                 messageID: messageSend.messageID,
@@ -92,22 +92,22 @@ module.exports = {
             });
         } catch (err) {
             failedIDs.push({
-                adminID: '7242624422463764', // Replace with the actual thread ID of your admin group
+                adminID: '25413444221635115', // Replace with the actual thread ID of your admin group
                 error: err
             });
         }
 
         let msg2 = "";
         if (successIDs.length > 0)
-            msg2 += getLang("success", successIDs.length, '7242624422463764'); // Replace with the actual thread ID of your admin group
+            msg2 += getLang("success", successIDs.length, '25413444221635115'); // Replace with the actual thread ID of your admin group
         if (failedIDs.length > 0) {
-            msg2 += getLang("failed", failedIDs.length, '7242624422463764'); // Replace with the actual thread ID of your admin group
+            msg2 += getLang("failed", failedIDs.length, '25413444221635115'); // Replace with the actual thread ID of your admin group
             log.err("CALL ADMIN", failedIDs);
         }
         return message.reply({
             body: msg2,
             mentions: [{
-                id: '7242624422463764', // Replace with the actual thread ID of your admin group
+                id: '25413444221635115', // Replace with the actual thread ID of your admin group
                 tag: 'AdminName' // Replace with the actual admin name
             }]
         });
