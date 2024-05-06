@@ -28,7 +28,7 @@
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "Octa",
-  "prefix": "*",
+  "prefix": "-",
   "database": {
     "type": "mongodb",
     "uriMongodb": "mongodb+srv://abdulkaiyum:abdulkaiyum5426@octa.elx1m1f.mongodb.net/GoatBotV2?retryWrites=true&w=majority&appName=octa",
