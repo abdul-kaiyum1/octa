@@ -1,5 +1,5 @@
 const axios = require("axios");
-const ytdl = require("@distube/ytdl-core");
+const ytdl = require("ytdl-core");
 const fs = require("fs-extra");
 const { getStreamFromURL, downloadFile, formatNumber } = global.utils;
 async function getStreamAndSize(url, path = "") {
@@ -23,15 +23,16 @@ async function getStreamAndSize(url, path = "") {
 module.exports = {
 	config: {
 		name: "ytb",
-		version: "1.16",
+		version: "1.14",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		description: {
+		shortDescription: "YouTube",
+		longDescription: {
 			vi: "Tải video, audio hoặc xem thông tin video trên YouTube",
 			en: "Download video, audio or view video information on YouTube"
 		},
-		category: "media",
+		category: "𝗠𝗘𝗗𝗜𝗔",
 		guide: {
 			vi: "   {pn} [video|-v] [<tên video>|<link video>]: dùng để tải video từ youtube."
 				+ "\n   {pn} [audio|-a] [<tên video>|<link video>]: dùng để tải audio từ youtube"
@@ -57,8 +58,8 @@ module.exports = {
 			choose: "%1Reply tin nhắn với số để chọn hoặc nội dung bất kì để gỡ",
 			video: "video",
 			audio: "âm thanh",
-			downloading: "⬇️ Đang tải xuống %1 \"%2\"",
-			downloading2: "⬇️ Đang tải xuống %1 \"%2\"\n🔃 Tốc độ: %3MB/s\n⏸️ Đã tải: %4/%5MB (%6%)\n⏳ Ước tính thời gian còn lại: %7 giây",
+			downloading: "⬇ Đang tải xuống %1 \"%2\"",
+			downloading2: "⬇ Đang tải xuống %1 \"%2\"\n🔃 Tốc độ: %3MB/s\n⏸ Đã tải: %4/%5MB (%6%)\n⏳ Ước tính thời gian còn lại: %7 giây",
 			noVideo: "⭕ Rất tiếc, không tìm thấy video nào có dung lượng nhỏ hơn 83MB",
 			noAudio: "⭕ Rất tiếc, không tìm thấy audio nào có dung lượng nhỏ hơn 26MB",
 			info: "💠 Tiêu đề: %1\n🏪 Channel: %2\n👨‍👩‍👧‍👦 Subscriber: %3\n⏱ Thời gian video: %4\n👀 Lượt xem: %5\n👍 Lượt thích: %6\n🆙 Ngày tải lên: %7\n🔠 ID: %8\n🔗 Link: %9",
@@ -70,8 +71,8 @@ module.exports = {
 			choose: "%1Reply to the message with a number to choose or any content to cancel",
 			video: "video",
 			audio: "audio",
-			downloading: "⬇️ Downloading %1 \"%2\"",
-			downloading2: "⬇️ Downloading %1 \"%2\"\n🔃 Speed: %3MB/s\n⏸️ Downloaded: %4/%5MB (%6%)\n⏳ Estimated time remaining: %7 seconds",
+			downloading: "⬇ Downloading %1 \"%2\"",
+			downloading2: "⬇ Downloading %1 \"%2\"\n🔃 Speed: %3MB/s\n⏸ Downloaded: %4/%5MB (%6%)\n⏳ Estimated time remaining: %7 seconds",
 			noVideo: "⭕ Sorry, no video was found with a size less than 83MB",
 			noAudio: "⭕ Sorry, no audio was found with a size less than 26MB",
 			info: "💠 Title: %1\n🏪 Channel: %2\n👨‍👩‍👧‍👦 Subscriber: %3\n⏱ Video duration: %4\n👀 View count: %5\n👍 Like count: %6\n🆙 Upload date: %7\n🔠 ID: %8\n🔗 Link: %9",
@@ -82,17 +83,21 @@ module.exports = {
 	onStart: async function ({ args, message, event, commandName, getLang }) {
 		let type;
 		switch (args[0]) {
+      case "v":
 			case "-v":
 			case "video":
 				type = "video";
 				break;
+      case "a":
+      case "s":
 			case "-a":
 			case "-s":
 			case "audio":
 			case "sing":
 				type = "audio";
 				break;
-			case "-i":
+			case "i":
+      case "-i":
 			case "info":
 				type = "info";
 				break;
@@ -170,7 +175,7 @@ async function handle({ type, infoVideo, message, getLang }) {
 		const msgSend = message.reply(getLang("downloading", getLang("video"), title));
 		const { formats } = await ytdl.getInfo(videoId);
 		const getFormat = formats
-			.filter(f => f.hasVideo && f.hasAudio && f.quality == 'tiny' && f.audioBitrate == 128)
+			.filter(f => f.hasVideo && f.hasAudio)
 			.sort((a, b) => b.contentLength - a.contentLength)
 			.find(f => f.contentLength || 0 < MAX_SIZE);
 		if (!getFormat)

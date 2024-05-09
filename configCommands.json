@@ -29,11 +29,21 @@
     },
     "dhbc": {
       "reward": 1000
+    },
+    "logsbot": {
+      "allow": true
     }
   },
   "envEvents": {
     "logsbot": {
       "allow": true
     }
-  }
+  },
+  "commandUnload": [
+    "memori.js",
+    "cekar.js",
+    "translate.js",
+    "e.js",
+    "bank.js"
+  ]
 }
