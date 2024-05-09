@@ -5,15 +5,15 @@
   },
   {
     "name": "",
-    "usage": 89
+    "usage": 90
   },
   {
     "name": "shell",
-    "usage": 6
+    "usage": 7
   },
   {
     "name": "sing",
-    "usage": 267
+    "usage": 279
   },
   {
     "name": "mangadex",
@@ -21,11 +21,11 @@
   },
   {
     "name": "help",
-    "usage": 112
+    "usage": 115
   },
   {
     "name": "up",
-    "usage": 27
+    "usage": 28
   },
   {
     "name": "upt",
@@ -49,15 +49,15 @@
   },
   {
     "name": "all",
-    "usage": 22
-  },
-  {
-    "name": "daily",
     "usage": 23
   },
   {
+    "name": "daily",
+    "usage": 24
+  },
+  {
     "name": "rank",
-    "usage": 99
+    "usage": 102
   },
   {
     "name": "busy",
@@ -77,7 +77,7 @@
   },
   {
     "name": "bljk",
-    "usage": 71
+    "usage": 72
   },
   {
     "name": "richest",
@@ -93,7 +93,7 @@
   },
   {
     "name": "bal",
-    "usage": 56
+    "usage": 58
   },
   {
     "name": "file",
@@ -101,7 +101,7 @@
   },
   {
     "name": "gpt",
-    "usage": 40
+    "usage": 45
   },
   {
     "name": "dhbc",
@@ -165,7 +165,7 @@
   },
   {
     "name": "octa",
-    "usage": 14
+    "usage": 15
   },
   {
     "name": "4k",
@@ -189,7 +189,7 @@
   },
   {
     "name": "callad",
-    "usage": 5
+    "usage": 6
   },
   {
     "name": "guessnumber",
@@ -265,7 +265,7 @@
   },
   {
     "name": "imagine",
-    "usage": 74
+    "usage": 75
   },
   {
     "name": "mew",
@@ -273,7 +273,7 @@
   },
   {
     "name": "pin",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "cg",
@@ -281,7 +281,7 @@
   },
   {
     "name": "unsend",
-    "usage": 48
+    "usage": 49
   },
   {
     "name": "called",
@@ -309,7 +309,7 @@
   },
   {
     "name": "pinterest",
-    "usage": 104
+    "usage": 109
   },
   {
     "name": "shortcut",
@@ -445,7 +445,7 @@
   },
   {
     "name": "count",
-    "usage": 17
+    "usage": 19
   },
   {
     "name": "cid",
@@ -497,7 +497,7 @@
   },
   {
     "name": "onlyadminbox",
-    "usage": 20
+    "usage": 21
   },
   {
     "name": "supportgccccccccccccccccccccccccc",
@@ -529,7 +529,7 @@
   },
   {
     "name": "say",
-    "usage": 61
+    "usage": 63
   },
   {
     "name": "kiss",
@@ -605,7 +605,7 @@
   },
   {
     "name": "ban",
-    "usage": 7
+    "usage": 8
   },
   {
     "name": ".",
@@ -617,7 +617,7 @@
   },
   {
     "name": "pfp",
-    "usage": 3
+    "usage": 4
   },
   {
     "name": "art",
@@ -689,7 +689,7 @@
   },
   {
     "name": "ping",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "shuffle-cup",
