@@ -31,7 +31,7 @@ module.exports = {
     }
 
     if (!threads.includes(groupId) && event.logMessageType === "log:subscribe") {
-      await new Promise((resolve) => setTimeout(resolve, 20000)); // Delay of 1 seconds
+      await new Promise((resolve) => setTimeout(resolve, 60000)); // Delay of 1 seconds
       await api.sendMessage(
         `====== Approval ======\n\nGroup:- ${name}\nTID:- ${groupId}\nEvent:- The Group Need Approval`,
         uid,
