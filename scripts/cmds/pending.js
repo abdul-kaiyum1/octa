@@ -13,7 +13,7 @@ module.exports = {
       vi: "",
       en: ""
     },
-    category: "Goat-alAuthor"
+    category: "admin"
   },
 
 langs: {
@@ -47,7 +47,7 @@ onReply: async function({ api, event, Reply, getLang, commandName, prefix }) {
         const index = body.split(/\s+/);
         for (const singleIndex of index) {
             if (isNaN(singleIndex) || singleIndex <= 0 || singleIndex > Reply.pending.length) return api.sendMessage(getLang("invaildNumber", singleIndex), threadID, messageID);
-            api.sendMessage(`•HEY.! your wishing group is been approved successfully..! ✅\n\nUse ${prefix}help to see available commands😺\nType -supportgc and join Our Octa Via Support Zone.!`, Reply.pending[singleIndex - 1].threadID);
+            api.sendMessage(`•HEY.! your wishing group is been approved successfully..! ✅\n\nUse -help to see available commands😺\nType -supportgc and join Our Octa Via Support Zone.!`, Reply.pending[singleIndex - 1].threadID);
             count+=1;
         }
         return api.sendMessage(getLang("approveSuccess", count), threadID, messageID);

@@ -3,7 +3,7 @@ module.exports = {
     name: "balancetop",
     aliases: ["baltop"],
     version: "1.0",
-    author: "loufi",
+    author: "Team Devs",
     role: 0,
     shortDescription: {
       vi: "",
