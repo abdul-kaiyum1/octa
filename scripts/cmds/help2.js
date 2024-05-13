@@ -28,8 +28,6 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `♢ Octa's Commands ♢\n`;
-
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
 
@@ -40,17 +38,17 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\n╭──────────♡\n│ 『 ${category.toUpperCase()} 』\n│ ✰`;
+          msg += `╭── ${category.toUpperCase()} \n│ ✧`;
 
           const names = categories[category].commands.sort();
-          msg += `${names.join(",\n│ ")}`;
+          msg += `${names.join(",\n│ ✧")}`;
 
-          msg += `\n╰────────♢`;
+          msg += `\n╰────────♢\n\n`;
         }
       });
 
       const totalCommands = commands.size;
-      msg += `\n◎ Octa\nTotal Commands » ${totalCommands}\nUse help (cmd name) to see cmd usage details`;
+      msg += `◎ Octa\nTotal Commands » ${totalCommands}\nUse help (cmd name) to see cmd usage details`;
 
       await message.reply({ body: msg });
     } else {
@@ -62,6 +60,8 @@ module.exports = {
       } else {
         const configCommand = command.config;
         const roleText = roleTextToString(configCommand.role);
+        const countDown = configCommand.countDown || "N/A";
+        const version = configCommand.version || "N/A";
         const author = configCommand.author || "Unknown";
 
         const longDescription = configCommand.longDescription ? configCommand.longDescription.en || "No description" : "No description";
@@ -69,7 +69,7 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `♢ Command Help ♢\n\nName » ${configCommand.name} \nAuthor » ${author} \nAliases » ${configCommand.aliases ? configCommand.aliases.join(", ") : "None"} \nDescription » ${longDescription} \nUsage » ${usage} \nExample » ${usage}`;
+        const response = `♢ Command Help ♢\n\nName » ${configCommand.name} \nAuthor » ${author} \nRole » ${roleText} \nCountDown » ${countDown} \nVersion » ${version} \nAliases » ${configCommand.aliases ? configCommand.aliases.join(", ") : "None"} \nDescription » ${longDescription} \nUsage » ${usage} \nExample » ${usage}`;
 
         await message.reply(response);
       }

@@ -5,10 +5,11 @@ module.exports = {
     "author": "Subash",
     "longDescription": "Downloader",
     "role": 0,
-    "category": "media",
+    "category": "Media",
     "guide": {
       "en": "{pn} <link>"
-    }
+    },
+    "countDown": 25
   },
   "location": "/home/abdulkaiyum/octa/scripts/cmds/insta.js"
 };

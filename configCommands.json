@@ -32,6 +32,9 @@
     },
     "logsbot": {
       "allow": true
+    },
+    "doraemon": {
+      "reward": 100
     }
   },
   "envEvents": {

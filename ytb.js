@@ -3,14 +3,14 @@ module.exports = {
     "name": "ytb",
     "version": "1.14",
     "author": "NTKhang",
-    "countDown": 5,
+    "countDown": 25,
     "role": 0,
     "shortDescription": "YouTube",
     "longDescription": {
       "vi": "Tải video, audio hoặc xem thông tin video trên YouTube",
       "en": "Download video, audio or view video information on YouTube"
     },
-    "category": "media",
+    "category": "𝗠𝗘𝗗𝗜𝗔",
     "guide": {
       "vi": "   {pn} [video|-v] [<tên video>|<link video>]: dùng để tải video từ youtube.\n   {pn} [audio|-a] [<tên video>|<link video>]: dùng để tải audio từ youtube\n   {pn} [info|-i] [<tên video>|<link video>]: dùng để xem thông tin video từ youtube\n   Ví dụ:\n    {pn} -v Fallen Kingdom\n    {pn} -a Fallen Kingdom\n    {pn} -i Fallen Kingdom",
       "en": "   {pn} [video|-v] [<video name>|<video link>]: use to download video from youtube.\n   {pn} [audio|-a] [<video name>|<video link>]: use to download audio from youtube\n   {pn} [info|-i] [<video name>|<video link>]: use to view video information from youtube\n   Example:\n    {pn} -v Fallen Kingdom\n    {pn} -a Fallen Kingdom\n    {pn} -i Fallen Kingdom"

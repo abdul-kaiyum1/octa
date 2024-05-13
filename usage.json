@@ -1,11 +1,11 @@
 [
   {
     "name": "sing",
-    "usage": 299
+    "usage": 309
   },
   {
     "name": "help",
-    "usage": 159
+    "usage": 192
   },
   {
     "name": "pinterest",
@@ -13,15 +13,15 @@
   },
   {
     "name": "rank",
-    "usage": 117
+    "usage": 127
   },
   {
     "name": "",
-    "usage": 95
+    "usage": 100
   },
   {
     "name": "bljk",
-    "usage": 96
+    "usage": 113
   },
   {
     "name": "say",
@@ -29,15 +29,15 @@
   },
   {
     "name": "imagine",
-    "usage": 76
+    "usage": 78
   },
   {
     "name": "gpt",
-    "usage": 74
+    "usage": 79
   },
   {
     "name": "bal",
-    "usage": 72
+    "usage": 87
   },
   {
     "name": "supportgc",
@@ -45,27 +45,27 @@
   },
   {
     "name": "unsend",
-    "usage": 57
+    "usage": 62
   },
   {
     "name": "bank",
-    "usage": 49
+    "usage": 51
   },
   {
     "name": "thread",
-    "usage": 38
+    "usage": 41
   },
   {
     "name": "pair",
-    "usage": 38
+    "usage": 45
   },
   {
     "name": "pi",
-    "usage": 35
+    "usage": 38
   },
   {
     "name": "up",
-    "usage": 34
+    "usage": 35
   },
   {
     "name": "rules",
@@ -73,11 +73,11 @@
   },
   {
     "name": "daily",
-    "usage": 31
+    "usage": 36
   },
   {
     "name": "approve",
-    "usage": 30
+    "usage": 33
   },
   {
     "name": "all",
@@ -89,7 +89,7 @@
   },
   {
     "name": "onlyadminbox",
-    "usage": 23
+    "usage": 26
   },
   {
     "name": "count",
@@ -97,11 +97,11 @@
   },
   {
     "name": "trans",
-    "usage": 21
+    "usage": 22
   },
   {
     "name": "acp",
-    "usage": 20
+    "usage": 29
   },
   {
     "name": "4k",
@@ -113,7 +113,7 @@
   },
   {
     "name": "bin",
-    "usage": 15
+    "usage": 16
   },
   {
     "name": "warn",
@@ -121,11 +121,11 @@
   },
   {
     "name": "tid",
-    "usage": 15
+    "usage": 17
   },
   {
     "name": "fb",
-    "usage": 15
+    "usage": 18
   },
   {
     "name": "antichangeinfobox",
@@ -145,31 +145,31 @@
   },
   {
     "name": "pending",
-    "usage": 13
+    "usage": 19
   },
   {
     "name": "cg",
-    "usage": 13
+    "usage": 40
   },
   {
     "name": "song",
-    "usage": 12
+    "usage": 19
   },
   {
     "name": "uns",
-    "usage": 12
+    "usage": 14
   },
   {
     "name": "weather",
-    "usage": 12
+    "usage": 14
   },
   {
     "name": "file",
-    "usage": 11
+    "usage": 16
   },
   {
     "name": "prefix",
-    "usage": 10
+    "usage": 11
   },
   {
     "name": "uid",
@@ -177,15 +177,15 @@
   },
   {
     "name": "callad",
-    "usage": 10
-  },
-  {
-    "name": "balancetop",
     "usage": 11
   },
   {
+    "name": "balancetop",
+    "usage": 15
+  },
+  {
     "name": "upt",
-    "usage": 9
+    "usage": 10
   },
   {
     "name": "ban",
@@ -193,7 +193,7 @@
   },
   {
     "name": "hangman",
-    "usage": 9
+    "usage": 13
   },
   {
     "name": "ms",
@@ -205,11 +205,11 @@
   },
   {
     "name": "rankup",
-    "usage": 8
+    "usage": 9
   },
   {
     "name": "shell",
-    "usage": 8
+    "usage": 20
   },
   {
     "name": "dhbc",
@@ -245,7 +245,7 @@
   },
   {
     "name": "slot",
-    "usage": 6
+    "usage": 7
   },
   {
     "name": "kick",
@@ -253,7 +253,7 @@
   },
   {
     "name": "busy",
-    "usage": 6
+    "usage": 10
   },
   {
     "name": "pfp",
@@ -277,7 +277,7 @@
   },
   {
     "name": "insta",
-    "usage": 5
+    "usage": 8
   },
   {
     "name": "gc",
@@ -285,11 +285,11 @@
   },
   {
     "name": "baltop",
-    "usage": 5
+    "usage": 6
   },
   {
     "name": "ai",
-    "usage": 5
+    "usage": 6
   },
   {
     "name": "upscale",
@@ -297,7 +297,7 @@
   },
   {
     "name": "adduser",
-    "usage": 4
+    "usage": 5
   },
   {
     "name": "guessnumber",
@@ -373,7 +373,7 @@
   },
   {
     "name": "profile",
-    "usage": 3
+    "usage": 4
   },
   {
     "name": "spy",
@@ -465,7 +465,7 @@
   },
   {
     "name": "setname",
-    "usage": 2
+    "usage": 4
   },
   {
     "name": "leaveall",
@@ -529,7 +529,7 @@
   },
   {
     "name": "pet",
-    "usage": 1
+    "usage": 9
   },
   {
     "name": "my",
@@ -593,7 +593,7 @@
   },
   {
     "name": "lsc",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "cid",
@@ -897,7 +897,7 @@
   },
   {
     "name": "clear",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "sufflecup",
@@ -969,6 +969,70 @@
   },
   {
     "name": "setcat",
-    "usage": 3
+    "usage": 13
+  },
+  {
+    "name": "dai",
+    "usage": 1
+  },
+  {
+    "name": "helpall",
+    "usage": 1
+  },
+  {
+    "name": "trash",
+    "usage": 1
+  },
+  {
+    "name": "bak",
+    "usage": 1
+  },
+  {
+    "name": "setcd",
+    "usage": 10
+  },
+  {
+    "name": "hrlp",
+    "usage": 1
+  },
+  {
+    "name": "fbinfo",
+    "usage": 1
+  },
+  {
+    "name": "gelp",
+    "usage": 1
+  },
+  {
+    "name": "tiktok",
+    "usage": 2
+  },
+  {
+    "name": "ask",
+    "usage": 1
+  },
+  {
+    "name": "start",
+    "usage": 1
+  },
+  {
+    "name": "exptop",
+    "usage": 1
+  },
+  {
+    "name": "sdxl",
+    "usage": 1
+  },
+  {
+    "name": "doremon",
+    "usage": 5
+  },
+  {
+    "name": "shall",
+    "usage": 2
+  },
+  {
+    "name": "ranl",
+    "usage": 2
   }
 ]
