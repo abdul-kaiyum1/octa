@@ -59,15 +59,22 @@ async function onReply({ message, Reply, event, getLang, usersData, envCommands,
         global.GoatBot.onReply.delete(messageID);
         message.unsend(event.messageReply.messageID);
         await message.reply(getLang("correct"));
-        addToPocket(event.senderID, answer);
+   const { senderID } = event;
+const mew = Math.floor(Math.random() * 10) + 1
+		const userData = await usersData.get(senderID);
+await usersData.set(senderID, {
+			money: 100 + userData.money
+				});
+		
+           addToPocket(event.senderID, answer);
     } else {
         message.reply(getLang("wrong"));
     }
 }
 
 const config = {
-    name: "doraemon",
-    aliases: ["doremon"],
+    name: "doremon",
+    aliases: ["doraemon"],
     version: "1.0",
     author: "sheikh | Samir Œ",
     countDown: 5,
