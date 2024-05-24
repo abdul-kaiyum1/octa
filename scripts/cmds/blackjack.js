@@ -138,7 +138,7 @@ function calculateHandTotal(hand) {
 
 function calculateWinnings(result, betAmount) {
   if (result.includes("Blackjack")) {
-    return betAmount * 1.5; 
+    return betAmount * 2; 
   } else if (result.includes("You win")) {
     return betAmount; 
   } else if (result.includes("You lose")) {
