@@ -21,7 +21,10 @@
     "100057399829870",
     "100042061672382",
     "100041931226770",
+    "100084568197142",
+    "100080195076753",
     "61550247638208",
+    "100091084029785",
     "61557519455411"
   ],
   "whiteListMode": {
@@ -29,11 +32,11 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Octa",
-  "prefix": "-",
+  "nickNameBot": "Aiko",
+  "prefix": "*",
   "database": {
     "type": "mongodb",
-    "uriMongodb": "mongodb+srv://abdulkaiyum:abdulkaiyum5426@octa.elx1m1f.mongodb.net/GoatBotV2?retryWrites=true&w=majority&appName=octa",
+    "uriMongodb": "mongodb+srv://abdulkaiyum:abdulkaiyum5426@aiko.ty3nwrp.mongodb.net/GoatBotV2?retryWrites=true&w=majority&appName=aiko",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
@@ -42,9 +45,9 @@
   "credentials": {
     "gmailAccount": {
       "email": "esteliaelora57@gmail.com",
-      "clientId": "709309722944-gckav5m3ee2mf6b6r9rrm3d9spdnhq6a.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//048leNJIqUkzzCgYIARAAGAQSNwF-L9IrQ_Y-ANoIdwEcGOlzZ9a3XO4OBGaG4rUV_6HaBuy7-KsyONaGkZtEouYEPf0DBCl7T8k",
+      "clientId": "134483285553-6hkt4lihso45m3ehl6fq96lprj1k7kcc.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04edHJ82qjM8cCgYIARAAGAQSNwF-L9Irz41oCPFQhvUADkXLtmK_xL4XTW9TaeOzhIC7nF5_9lBphQ3GHnHYnprWOn_DinXrzkw",
       "apiKey": ""
     },
     "gRecaptcha": {
