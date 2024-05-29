@@ -80,8 +80,8 @@ module.exports = {
 const defaultDesignCard = {
 	widthCard: 2000,
 	heightCard: 500,
-	main_color: "https://i.ibb.co/g7cCj1g/Subheading.png",
-	sub_color: "rgba(255,255,255,0.5)",
+	main_color: "https://i.ibb.co/LPrv63P/428993185.jpg",
+	sub_color: "rgba(255, 255, 255, 0.5)",
 	alpha_subcard: 0.0,
 	exp_color: "#e1e1e1",
 	expNextLevel_color: "#3f3f3f",

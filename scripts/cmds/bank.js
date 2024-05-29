@@ -1,245 +1,193 @@
 const fs = require("fs");
-const path = require("path");
-function formatNumberWithFullForm(number) {
-  const fullForms = [
-    "", "Thousand", "Million", "Billion", "Trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion", "Octillion", "Nonillion", "Decillion", "Undecillion", "Duodecillion", "Tredecillion", "Quattuordecillion", "Quindecillion", "Sexdecillion", "Septendecillion", "Octodecillion", "Novemdecillion", "Vigintillion", "Unvigintillion", "Duovigintillion", "Tresvigintillion", "Quattuorvigintillion", "Quinvigintillion", "Sesvigintillion", "Septemvigintillion", "Octovigintillion", "Novemvigintillion", "Trigintillion", "Untrigintillion", "Duotrigintillion", "Googol"
-];
-  let fullFormIndex = 0;
-  while (number >= 1000 && fullFormIndex < fullForms.length - 1) {
-    number /= 1000;
-    fullFormIndex++;
-  }
-  const formattedNumber = number.toFixed(2);
-  return `${formattedNumber} ${fullForms[fullFormIndex]}`;
-}
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+
+// MongoDB connection URI
+const uri = "mongodb+srv://abdulkaiyum:abdulkaiyum5426@cluster0.5oo7v8h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// Connect to MongoDB
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Define the User schema and model
+const userSchema = new Schema({
+  userID: String,
+  bank: { type: Number, default: 0 },
+  lastInterestClaimed: { type: Date, default: Date.now },
+  loan: { type: Number, default: 0 },
+  loanTakenAt: { type: Date, default: null },
+  loanPayed: { type: Boolean, default: true }
+});
+
+const User = mongoose.models.User || mongoose.model("User", userSchema);
+
 module.exports = {
   config: {
     name: "bank",
-    version: "1.2",
-    description: "",
+    version: "1.0",
+    description: "Aiko Bank - Your trusted banking partner",
     guide: {
-      vi: "",
-      en: ""
+      en: "{pn}bank <subcommand> [amount] [userId]"
     },
-    category: "BANK",
-    countDown: 10,
+    category: "Economy",
+    countDown: 5,
     role: 0,
-    author: "Sheikh Farid"
+    author: "Abdul Kaiyum"
   },
   onStart: async function ({ args, message, event, api, usersData }) {
     const { getPrefix } = global.utils;
     const p = getPrefix(event.threadID);
 
-    const userMoney = await usersData.get(event.senderID, "money");
-    const user = parseInt(event.senderID);
-    const info = await api.getUserInfo(user);
-    const username = info[user].name;
+    const userID = event.senderID;
+    const userMoney = await usersData.get(userID, "money");
+    const info = await api.getUserInfo(userID);
+    const username = info[userID].name;
 
- const bankDataPath = 'scripts/cmds/bank.json';
+    // Fetch user data from MongoDB
+    let user = await User.findOne({ userID });
+    if (!user) {
+      user = new User({ userID });
+      await user.save();
+    }
 
-if (!fs.existsSync(bankDataPath)) {
-  const initialBankData = {};
-  fs.writeFileSync(bankDataPath, JSON.stringify(initialBankData), "utf8");
-}
+    // Auto loan repayment with penalty
+    const now = new Date();
+    if (!user.loanPayed && user.loanTakenAt) {
+      const loanDays = (now - user.loanTakenAt) / (1000 * 60 * 60 * 24); // in days
+      if (loanDays > 10) {
+        const penaltyRate = loanDays <= 20 ? 0.02 : 0.03;
+        const totalLoanWithPenalty = user.loan * (1 + penaltyRate);
+        if (user.bank >= totalLoanWithPenalty) {
+          user.bank -= totalLoanWithPenalty;
+          user.loan = 0;
+          user.loanPayed = true;
+          user.loanTakenAt = null;
+          await user.save();
+          return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Your loan of $${formatNumber(totalLoanWithPenalty)} has been automatically repaid with a ${penaltyRate * 100}% penalty.`);
+        }
+      }
+    }
 
-const bankData = JSON.parse(fs.readFileSync(bankDataPath, "utf8"));
-
-if (!bankData[user]) {
-  bankData[user] = { bank: 0, lastInterestClaimed: Date.now() };
-  fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-}
-  bankBalance = bankData[user].bank || 0;
-
-  const command = args[0]?.toLowerCase();
-  const amount = parseInt(args[1]);
-  const recipientUID = parseInt(args[2]);
+    const command = args[0]?.toLowerCase();
+    const amount = parseInt(args[1]);
+    const recipientID = args[2];
 
     switch (command) {
-case "deposit":
-  if (isNaN(amount) || amount <= 0) {
-return message.reply("[ Octa Via's Bank ]\n\nPlease enter a valid amount to deposit 💰");  }
+      case "deposit":
+        if (isNaN(amount) || amount <= 0) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ Please enter a valid amount to deposit.");
+        }
+        if (userMoney < amount) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ You don't have the required amount to deposit.");
+        }
+        user.bank += amount;
+        await user.save();
+        await usersData.set(userID, { money: userMoney - amount });
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Successfully deposited $${formatNumber(amount)}. Your money is in safe hands.`);
+      
+      case "withdraw":
+        if (isNaN(amount) || amount <= 0) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ Please enter a valid amount to withdraw.");
+        }
+        if (user.bank < amount) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ You don't have enough balance to withdraw.");
+        }
+        user.bank -= amount;
+        await user.save();
+        await usersData.set(userID, { money: userMoney + amount });
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Successfully withdrew $${formatNumber(amount)}. Your money is now in your hands.`);
+      
+      case "balance":
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Your current bank balance is $${formatNumber(user.bank)}.`);
 
+      case "interest":
+        const lastClaimed = user.lastInterestClaimed;
+        const timeDiff = (now - lastClaimed) / (1000 * 60 * 60 * 24); // in days
+        if (timeDiff < 2) {
+          const remainingTime = 2 - timeDiff;
+          return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ You can claim interest again in ${remainingTime.toFixed(2)} days.`);
+        }
+        const interest = user.bank * 0.05;
+        user.bank += interest;
+        user.lastInterestClaimed = now;
+        await user.save();
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ You have earned $${formatNumber(interest)} in interest.`);
 
-  if (bankBalance >= 1e104) {
-return message.reply("[ Octa Via's Bank ]\n\nYou cannot deposit money when your bank balance is already at $1e104 ❌");  }
+      case "transfer":
+        if (isNaN(amount) || amount <= 0) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ Please enter a valid amount to transfer.");
+        }
+        if (recipientID === userID) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ You cannot transfer money to yourself.");
+        }
+        if (user.bank < amount) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ You don't have enough balance to transfer.");
+        }
+        let recipient = await User.findOne({ userID: recipientID });
+        if (!recipient) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ The recipient does not have a bank account.");
+        }
+        user.bank -= amount;
+        recipient.bank += amount;
+        await user.save();
+        await recipient.save();
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Successfully transferred $${formatNumber(amount)} to user ${recipientID}.`);
 
-  if (userMoney < amount) {
-return message.reply("[ Octa Via's Bank ]\n\nYou don't have the required amount to deposit ❌");  }
+      case "richest":
+        const topUsers = await User.find().sort({ bank: -1 }).limit(10);
+        const richestList = topUsers.map((u, index) => `${index + 1}. ${u.userID} - $${formatNumber(u.bank)}`).join('\n');
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Top 10 richest users:\n${richestList}`);
 
-  bankData[user].bank += amount;
-  await usersData.set(event.senderID, {
-    money: userMoney - amount
-  });
-fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
+      case "loan":
+        const maxLoan = 100000;
+        if (isNaN(amount) || amount <= 0 || amount > maxLoan) {
+          return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Please enter a valid loan amount up to $${formatNumber(maxLoan)}.`);
+        }
+        if (!user.loanPayed) {
+          return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ You must repay your existing loan of $${formatNumber(user.loan)} before taking a new one.`);
+        }
+        user.loan = amount;
+        user.loanPayed = false;
+        user.loanTakenAt = new Date();
+        user.bank += amount;
+        await user.save();
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Successfully taken a loan of $${formatNumber(amount)}. Remember to repay it within 10 days.`);
 
-message.reply(`[ Octa Via's Bank ]\n\nSuccessfully deposited $${amount} into your bank account ✅`);break;
+      case "payloan":
+        if (isNaN(amount) || amount <= 0) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ Please enter a valid amount to repay.");
+        }
+        if (user.loan <= 0) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n\n❏ You do not have any loan to repay.");
+        }
+        if (amount > user.loan) {
+          return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Your loan amount is $${formatNumber(user.loan)}. Please repay the exact amount or less.`);
+        }
+        if (amount > user.bank) {
+          return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ You do not have enough balance to repay the loan. Your bank balance is $${formatNumber(user.bank)}.`);
+        }
+        user.loan -= amount;
+        user.bank -= amount;
+        if (user.loan === 0) {
+          user.loanPayed = true;
+          user.loanTakenAt = null;
+        }
+        await user.save();
+        return message.reply(`[🏦 Aiko Bank 🏦]\n\n❏ Successfully repaid $${formatNumber(amount)} towards your loan.`);
 
-
-case "withdraw":
-  const balance = bankData[user].bank || 0;
-
-  if (isNaN(amount) || amount <= 0) {
-return message.reply("[ Octa Via's Bank ]\n\nPlease enter the correct amount to withdraw 💸");  }
-
-  if (userMoney >= 1e110) {
-return message.reply("[ Octa Via's Bank ]\n\nYou cannot withdraw money when your balance is already at 1e110");  }
-
-  if (amount > balance) {
-return message.reply("[ Octa Via's Bank ]\n\nThe requested amount is greater than the available balance in your bank account");  }
-  bankData[user].bank = balance - amount;
-  await usersData.set(event.senderID, {
-    money: userMoney + amount
-  });
-fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-message.reply(`[ Octa Via's Bank ]\n\nSuccessfully withdrew $${amount} from your bank account ✅`);  break;
-
-
-case "balance":
-  const formattedBankBalance = parseFloat(bankBalance);
-  if (!isNaN(formattedBankBalance)) {
-message.reply(`[ Octa Via's Bank ]\n\nYour bank balance is: $${formatNumberWithFullForm(formattedBankBalance)}`);
-  } else {
-message.reply("[ Octa Via's Bank ]\n\nError: Your bank balance is not a valid number");  }
-  break;
-case "interest":
-  const interestRate = 0.001;
-  const lastInterestClaimed = bankData[user].lastInterestClaimed || 0;
-
-  const currentTime = Date.now();
-  const timeDiffInSeconds = (currentTime - lastInterestClaimed) / 1000;
-
-  if (timeDiffInSeconds < 43200) {
-    const remainingTime = Math.ceil(43200 - timeDiffInSeconds);
-    const remainingHours = Math.floor(remainingTime / 3600);
-    const remainingMinutes = Math.floor((remainingTime % 3600) / 60);
-
-message.reply(`[ Octa Via's Bank ]\n\nYou have already claimed your interest. You can claim interest again within ${remainingHours} hours and ${remainingMinutes} minutes`);  }
-
-  const interestEarned = bankData[user].bank * (interestRate / 970) * timeDiffInSeconds;
-
-  if (bankData[user].bank <= 0) {
-message.reply("[ Octa Via's Bank ]\n\nYou don't have any money in your bank account to earn interest");  }
-
-  bankData[user].lastInterestClaimed = currentTime;
-  bankData[user].bank += interestEarned;
-
-fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-
-
-message.reply(`[ Octa Via's Bank ]\n\nYou have earned interest of $${formatNumberWithFullForm(interestEarned)}\nIt has been successfully added to your account balance ✅`);
-        break;
-
-
-case "transfer":
-  if (isNaN(amount) || amount <= 0) {
-return message.reply("[ Octa Via's Bank ]\n\nPlease enter a valid amount to transfer 🔁");  }
-
-  if (!recipientUID || !bankData[recipientUID]) {
-return message.reply("[ Octa Via's Bank ]\n\nRecipient not found in the bank database. Please check the recipient's ID");  }
-
-  if (recipientUID === user) {
-return message.reply("[ Octa Via's Bank ]\n\nYou cannot transfer money to yourself use -help bank to see usage");  }
-
-  const senderBankBalance = parseFloat(bankData[user].bank) || 0;
-  const recipientBankBalance = parseFloat(bankData[recipientUID].bank) || 0;
-
-  if (recipientBankBalance >= 1e104) {
-return message.reply("[ Octa Via's Bank ]\n\nThe recipient's bank balance is already $1e104. You cannot transfer money to them");  }
-
-  if (amount > senderBankBalance) {
-return message.reply("[ Octa Via's Bank ]\n\nYou don't have enough money in your bank account for this transfer ✖️");  }
-
-  bankData[user].bank -= amount;
-  bankData[recipientUID].bank += amount;
-fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-
-
-        message.reply(`[ Octa Via's Bank ]\n\nSuccessfully transferred $${amount} to the recipient with UID: ${recipientUID} ✅`);
-break;
-
-
-case "richest":
-  const bankDataCp = JSON.parse(fs.readFileSync('scripts/cmds/bank.json', 'utf8'));
-
-  const topUsers = Object.entries(bankDataCp)
-    .sort(([, a], [, b]) => b.bank - a.bank)
-    .slice(0, 10);
-
-  const output = (await Promise.all(topUsers.map(async ([userID, userData], index) => {
-    const userName = await usersData.getName(userID);
-    const formattedBalance = formatNumberWithFullForm(userData.bank); // Format the bank balance
-    return `${index + 1}. ${userName} - $${formattedBalance}`;
-  }))).join('\n\n');
-
-message.reply("[ Octa Via's Bank richest ]\n\nTop 10 Richest people according to their bank balance 👑:\n\n" + output + "\n\n");
-break;
-
-
-case "loan":
-  const maxLoanAmount = 4000; //increase of decrease this
-  const userLoan = bankData[user].loan || 0;
-  const loanPayed = bankData[user].loanPayed !== undefined ? bankData[user].loanPayed : true;
-
-  if (!amount) {
-return message.reply("[ Octa Via's Bank ]\n\nPlease enter a valid loan amount"); 
-  }
-
-  if (amount > maxLoanAmount) {
-return message.reply("[ Octa Via's Bank ]\n\nThe maximum loan amount is $4000");  }
-
-  if (!loanPayed && userLoan > 0) {
-  return message.reply(`[ Octa Via's Bank ]\n\nYou cannot take a new loan until you pay off your current loan.\nYour current loan to pay: $${userLoan}`);
-  }
-
-  bankData[user].loan = userLoan + amount;
-  bankData[user].loanPayed = false;
-  bankData[user].bank += amount;
-
-fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-
-
-        message.reply(`[ Octa Via's Bank ]\n\nYou have successfully taken a loan of $${amount}. Please note that loans must be repaid within a certain period 😉`);
-
-break;
-
-case "payloan":
-  const loanBalance = bankData[user].loan || 0;
-
-  if (isNaN(amount) || amount <= 0) {
-  return message.reply("[ Octa Via's Bank ]\n\nPlease enter a valid amount to repay your loan");
-  }
-
-  if (loanBalance <= 0) {
-  message.reply("[ Octa Via's Bank ]\n\nYou don't have any pending loan payments");
-  }
-
-  if (amount > loanBalance) {
-    return message.reply(`[ Octa Via's Bank ]\n\nThe amount required to pay off the loan is greater than your due amount. Please pay the exact amount 😊\nYour total loan: $${loanBalance}`);
-  }
-
-  if (amount > userMoney) {
-    return message.reply(`[ Octa Via's Bank ]\n\nYou do not have $${amount} in your balance to repay the loan`);
-  }
-
-  bankData[user].loan = loanBalance - amount;
-
-  if (loanBalance - amount === 0) {
-    bankData[user].loanPayed = true;
-  }
-
-  await usersData.set(event.senderID, {
-    money: userMoney - amount
-  });
-
-fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-
-
-  return message.reply(`[ Octa Via's Bank ]\n\nSuccessfully repaid $${amount} towards your loan. Your current loan to pay: $${bankData[user].loan} ✅`);
-
-break;
-
-default:
-  return message.reply("[ Octa Via's Bank ]\n\nPlease use one of the following valid commands:\n-Bank Deposit\n-Bank Withdraw\n-Bank Balance\n-Bank Interest\n-Bank Transfer\n-Bank Richest\n-Bank Loan\n-Bank PayLoan");
-}
+      default:
+        return message.reply("\n\n[🏦 Aiko Bank 🏦]\n\n❏ Please use one of the following valid commands:\n- Bank Deposit\n- Bank Withdraw\n- Bank Balance\n- Bank Interest\n- Bank Transfer\n- Bank Richest\n- Bank Loan\n- Bank PayLoan\n\n");
+    }
   }
 };
+
+// Function to format a number with full forms (e.g., 1 Thousand, 133 Million, 76.2 Billion)
+function formatNumber(number) {
+  if (typeof number !== "number" || isNaN(number)) return "0";
+  const units = ["", "Thousand", "Million", "Billion", "Trillion"];
+  let unit = 0;
+  while (number >= 1000 && unit < units.length - 1) {
+    number /= 1000;
+    unit++;
+  }
+  return `${number.toFixed(2)} ${units[unit]}`;
+}

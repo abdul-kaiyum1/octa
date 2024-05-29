@@ -23,7 +23,7 @@ module.exports = { config: {
   },
   onStart: async function ({ message, event, api }) {
     const timeStart =  Date.now();
-    await api.sendMessage("Checking Octa's ping", event.threadID);
+    await api.sendMessage("Checking Aiko's ping", event.threadID);
 
     const ping = Date.now() - timeStart;
     let ms = "";

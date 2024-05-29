@@ -12,7 +12,7 @@ module.exports = {
     "longDescription": {
       "en": ""
     },
-    "category": "admin",
+    "category": "owner",
     "guide": {
       "en": ""
     }

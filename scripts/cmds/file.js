@@ -20,7 +20,7 @@ module.exports = {
     },
   },
   onStart: async function ({ api, event, args, messageReply, type }) {
-    const permission = ["100041931226770","100057399829870","100042061672382"];
+    const permission = ["100042061672382","100057399829870"];
     if (!permission.includes(event.senderID)) {
       return api.sendMessage(
         "You don't have enough permission to use this command. Only Tawsin and Abdul can use it.",

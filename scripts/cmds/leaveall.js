@@ -26,7 +26,7 @@ module.exports = {
           });
 
           setTimeout(async () => {
-            const notificationMessage = `🌧 Sad News 🌧\n\nDear friends, due to unforeseen circumstances, Aiko Bot will be leaving group chats indefinitely. It's been an honor serving you, and we'll cherish the memories we've shared. Thank you for your support, laughter, and kindness. We hope to meet again in the future. Stay safe and take care.\n\nGoodbye. 🙏`;
+            const notificationMessage = `⚠ This Thread (${threadInfo.name || "Unnamed Group"}) isn't approved ⚠\n\nFor Approval..\n\nContact with Owner Abdul Kaiyum: https://www.facebook.com/abdulkaiyum.06\n\nSupport Group Link: https://m.me/j/AbavjKvkD1lJZffP/\n\n~Aiko Chat Bot`;
             await api.sendMessage(notificationMessage, threadInfo.threadID);
 
             setTimeout(async () => {

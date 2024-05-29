@@ -5,14 +5,14 @@ module.exports = {
     version: "1.0",
     author: "NZ R",
     countDown: 5,
-    role: 0,
+    role: 2,
     shortDescription: {
       en: ""
     },
     longDescription: {
       en: ""
     },
-    category: "Agent 007",
+    category: "Owner",
     guide:{
       en: ""
     }
@@ -26,8 +26,8 @@ module.exports = {
     const messageContent = args.slice(1).join(" ");
 
     api.sendMessage({
-      body: `🕵️‍♀️ Shh... A secret message awaits: ${messageContent}`,
-      mentions: [{ id: event.senderID, tag: "Agent 007 🕵️‍♀️  " }]
+      body: `🕵‍♀ Shh... A secret message awaits: ${messageContent}`,
+      mentions: [{ id: event.senderID, tag: "Agent 007 🕵‍♀  " }]
     }, recipient, (err, info) => {
       if (err) {
         return message.err("The message could not be delivered. It seems like the recipient is a master of encryption!");
@@ -57,7 +57,7 @@ module.exports = {
           if (err) {
             return message.err("The encrypted reply could not be delivered. It seems like the sender is hiding in the shadows!");
           }
-          message.reply("🕵️‍♂️ Message has been sent 🕵️‍♀️ ️");
+          message.reply("🕵‍♂ Message has been sent 🕵‍♀ ");
           global.GoatBot.onReply.set(info.messageID, {
             commandName: "pm",
             messageID: info.messageID,

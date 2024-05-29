@@ -1,5 +1,3 @@
-
-
 [
   {
     "petID": "1703913007658",
@@ -7,17 +5,17 @@
     "petName": "Miyako",
     "gender": "female",
     "bio": "No bio available.",
-    "energy": 161,
+    "energy": 100,
     "happiness": 100,
     "hungry": 0,
     "winCount": 110,
     "rank": "Bronze",
     "level": 10,
-    "exp": 3731,
+    "exp": 3931,
     "coins": 2e+21,
     "job": {
-      "salary": 134,
-      "lastWorkDate": 1710225855050,
+      "salary": 103,
+      "lastWorkDate": 1716983840876,
       "workCount": 1
     },
     "items": {
@@ -30,7 +28,7 @@
     },
     "energyLimit": 180,
     "hungryLimit": 80,
-    "injury": 234,
+    "injury": 0,
     "sick": {
       "type": "diarrhea"
     },
@@ -267,11 +265,11 @@
     "bio": "mew mew",
     "energy": 0,
     "happiness": 100,
-    "hungry": 25,
+    "hungry": 33,
     "winCount": 114,
     "rank": "GrandMaster",
     "level": 71,
-    "exp": 6320,
+    "exp": 6370,
     "coins": 2905,
     "friends": [
       "1703913007658",
@@ -874,19 +872,25 @@
     "petName": "happyboy",
     "gender": "male",
     "bio": "No bio available.",
-    "energy": 0,
+    "energy": 100,
     "happiness": 66,
     "hungry": 50,
     "winCount": 2,
     "clan": null,
     "rank": "Bronze",
     "level": 1,
-    "exp": 200,
+    "exp": 380,
     "coins": 546,
     "job": {
-      "salary": 61,
-      "lastWorkDate": 1708779797726
-    }
+      "salary": 141,
+      "lastWorkDate": 1716992906882
+    },
+    "sleep": true,
+    "items": {
+      "redbull": 10,
+      "burger": 10
+    },
+    "injury": 0
   },
   {
     "petID": "1708779722376",
@@ -1793,7 +1797,7 @@
     "rank": "Bronze",
     "level": 16,
     "exp": 4664,
-    "coins": 145378,
+    "coins": 145431,
     "friends": [
       "1708779663315",
       "1708932028586",
@@ -1808,8 +1812,8 @@
       "1709960448521"
     ],
     "job": {
-      "salary": 119,
-      "lastWorkDate": 1713520792489
+      "salary": 53,
+      "lastWorkDate": 1716722022348
     },
     "injury": 0,
     "energyLimit": 80,
@@ -4202,10 +4206,10 @@
     "petName": "megachan",
     "gender": "male",
     "bio": "wyalala",
-    "energy": 33,
+    "energy": 0,
     "happiness": 100,
     "hungry": 15,
-    "winCount": 590,
+    "winCount": 594,
     "rank": "Silver",
     "level": 25,
     "exp": 4659,
@@ -5294,14 +5298,14 @@
     "petName": "namako",
     "gender": "male",
     "bio": "strong and cute",
-    "energy": 84,
+    "energy": 0,
     "happiness": 100,
     "hungry": 0,
-    "winCount": 3,
+    "winCount": 11,
     "rank": "Bronze",
     "level": 2,
     "exp": 632,
-    "coins": 333,
+    "coins": 2109,
     "job": {
       "salary": 148,
       "lastWorkDate": 1713534252158
@@ -5371,14 +5375,14 @@
     "petName": "Lea",
     "gender": "female",
     "bio": "°Sheikh's friend",
-    "energy": 56,
+    "energy": 0,
     "happiness": 100,
     "hungry": 5,
-    "winCount": 14,
+    "winCount": 17,
     "rank": "Bronze",
     "level": 4,
     "exp": 535,
-    "coins": 3467,
+    "coins": 4017,
     "home": true,
     "job": {
       "salary": 120,
@@ -5444,14 +5448,14 @@
     "petName": "💀Godzilla💀",
     "gender": "male",
     "bio": "👑TheNewEmpire👑",
-    "energy": 46,
+    "energy": 0,
     "happiness": 100,
     "hungry": 0,
-    "winCount": 13,
+    "winCount": 19,
     "rank": "Bronze",
     "level": 5,
     "exp": 1732,
-    "coins": 1997.6,
+    "coins": 3110.6,
     "home": true,
     "injury": 37,
     "items": {
@@ -5472,14 +5476,14 @@
     "petName": "prcis",
     "gender": "female",
     "bio": "“Anata ga nani o okonatte iru ka, wakarimasen”.",
-    "energy": 92,
+    "energy": 0,
     "happiness": 94,
     "hungry": 8,
-    "winCount": 6,
+    "winCount": 9,
     "rank": "Bronze",
     "level": 3,
     "exp": 845,
-    "coins": 603,
+    "coins": 1348,
     "home": true,
     "job": {
       "salary": 130,
@@ -5505,14 +5509,14 @@
     "petName": "Lullo",
     "gender": "male",
     "bio": "Fuck you",
-    "energy": 65,
+    "energy": 0,
     "happiness": 100,
     "hungry": 9,
-    "winCount": 1,
+    "winCount": 7,
     "rank": "Bronze",
     "level": 3,
     "exp": 256,
-    "coins": 198,
+    "coins": 1504,
     "home": true,
     "items": {
       "mango": 3,
@@ -5531,7 +5535,7 @@
     "petName": "zake",
     "gender": "male",
     "bio": "°THE BOSS",
-    "energy": 50,
+    "energy": 0,
     "happiness": 50,
     "hungry": 50,
     "winCount": 2,
@@ -5547,5 +5551,158 @@
     "items": {
       "burger": 5
     }
+  },
+  {
+    "petID": "1716636597777",
+    "uid": "100082959835429",
+    "petName": "Yahiko",
+    "gender": "male",
+    "bio": "Hi",
+    "energy": 0,
+    "happiness": 50,
+    "hungry": 50,
+    "winCount": 2,
+    "rank": "Bronze",
+    "level": 1,
+    "exp": 0,
+    "coins": 467,
+    "home": true,
+    "friends": [
+      "1716902715466"
+    ]
+  },
+  {
+    "petID": "1716711496050",
+    "uid": "100091860914295",
+    "petName": "mochie",
+    "gender": "female",
+    "bio": "No bio available.",
+    "energy": 0,
+    "happiness": 83,
+    "hungry": 0,
+    "winCount": 20,
+    "rank": "Bronze",
+    "level": 5,
+    "exp": 1585,
+    "coins": 7344,
+    "home": true,
+    "job": {
+      "salary": 141,
+      "lastWorkDate": 1716899061827
+    },
+    "items": {
+      "pancake": 0,
+      "water": 0,
+      "pizza": 50
+    },
+    "injury": 0,
+    "friends": [
+      "1716717400032"
+    ]
+  },
+  {
+    "petID": "1716717400032",
+    "uid": "61559865575918",
+    "petName": "markyy",
+    "gender": "female",
+    "bio": "ACOSMIST >>>",
+    "energy": 112,
+    "happiness": 100,
+    "hungry": 0,
+    "winCount": 16,
+    "rank": "Bronze",
+    "level": 5,
+    "exp": 1986,
+    "coins": 624,
+    "home": true,
+    "job": {
+      "salary": 143,
+      "lastWorkDate": 1716992918590
+    },
+    "injury": 866,
+    "items": {
+      "pancake": 5,
+      "water": 0,
+      "redbull": 5
+    },
+    "donateCount": 3053,
+    "friends": [
+      "1716723256680",
+      "1716711496050"
+    ]
+  },
+  {
+    "petID": "1716723256680",
+    "uid": "61555738678746",
+    "petName": "Alexa",
+    "gender": "female",
+    "bio": "(*-*)",
+    "energy": 103,
+    "happiness": 100,
+    "hungry": 0,
+    "winCount": 17,
+    "rank": "Bronze",
+    "level": 4,
+    "exp": 33,
+    "coins": 3353,
+    "home": true,
+    "job": {
+      "salary": 109,
+      "lastWorkDate": 1716779662882
+    },
+    "items": {
+      "salad": 0,
+      "apple": 5,
+      "orange": 5,
+      "strawberry": 5,
+      "cherry": 5,
+      "avocado": 5,
+      "cookie": 5,
+      "pancake": 10
+    },
+    "sleep": true,
+    "friends": [
+      "1716717400032"
+    ]
+  },
+  {
+    "petID": "1716902715466",
+    "uid": "100090093279805",
+    "petName": "Yagura",
+    "gender": "male",
+    "bio": "(Right now I'm loving myself)`",
+    "energy": 50,
+    "happiness": 50,
+    "hungry": 50,
+    "winCount": 0,
+    "rank": "Bronze",
+    "level": 1,
+    "exp": 0,
+    "coins": 156,
+    "home": true,
+    "friends": [
+      "1716636597777"
+    ],
+    "job": {
+      "salary": 106,
+      "lastWorkDate": 1716986580426
+    },
+    "sleep": true
+  },
+  {
+    "petID": "1716917521400",
+    "uid": "61557115073711",
+    "petName": "Rock",
+    "gender": "male",
+    "bio": "I'm his rock",
+    "energy": 50,
+    "happiness": 50,
+    "hungry": 50,
+    "winCount": 0,
+    "rank": "Bronze",
+    "level": 1,
+    "exp": 0,
+    "coins": 50,
+    "home": true
   }
 ]
