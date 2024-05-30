@@ -1,11 +1,11 @@
 [
   {
     "name": "aiko",
-    "usage": 786
+    "usage": 794
   },
   {
     "name": "sing",
-    "usage": 597
+    "usage": 600
   },
   {
     "name": "help",
@@ -17,15 +17,15 @@
   },
   {
     "name": "bal",
-    "usage": 631
+    "usage": 638
   },
   {
     "name": "bljk",
-    "usage": 299
+    "usage": 300
   },
   {
     "name": "",
-    "usage": 313
+    "usage": 320
   },
   {
     "name": "rank",
@@ -37,7 +37,7 @@
   },
   {
     "name": "roulette",
-    "usage": 727
+    "usage": 732
   },
   {
     "name": "pet",
@@ -57,7 +57,7 @@
   },
   {
     "name": "unsend",
-    "usage": 161
+    "usage": 163
   },
   {
     "name": "supportgc",
@@ -85,7 +85,7 @@
   },
   {
     "name": "bank",
-    "usage": 136
+    "usage": 161
   },
   {
     "name": "pair",
@@ -105,7 +105,7 @@
   },
   {
     "name": "baltop",
-    "usage": 111
+    "usage": 113
   },
   {
     "name": "ytb",
@@ -117,7 +117,7 @@
   },
   {
     "name": "trans",
-    "usage": 52
+    "usage": 53
   },
   {
     "name": "doremon",
@@ -161,7 +161,7 @@
   },
   {
     "name": "shell",
-    "usage": 31
+    "usage": 32
   },
   {
     "name": "song",
@@ -201,7 +201,7 @@
   },
   {
     "name": "uid",
-    "usage": 28
+    "usage": 30
   },
   {
     "name": "hangman",
@@ -329,7 +329,7 @@
   },
   {
     "name": "pfp",
-    "usage": 13
+    "usage": 14
   },
   {
     "name": "pm",
@@ -869,7 +869,7 @@
   },
   {
     "name": "approval",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "supportgccccccccccccccccccccccccc",

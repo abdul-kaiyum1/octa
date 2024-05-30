@@ -107,11 +107,11 @@ module.exports = {
           const userName = await usersData.getName(userID);
           return `${index + 1}. ${userName} - $${formatNumberWithFullForm(data.bank)}`;
         }));
-        return message.reply(`[🏦 Aiko Bank 🏦]\n❏ Top 10 richest users:\n\n${richestUsers.join("\n\n")}. Strive for greatness with Aiko Bank.`);
+        return message.reply(`[🏦 Aiko Bank 🏦]\n❏ Top 10 richest users:\n\n${richestUsers.join("\n\n\n")}. Strive for greatness with Aiko Bank.`);
       
       case "loan":
-        if (isNaN(amount) || amount <= 0 || amount > 100000) {
-          return message.reply("[🏦 Aiko Bank 🏦]\n❏ Please enter a valid loan amount (up to $100,000).");
+        if (isNaN(amount) || amount <= 0 || amount > 50000) {
+          return message.reply("[🏦 Aiko Bank 🏦]\n❏ Please enter a valid loan amount (up to $50,000).");
         }
         const loanTimeDiff = (now - bankData[user].loanTakenTime) / (1000 * 60 * 60 * 24);
         if (bankData[user].loan > 0 && loanTimeDiff < 7) {
@@ -122,7 +122,7 @@ module.exports = {
         bankData[user].loanInterestRate = 0.02;
         bankData[user].bank += amount;
         fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
-        return message.reply(`[🏦 Aiko Bank 🏦]\n❏ You have successfully taken a loan of $${amount}. Please repay within 10 days to avoid additional interest.`);
+        return message.reply(`[🏦 Aiko Bank 🏦]\n❏ You have successfully taken a loan of $${amount}. Please repay within 7 days to avoid additional interest.`);
       
       case "payloan":
         const loanBalance = bankData[user].loan;
