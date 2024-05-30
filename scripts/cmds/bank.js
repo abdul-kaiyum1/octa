@@ -36,6 +36,7 @@ module.exports = {
     const command = args[0]?.toLowerCase();
     const amount = parseInt(args[1]);
     const recipientUID = parseInt(args[2]);
+    const now = Date.now();
 
     switch (command) {
       case "deposit":
@@ -66,7 +67,6 @@ module.exports = {
         return message.reply(`[🏦 Aiko Bank 🏦]\n❏ Your bank balance is: $${formatNumberWithFullForm(bankData[user].bank)}. Your future is secure with us.`);
       
       case "interest":
-        const now = Date.now();
         const lastInterestClaimed = bankData[user].lastInterestClaimed;
         const timeDiff = (now - lastInterestClaimed) / (1000 * 60 * 60 * 24); // difference in days
 
@@ -134,7 +134,7 @@ module.exports = {
         }
         bankData[user].loan -= amount;
         if (bankData[user].loan === 0) {
-                   bankData[user].loanTakenTime = 0;
+          bankData[user].loanTakenTime = 0;
           bankData[user].loanInterestRate = 0.02;
         }
         await usersData.set(event.senderID, { money: userMoney - amount });
@@ -154,37 +154,37 @@ function formatNumberWithFullForm(number) {
     "Million",
     "Billion",
     "Trillion",
-    "Quadrillion",
-    "Quintillion",
-    "Sextillion",
-    "Septillion",
-    "Octillion",
-    "Nonillion",
-    "Decillion",
-    "Undecillion",
-    "Duodecillion",
-    "Tredecillion",
-    "Quattuordecillion",
-    "Quindecillion",
-    "Sexdecillion",
-    "Septendecillion",
-    "Octodecillion",
-    "Novemdecillion",
-    "Vigintillion",
-    "Unvigintillion",
-    "Duovigintillion",
-    "Tresvigintillion",
-    "Quattuorvigintillion",
-    "Quinvigintillion",
-    "Sesvigintillion",
-    "Septemvigintillion",
-    "Octovigintillion",
-    "Novemvigintillion",
-    "Trigintillion",
-    "Untrigintillion",
-    "Duotrigintillion",
-    "Googol",
-  ];
+  "Quadrillion",
+  "Quintillion",
+  "Sextillion",
+  "Septillion",
+  "Octillion",
+  "Nonillion",
+  "Decillion",
+  "Undecillion",
+  "Duodecillion",
+  "Tredecillion",
+  "Quattuordecillion",
+  "Quindecillion",
+  "Sexdecillion",
+  "Septendecillion",
+  "Octodecillion",
+  "Novemdecillion",
+  "Vigintillion",
+  "Unvigintillion",
+  "Duovigintillion",
+  "Tresvigintillion",
+  "Quattuorvigintillion",
+  "Quinvigintillion",
+  "Sesvigintillion",
+  "Septemvigintillion",
+  "Octovigintillion",
+  "Novemvigintillion",
+  "Trigintillion",
+  "Untrigintillion",
+  "Duotrigintillion",
+  "Googol"
+];
 
   // Calculate the full form of the number (e.g., Thousand, Million, Billion)
   let fullFormIndex = 0;
@@ -211,7 +211,7 @@ function handleAutomaticLoanRepayment() {
 
     if (bankData[user].loan > 0) {
       if (loanTimeDiff >= 7) {
-        bankData[user].loanInterestRate = 0.03; // Increase interest rate after 10 days
+        bankData[user].loanInterestRate = 0.03; // Increase interest rate after 17 days
         const interest = bankData[user].loan * bankData[user].loanInterestRate;
         bankData[user].loan += interest;
         bankData[user].bank -= bankData[user].loan;
@@ -231,6 +231,4 @@ function handleAutomaticLoanRepayment() {
   fs.writeFileSync(bankDataPath, JSON.stringify(bankData), "utf8");
 }
 
-// Schedule the automatic loan repayment function to run daily
-setInterval(handleAutomaticLoanRepayment, 24 * 60 * 60 * 1000); // Run once every 24 hours
-
+setInterval(handleAutomaticLoanRepayment, 24 * 60 * 60 * 1000); 
