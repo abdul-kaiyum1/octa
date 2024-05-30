@@ -1792,12 +1792,12 @@
     "energy": 0,
     "happiness": 100,
     "hungry": 0,
-    "winCount": 356,
+    "winCount": 358,
     "clan": null,
     "rank": "Bronze",
     "level": 16,
-    "exp": 4664,
-    "coins": 145431,
+    "exp": 4824,
+    "coins": 145883,
     "friends": [
       "1708779663315",
       "1708932028586",
@@ -1812,8 +1812,8 @@
       "1709960448521"
     ],
     "job": {
-      "salary": 53,
-      "lastWorkDate": 1716722022348
+      "salary": 127,
+      "lastWorkDate": 1717026612158
     },
     "injury": 0,
     "energyLimit": 80,
@@ -5637,18 +5637,18 @@
     "petName": "Alexa",
     "gender": "female",
     "bio": "(*-*)",
-    "energy": 103,
+    "energy": 124,
     "happiness": 100,
     "hungry": 0,
     "winCount": 17,
     "rank": "Bronze",
     "level": 4,
-    "exp": 33,
-    "coins": 3353,
+    "exp": 183,
+    "coins": 3545,
     "home": true,
     "job": {
-      "salary": 109,
-      "lastWorkDate": 1716779662882
+      "salary": 90,
+      "lastWorkDate": 1717064007972
     },
     "items": {
       "salad": 0,
@@ -5658,9 +5658,9 @@
       "cherry": 5,
       "avocado": 5,
       "cookie": 5,
-      "pancake": 10
+      "pancake": 8
     },
-    "sleep": true,
+    "sleep": false,
     "friends": [
       "1716717400032"
     ]
@@ -5671,7 +5671,7 @@
     "petName": "Yagura",
     "gender": "male",
     "bio": "(Right now I'm loving myself)`",
-    "energy": 50,
+    "energy": 22,
     "happiness": 50,
     "hungry": 50,
     "winCount": 0,

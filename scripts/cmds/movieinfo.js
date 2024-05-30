@@ -31,7 +31,7 @@ module.exports = {
   onStart: async function ({ api, message, event, args, getLang }) {
     const movieName = args.join(" ");
     console.log(`Received movie name: ${movieName}`);
-    
+
     if (!movieName) {
       console.log("No movie name provided.");
       return message.reply(getLang("invalid_movie"));
@@ -66,20 +66,22 @@ module.exports = {
 
       console.log("Sending movie information.");
       await message.reply(getLang("sending_movie_info"));
+      await api.sendMessage({ body: movieInfo }, event.threadID);
 
       if (data.poster) {
-        const posterPath = `${__dirname}/tmp/poster.jpg`;
-        const posterResponse = await axios.get(data.poster, { responseType: 'arraybuffer' });
-        fs.writeFileSync(posterPath, Buffer.from(posterResponse.data, 'binary'));
+        try {
+          const posterPath = `${__dirname}/tmp/poster.jpg`;
+          const posterResponse = await axios.get(data.poster, { responseType: 'arraybuffer' });
+          fs.writeFileSync(posterPath, Buffer.from(posterResponse.data, 'binary'));
 
-        await api.sendMessage({
-          body: movieInfo,
-          attachment: fs.createReadStream(posterPath)
-        }, event.threadID, () => {
-          fs.unlinkSync(posterPath);
-        });
-      } else {
-        await api.sendMessage({ body: movieInfo }, event.threadID);
+          await api.sendMessage({
+            attachment: fs.createReadStream(posterPath)
+          }, event.threadID, () => {
+            fs.unlinkSync(posterPath);
+          });
+        } catch (error) {
+          console.error(`Error sending poster: ${error}`);
+        }
       }
 
     } catch (error) {
