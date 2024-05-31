@@ -8,7 +8,7 @@
     "energy": 100,
     "happiness": 100,
     "hungry": 0,
-    "winCount": 110,
+    "winCount": 111,
     "rank": "Bronze",
     "level": 10,
     "exp": 3931,
@@ -327,7 +327,7 @@
     "injury": 0,
     "lastSleepTime": 1709727130236,
     "donateCount": 5500,
-    "sleep": false,
+    "sleep": true,
     "hunger": 8
   },
   {
@@ -872,25 +872,28 @@
     "petName": "happyboy",
     "gender": "male",
     "bio": "No bio available.",
-    "energy": 100,
+    "energy": 300,
     "happiness": 66,
     "hungry": 50,
-    "winCount": 2,
+    "winCount": 3,
     "clan": null,
     "rank": "Bronze",
-    "level": 1,
-    "exp": 380,
-    "coins": 546,
+    "level": 2,
+    "exp": 506,
+    "coins": 633,
     "job": {
-      "salary": 141,
-      "lastWorkDate": 1716992906882
+      "salary": 53,
+      "lastWorkDate": 1717079634042
     },
     "sleep": true,
     "items": {
       "redbull": 10,
-      "burger": 10
+      "burger": 30
     },
-    "injury": 0
+    "injury": 0,
+    "friends": [
+      "1716717400032"
+    ]
   },
   {
     "petID": "1708779722376",
@@ -1789,15 +1792,15 @@
     "petName": "suga females",
     "gender": "female",
     "bio": "No bio available.",
-    "energy": 0,
+    "energy": 100,
     "happiness": 100,
     "hungry": 0,
     "winCount": 358,
     "clan": null,
     "rank": "Bronze",
     "level": 16,
-    "exp": 4824,
-    "coins": 145883,
+    "exp": 4904,
+    "coins": 145798,
     "friends": [
       "1708779663315",
       "1708932028586",
@@ -1812,8 +1815,8 @@
       "1709960448521"
     ],
     "job": {
-      "salary": 127,
-      "lastWorkDate": 1717026612158
+      "salary": 94,
+      "lastWorkDate": 1717068877738
     },
     "injury": 0,
     "energyLimit": 80,
@@ -4805,7 +4808,10 @@
     "rank": "Bronze",
     "level": 1,
     "exp": 50,
-    "coins": 493
+    "coins": 493,
+    "friends": [
+      "1716723256680"
+    ]
   },
   {
     "petID": "1710225701573",
@@ -5606,20 +5612,20 @@
     "petName": "markyy",
     "gender": "female",
     "bio": "ACOSMIST >>>",
-    "energy": 112,
+    "energy": 100,
     "happiness": 100,
     "hungry": 0,
     "winCount": 16,
     "rank": "Bronze",
-    "level": 5,
-    "exp": 1986,
-    "coins": 624,
+    "level": 6,
+    "exp": 186,
+    "coins": 488,
     "home": true,
     "job": {
       "salary": 143,
       "lastWorkDate": 1716992918590
     },
-    "injury": 866,
+    "injury": 0,
     "items": {
       "pancake": 5,
       "water": 0,
@@ -5628,7 +5634,8 @@
     "donateCount": 3053,
     "friends": [
       "1716723256680",
-      "1716711496050"
+      "1716711496050",
+      "1708779683414"
     ]
   },
   {
@@ -5637,18 +5644,18 @@
     "petName": "Alexa",
     "gender": "female",
     "bio": "(*-*)",
-    "energy": 124,
+    "energy": 145,
     "happiness": 100,
     "hungry": 0,
-    "winCount": 17,
+    "winCount": 18,
     "rank": "Bronze",
     "level": 4,
-    "exp": 183,
-    "coins": 3545,
+    "exp": 283,
+    "coins": 3806,
     "home": true,
     "job": {
-      "salary": 90,
-      "lastWorkDate": 1717064007972
+      "salary": 111,
+      "lastWorkDate": 1717142256683
     },
     "items": {
       "salad": 0,
@@ -5662,7 +5669,8 @@
     },
     "sleep": false,
     "friends": [
-      "1716717400032"
+      "1716717400032",
+      "1710156374727"
     ]
   },
   {
@@ -5671,23 +5679,23 @@
     "petName": "Yagura",
     "gender": "male",
     "bio": "(Right now I'm loving myself)`",
-    "energy": 22,
-    "happiness": 50,
-    "hungry": 50,
-    "winCount": 0,
+    "energy": 3,
+    "happiness": 74,
+    "hungry": 60,
+    "winCount": 1,
     "rank": "Bronze",
     "level": 1,
-    "exp": 0,
-    "coins": 156,
+    "exp": 92,
+    "coins": 523,
     "home": true,
     "friends": [
       "1716636597777"
     ],
     "job": {
-      "salary": 106,
-      "lastWorkDate": 1716986580426
+      "salary": 56,
+      "lastWorkDate": 1717142468729
     },
-    "sleep": true
+    "sleep": false
   },
   {
     "petID": "1716917521400",
