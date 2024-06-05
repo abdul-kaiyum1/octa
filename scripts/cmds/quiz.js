@@ -64,8 +64,9 @@ module.exports = {
       history: "history",
       sports: "sports",
       animals: "animals",
+      general knowledge: "general knowledge",
       celebrities: "celebrities",
-      general_knowledge: "general knowledge",
+      general_knowledge: "general_knowledge",
       geography: "geography",
       mythology: "mythology",
       art: "art",
@@ -73,14 +74,14 @@ module.exports = {
       music: "music",
       television: "television",
       film: "film",
-      video_games: "video games",
-      board_games: "board games",
+      video_games: "video_games",
+      board_games: "board_games",
       computers: "computers",
       mathematics: "mathematics",
-      comic_books: "comic books",
+      comic_books: "comic_books",
       gadgets: "gadgets",
-      cartoon_animations: "cartoon animations",
-      anime_manga: "anime manga"
+      cartoon_animations: "cartoon_animations",
+      anime_manga: "anime_manga"
     };
 
     const categoryArg = args.join(' ').toLowerCase();
