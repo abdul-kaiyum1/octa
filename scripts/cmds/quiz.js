@@ -64,7 +64,7 @@ module.exports = {
       history: "history",
       sports: "sports",
       animals: "animals",
-      'general knowledge:' "general knowledge",
+      'general knowledge': "general knowledge",
       celebrities: "celebrities",
       general_knowledge: "general_knowledge",
       geography: "geography",
