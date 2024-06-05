@@ -88,7 +88,7 @@ module.exports = {
     const category = categoryMap[categoryArg];
 
     if (!category) {
-      return message.reply("Please specify a valid category: science, history, sports, animals, celebrities, general_knowledge, etc.");
+      return message.reply("Please specify a valid category: science, history, sports, animals,art, celebrities, general_knowledge,anime_manga,mythology,geography, literature, etc.");
     }
 
     const userId = event.senderID;
@@ -155,7 +155,7 @@ module.exports = {
       await usersData.set(event.senderID, { money: userData[event.senderID].money });
       message.reply(`🎉 Correct answer! You've earned $${reward}. Your new balance is $${userData[event.senderID].money}.`);
     } else {
-      message.reply(`❌ Wrong answer. The correct answer was: ${correctAnswer}. Better luck next time!`);
+      message.reply(`❌ Wrong answer. Better luck next time!`);
     }
 
     fs.writeFileSync(userDataPath, JSON.stringify(userData, null, 2), 'utf8');
