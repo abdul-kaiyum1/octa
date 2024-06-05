@@ -10,7 +10,7 @@ if (fs.existsSync(userDataPath)) {
   userData = JSON.parse(fs.readFileSync(userDataPath, 'utf8'));
 }
 
-async function fetchQuizQuestions(category) {
+async function fetchQuizQuestionsFromAPI(category) {
   try {
     const response = await axios.get(`https://opentdb.com/api.php?amount=50&type=multiple&category=${category}`);
     const questions = response.data.results.map(q => ({
@@ -21,10 +21,9 @@ async function fetchQuizQuestions(category) {
       options: [...q.incorrect_answers, q.correct_answer].sort(() => Math.random() - 0.5),
       answer: q.correct_answer,
     }));
-    fs.writeFileSync(quizCachePath, JSON.stringify(questions, null, 2), 'utf8');
     return questions;
   } catch (error) {
-    console.error('Error fetching quiz questions:', error);
+    console.error('Error fetching quiz questions from API:', error);
     return [];
   }
 }
@@ -32,14 +31,16 @@ async function fetchQuizQuestions(category) {
 async function getQuizQuestions(category) {
   try {
     const cachedQuestions = JSON.parse(fs.readFileSync(quizCachePath, 'utf8'));
-    if (cachedQuestions.length > 0) {
-      return cachedQuestions;
+    const filteredQuestions = cachedQuestions.filter(q => q.category.toLowerCase() === category);
+    if (filteredQuestions.length > 0) {
+      return filteredQuestions;
     } else {
-      return await fetchQuizQuestions(category);
+      console.log('No cached questions found for category, fetching from API...');
+      return await fetchQuizQuestionsFromAPI(category);
     }
   } catch (error) {
     console.error('Quiz cache not found or invalid, fetching new questions...');
-    return await fetchQuizQuestions(category);
+    return await fetchQuizQuestionsFromAPI(category);
   }
 }
 
@@ -49,7 +50,7 @@ module.exports = {
     version: "2.0",
     description: "Answer quiz questions to earn money",
     guide: {
-      en: "{pn}quiz <category> to start a quiz\nAnswer by replying to the question.\nAvailable categories: Science, History, General Knowledge, etc."
+      en: "{pn}quiz <category> to start a quiz\nAnswer by replying to the question.\nAvailable categories: science, history, sports, animals, celebrities, general_knowledge, etc."
     },
     category: "games",
     countDown: 10,
@@ -59,20 +60,34 @@ module.exports = {
 
   onStart: async function ({ message, event, api, args, usersData }) {
     const categoryMap = {
-      science: 17,
-      history: 23,
-      sports:21,
-     animasl:27,
-     celebrities:26,
-     'general knowledge': 9,
-      // Add more categories and their corresponding IDs here
+      science: "science",
+      history: "history",
+      sports: "sports",
+      animals: "animals",
+      celebrities: "celebrities",
+      general_knowledge: "general knowledge",
+      geography: "geography",
+      mythology: "mythology",
+      art: "art",
+      literature: "literature",
+      music: "music",
+      television: "television",
+      film: "film",
+      video_games: "video games",
+      board_games: "board games",
+      computers: "computers",
+      mathematics: "mathematics",
+      comic_books: "comic books",
+      gadgets: "gadgets",
+      cartoon_animations: "cartoon animations",
+      anime_manga: "anime manga"
     };
 
     const categoryArg = args.join(' ').toLowerCase();
     const category = categoryMap[categoryArg];
 
     if (!category) {
-      return message.reply("Please specify a valid category: Science, History, General Knowledge, Sports, Animals, Celebrities, etc. ");
+      return message.reply("Please specify a valid category: science, history, sports, animals, celebrities, general_knowledge, etc.");
     }
 
     const userId = event.senderID;
@@ -124,23 +139,22 @@ module.exports = {
 
     const userAnswerIndex = parseInt(event.body.trim()) - 1;
 
-    if (userAnswerIndex < 0 || userAnswerIndex >= options.length) {
+    if (isNaN(userAnswerIndex) || userAnswerIndex < 0 || userAnswerIndex >= options.length) {
       return message.reply("⚠ Invalid option. Please reply with the correct option number.");
     }
 
     const userAnswer = options[userAnswerIndex];
     const correctAnswer = answer;
 
-  
     global.GoatBot.onReply.set(messageID, { ...Reply, answered: true });
 
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       const reward = Math.floor(Math.random() * 651) + 50; // Earn between $50 and $700
-      userData[event.senderID].money += reward;
+      userData[event.senderID].money = (userData[event.senderID].money || 0) + reward;
       await usersData.set(event.senderID, { money: userData[event.senderID].money });
       message.reply(`🎉 Correct answer! You've earned $${reward}. Your new balance is $${userData[event.senderID].money}.`);
     } else {
-      message.reply(`❌ Wrong answer. Better luck next time!`);
+      message.reply(`❌ Wrong answer. The correct answer was: ${correctAnswer}. Better luck next time!`);
     }
 
     fs.writeFileSync(userDataPath, JSON.stringify(userData, null, 2), 'utf8');
