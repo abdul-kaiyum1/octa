@@ -1,0 +1,32 @@
+{
+  "100057399829870": {
+    "currentScenario": "continueAlone"
+  },
+  "100060732784116": {
+    "currentScenario": "fightBeast",
+    "earnings": 0,
+    "skills": {
+      "strength": 1,
+      "intelligence": 1,
+      "agility": 1
+    }
+  },
+  "100054560899615": {
+    "currentScenario": "fightOutcome",
+    "earnings": 0,
+    "skills": {
+      "strength": 1,
+      "intelligence": 1,
+      "agility": 1
+    }
+  },
+  "61558303554125": {
+    "currentScenario": "runAway",
+    "earnings": 300,
+    "skills": {
+      "strength": 1,
+      "intelligence": 1,
+      "agility": 1
+    }
+  }
+}

@@ -47,6 +47,11 @@
     "translate.js",
     "e.js",
     "bank2.js",
-    "fb.js"
+    "fb.js",
+    "gemini.js",
+    "rank.js",
+    "adventure.js",
+    "pb.js",
+    "quiz.js"
   ]
 }

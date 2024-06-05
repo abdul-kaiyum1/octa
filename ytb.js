@@ -3,7 +3,7 @@ module.exports = {
     "name": "ytb",
     "version": "1.14",
     "author": "NTKhang",
-    "countDown": 25,
+    "countDown": 40,
     "role": 0,
     "shortDescription": "YouTube",
     "longDescription": {

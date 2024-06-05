@@ -1,350 +1,470 @@
 [
   {
     "name": "roulette",
-    "usage": 1847
-  },
-  {
-    "name": "aiko",
-    "usage": 1199
+    "usage": 2597
   },
   {
     "name": "bal",
-    "usage": 1403
+    "usage": 1982
   },
   {
-    "name": "sing",
-    "usage": 705
-  },
-  {
-    "name": "help",
-    "usage": 684
-  },
-  {
-    "name": "slot",
-    "usage": 622
+    "name": "aiko",
+    "usage": 1947
   },
   {
     "name": "pet",
-    "usage": 985
-  },
-  {
-    "name": "",
-    "usage": 481
-  },
-  {
-    "name": "bljk",
-    "usage": 338
+    "usage": 1805
   },
   {
     "name": "bank",
-    "usage": 899
+    "usage": 1591
   },
   {
-    "name": "rank",
-    "usage": 232
+    "name": "slot",
+    "usage": 976
   },
   {
-    "name": "pinterest",
-    "usage": 214
+    "name": "help",
+    "usage": 932
   },
   {
-    "name": "say",
-    "usage": 207
+    "name": "sing",
+    "usage": 832
   },
   {
-    "name": "daily",
-    "usage": 232
-  },
-  {
-    "name": "cg",
-    "usage": 195
-  },
-  {
-    "name": "unsend",
-    "usage": 235
-  },
-  {
-    "name": "count",
-    "usage": 175
-  },
-  {
-    "name": "gpt",
-    "usage": 185
-  },
-  {
-    "name": "baltop",
-    "usage": 172
-  },
-  {
-    "name": "supportgc",
-    "usage": 132
-  },
-  {
-    "name": "imagine",
-    "usage": 110
+    "name": "",
+    "usage": 781
   },
   {
     "name": "pair",
-    "usage": 163
+    "usage": 425
   },
   {
-    "name": "approve",
-    "usage": 104
+    "name": "bljk",
+    "usage": 361
   },
   {
-    "name": "thread",
-    "usage": 95
+    "name": "count",
+    "usage": 365
   },
   {
-    "name": "pin",
-    "usage": 101
+    "name": "unsend",
+    "usage": 324
   },
   {
-    "name": "up",
-    "usage": 84
+    "name": "daily",
+    "usage": 295
   },
   {
-    "name": "4k",
-    "usage": 80
+    "name": "rank",
+    "usage": 284
   },
   {
-    "name": "ytb",
-    "usage": 107
+    "name": "say",
+    "usage": 279
+  },
+  {
+    "name": "shuffle-cup",
+    "usage": 277
   },
   {
     "name": "pi",
-    "usage": 84
+    "usage": 272
   },
   {
-    "name": "baccarat",
-    "usage": 63
+    "name": "pinterest",
+    "usage": 265
   },
   {
-    "name": "trans",
-    "usage": 60
+    "name": "cg",
+    "usage": 218
   },
   {
-    "name": "all",
-    "usage": 62
+    "name": "baltop",
+    "usage": 213
   },
   {
-    "name": "miko",
-    "usage": 59
+    "name": "gpt",
+    "usage": 216
   },
   {
-    "name": "rules",
-    "usage": 62
+    "name": "supportgc",
+    "usage": 150
   },
   {
-    "name": "uns",
-    "usage": 55
+    "name": "approve",
+    "usage": 149
   },
   {
-    "name": "doremon",
-    "usage": 57
+    "name": "pin",
+    "usage": 140
   },
   {
     "name": "uid",
+    "usage": 136
+  },
+  {
+    "name": "thread",
+    "usage": 133
+  },
+  {
+    "name": "ytb",
+    "usage": 124
+  },
+  {
+    "name": "imagine",
+    "usage": 124
+  },
+  {
+    "name": "rules",
+    "usage": 115
+  },
+  {
+    "name": "miko",
+    "usage": 108
+  },
+  {
+    "name": "4k",
+    "usage": 103
+  },
+  {
+    "name": "baccarat",
+    "usage": 99
+  },
+  {
+    "name": "uns",
+    "usage": 94
+  },
+  {
+    "name": "up",
+    "usage": 94
+  },
+  {
+    "name": "mathgame",
+    "usage": 93
+  },
+  {
+    "name": "trans",
     "usage": 86
   },
   {
-    "name": "balancetop",
-    "usage": 37
+    "name": "blackjack",
+    "usage": 84
   },
   {
-    "name": "play",
-    "usage": 46
+    "name": "warn",
+    "usage": 81
+  },
+  {
+    "name": "doremon",
+    "usage": 79
+  },
+  {
+    "name": "adventure",
+    "usage": 70
+  },
+  {
+    "name": "all",
+    "usage": 68
+  },
+  {
+    "name": "fbdl",
+    "usage": 63
+  },
+  {
+    "name": "flag",
+    "usage": 65
   },
   {
     "name": "onlyadminbox",
-    "usage": 41
+    "usage": 58
   },
   {
-    "name": "pending",
-    "usage": 34
+    "name": "play",
+    "usage": 56
   },
   {
-    "name": "prefix",
-    "usage": 37
-  },
-  {
-    "name": "acp",
-    "usage": 35
-  },
-  {
-    "name": "song",
-    "usage": 46
-  },
-  {
-    "name": "shortcut",
-    "usage": 34
-  },
-  {
-    "name": "shell",
-    "usage": 39
-  },
-  {
-    "name": "file",
-    "usage": 40
-  },
-  {
-    "name": "fb",
-    "usage": 30
+    "name": "balance",
+    "usage": 54
   },
   {
     "name": "tid",
+    "usage": 53
+  },
+  {
+    "name": "file",
+    "usage": 51
+  },
+  {
+    "name": "hack",
+    "usage": 50
+  },
+  {
+    "name": "song",
+    "usage": 49
+  },
+  {
+    "name": "prefix",
+    "usage": 47
+  },
+  {
+    "name": "shortcut",
+    "usage": 47
+  },
+  {
+    "name": "shell",
+    "usage": 44
+  },
+  {
+    "name": "ai",
+    "usage": 46
+  },
+  {
+    "name": "pending",
+    "usage": 42
+  },
+  {
+    "name": "weather",
+    "usage": 42
+  },
+  {
+    "name": "acp",
+    "usage": 41
+  },
+  {
+    "name": "kick",
+    "usage": 46
+  },
+  {
+    "name": "callad",
+    "usage": 39
+  },
+  {
+    "name": "adduser",
+    "usage": 39
+  },
+  {
+    "name": "balancetop",
+    "usage": 39
+  },
+  {
+    "name": "quiz",
+    "usage": 39
+  },
+  {
+    "name": "fb",
     "usage": 36
   },
   {
     "name": "profile",
-    "usage": 30
+    "usage": 35
+  },
+  {
+    "name": "ban",
+    "usage": 33
+  },
+  {
+    "name": "gclub",
+    "usage": 32
+  },
+  {
+    "name": "pair2",
+    "usage": 32
   },
   {
     "name": "antichangeinfobox",
     "usage": 30
   },
   {
+    "name": "movieinfo",
+    "usage": 30
+  },
+  {
+    "name": "busy",
+    "usage": 28
+  },
+  {
+    "name": "clear",
+    "usage": 27
+  },
+  {
+    "name": "upt",
+    "usage": 27
+  },
+  {
+    "name": "setwelcome",
+    "usage": 27
+  },
+  {
+    "name": "dhbc",
+    "usage": 26
+  },
+  {
+    "name": "ship",
+    "usage": 26
+  },
+  {
     "name": "octa",
     "usage": 25
   },
   {
-    "name": "balance",
-    "usage": 36
-  },
-  {
-    "name": "callad",
-    "usage": 33
-  },
-  {
-    "name": "warn",
-    "usage": 53
-  },
-  {
     "name": "doraemon",
+    "usage": 25
+  },
+  {
+    "name": "art",
     "usage": 24
   },
   {
-    "name": "gclub",
-    "usage": 28
+    "name": "admin",
+    "usage": 24
+  },
+  {
+    "name": "insta",
+    "usage": 24
+  },
+  {
+    "name": "rankup",
+    "usage": 25
+  },
+  {
+    "name": "pet-battle",
+    "usage": 24
+  },
+  {
+    "name": "ignoreonlyadbox",
+    "usage": 23
+  },
+  {
+    "name": "emojimix",
+    "usage": 23
+  },
+  {
+    "name": "pfp",
+    "usage": 23
   },
   {
     "name": "hangman",
+    "usage": 22
+  },
+  {
+    "name": "mangadex",
+    "usage": 22
+  },
+  {
+    "name": "dorapok",
+    "usage": 22
+  },
+  {
+    "name": "gemini",
     "usage": 21
+  },
+  {
+    "name": "propose",
+    "usage": 22
   },
   {
     "name": "crc",
     "usage": 20
   },
   {
-    "name": "weather",
-    "usage": 27
+    "name": "avatar",
+    "usage": 20
+  },
+  {
+    "name": "setcat",
+    "usage": 20
+  },
+  {
+    "name": "setcd",
+    "usage": 20
   },
   {
     "name": "bin",
     "usage": 19
   },
   {
-    "name": "busy",
-    "usage": 23
-  },
-  {
-    "name": "upt",
-    "usage": 20
-  },
-  {
-    "name": "setwelcome",
+    "name": "aniedit",
     "usage": 19
-  },
-  {
-    "name": "dhbc",
-    "usage": 20
-  },
-  {
-    "name": "ban",
-    "usage": 24
-  },
-  {
-    "name": "kick",
-    "usage": 21
-  },
-  {
-    "name": "insta",
-    "usage": 19
-  },
-  {
-    "name": "art",
-    "usage": 23
   },
   {
     "name": "cdp",
     "usage": 18
   },
   {
-    "name": "setcat",
-    "usage": 17
+    "name": "uptime",
+    "usage": 20
   },
   {
-    "name": "clear",
-    "usage": 22
+    "name": "chat",
+    "usage": 18
   },
   {
-    "name": "hack",
-    "usage": 29
-  },
-  {
-    "name": "fbdl",
-    "usage": 48
-  },
-  {
-    "name": "avatar",
-    "usage": 16
+    "name": "guessnumber",
+    "usage": 18
   },
   {
     "name": "t",
     "usage": 16
   },
   {
-    "name": "admin",
-    "usage": 17
-  },
-  {
-    "name": "ai",
+    "name": "setname",
     "usage": 19
   },
   {
-    "name": "quiz",
+    "name": "pb",
+    "usage": 16
+  },
+  {
+    "name": "faceswap",
     "usage": 15
   },
   {
-    "name": "movieinfo",
-    "usage": 25
+    "name": "event",
+    "usage": 15
   },
   {
     "name": "e",
     "usage": 14
   },
   {
-    "name": "uptime",
-    "usage": 15
-  },
-  {
     "name": "ms",
     "usage": 14
   },
   {
-    "name": "pfp",
-    "usage": 15
+    "name": "pm",
+    "usage": 14
   },
   {
-    "name": "rankup",
+    "name": "filteruser",
+    "usage": 14
+  },
+  {
+    "name": "leaveall",
+    "usage": 14
+  },
+  {
+    "name": "blackbox",
     "usage": 13
   },
   {
-    "name": "mangadex",
-    "usage": 18
+    "name": "setrole",
+    "usage": 13
+  },
+  {
+    "name": "spy",
+    "usage": 13
+  },
+  {
+    "name": "unsent",
+    "usage": 13
   },
   {
     "name": "upscale",
+    "usage": 12
+  },
+  {
+    "name": "add",
     "usage": 12
   },
   {
@@ -352,43 +472,47 @@
     "usage": 11
   },
   {
-    "name": "setcd",
-    "usage": 10
+    "name": "generate",
+    "usage": 11
+  },
+  {
+    "name": "mka",
+    "usage": 11
+  },
+  {
+    "name": "request",
+    "usage": 11
   },
   {
     "name": "translate",
-    "usage": 10
-  },
-  {
-    "name": "pm",
-    "usage": 12
-  },
-  {
-    "name": "guessnumber",
-    "usage": 12
-  },
-  {
-    "name": "blackbox",
     "usage": 11
   },
   {
-    "name": "blackjack",
-    "usage": 10
-  },
-  {
-    "name": "setrole",
+    "name": "dcmd",
     "usage": 11
   },
   {
-    "name": "adduser",
-    "usage": 16
+    "name": "lyrics",
+    "usage": 11
   },
   {
-    "name": "generate",
+    "name": "kiss",
+    "usage": 11
+  },
+  {
+    "name": "badwords",
     "usage": 10
   },
   {
-    "name": "spy",
+    "name": "pp",
+    "usage": 10
+  },
+  {
+    "name": "video",
+    "usage": 10
+  },
+  {
+    "name": "fuck",
     "usage": 10
   },
   {
@@ -396,31 +520,7 @@
     "usage": 9
   },
   {
-    "name": "ping",
-    "usage": 8
-  },
-  {
     "name": "onlyadbox",
-    "usage": 9
-  },
-  {
-    "name": "gemini",
-    "usage": 21
-  },
-  {
-    "name": "pp",
-    "usage": 9
-  },
-  {
-    "name": "chat",
-    "usage": 9
-  },
-  {
-    "name": "setname",
-    "usage": 13
-  },
-  {
-    "name": "dorapok",
     "usage": 9
   },
   {
@@ -428,19 +528,63 @@
     "usage": 9
   },
   {
-    "name": "dcmd",
-    "usage": 9
-  },
-  {
     "name": "gc",
     "usage": 9
   },
   {
-    "name": "faceswap",
+    "name": "cat",
+    "usage": 9
+  },
+  {
+    "name": "support",
+    "usage": 9
+  },
+  {
+    "name": "antiout",
+    "usage": 9
+  },
+  {
+    "name": "😺",
+    "usage": 9
+  },
+  {
+    "name": "l",
+    "usage": 9
+  },
+  {
+    "name": "tiktok",
+    "usage": 9
+  },
+  {
+    "name": "*",
+    "usage": 9
+  },
+  {
+    "name": "ping",
     "usage": 8
   },
   {
-    "name": "kiss",
+    "name": "cover",
+    "usage": 8
+  },
+  {
+    "name": "alldl",
+    "usage": 8
+  },
+  {
+    "name": "rl",
+    "usage": 8
+  },
+  {
+    "name": "set",
+    "usage": 8
+  },
+  {
+    "name": "bot",
+    "usage": 8
+  },
+  {
+    "name": "user",
     "usage": 8
   },
   {
@@ -448,59 +592,51 @@
     "usage": 7
   },
   {
-    "name": "filteruser",
-    "usage": 12
-  },
-  {
-    "name": "rl",
-    "usage": 7
-  },
-  {
-    "name": "lyrics",
-    "usage": 10
-  },
-  {
-    "name": "set",
-    "usage": 7
-  },
-  {
     "name": "buttslap",
     "usage": 7
-  },
-  {
-    "name": "cover",
-    "usage": 8
   },
   {
     "name": "isha",
     "usage": 7
   },
   {
-    "name": "mka",
-    "usage": 8
-  },
-  {
-    "name": "request",
-    "usage": 8
-  },
-  {
-    "name": "cat",
+    "name": "llama",
     "usage": 7
-  },
-  {
-    "name": "l",
-    "usage": 7
-  },
-  {
-    "name": "badwords",
-    "usage": 10
   },
   {
     "name": "aikoh",
-    "usage": 6
+    "usage": 7
   },
   {
-    "name": "llama",
+    "name": "val",
+    "usage": 7
+  },
+  {
+    "name": "anigen",
+    "usage": 7
+  },
+  {
+    "name": "helo",
+    "usage": 7
+  },
+  {
+    "name": "info",
+    "usage": 7
+  },
+  {
+    "name": "wordgame",
+    "usage": 7
+  },
+  {
+    "name": "***",
+    "usage": 7
+  },
+  {
+    "name": "suffle-cup",
+    "usage": 8
+  },
+  {
+    "name": "****",
     "usage": 7
   },
   {
@@ -509,6 +645,50 @@
   },
   {
     "name": "refresh",
+    "usage": 7
+  },
+  {
+    "name": "game",
+    "usage": 6
+  },
+  {
+    "name": "tor",
+    "usage": 7
+  },
+  {
+    "name": "bql",
+    "usage": 6
+  },
+  {
+    "name": "hi",
+    "usage": 7
+  },
+  {
+    "name": "spam",
+    "usage": 6
+  },
+  {
+    "name": "interest",
+    "usage": 6
+  },
+  {
+    "name": "prefix.",
+    "usage": 6
+  },
+  {
+    "name": "download",
+    "usage": 6
+  },
+  {
+    "name": "is",
+    "usage": 6
+  },
+  {
+    "name": "loan",
+    "usage": 6
+  },
+  {
+    "name": "deposit",
     "usage": 6
   },
   {
@@ -518,10 +698,6 @@
   {
     "name": "appstore",
     "usage": 5
-  },
-  {
-    "name": "leaveall",
-    "usage": 8
   },
   {
     "name": "liner",
@@ -536,19 +712,59 @@
     "usage": 5
   },
   {
-    "name": "video",
-    "usage": 9
-  },
-  {
     "name": "image",
     "usage": 5
   },
   {
-    "name": "support",
-    "usage": 8
+    "name": "gfx",
+    "usage": 5
   },
   {
-    "name": "gfx",
+    "name": "top",
+    "usage": 5
+  },
+  {
+    "name": "tik",
+    "usage": 5
+  },
+  {
+    "name": "videofb",
+    "usage": 5
+  },
+  {
+    "name": "setleave",
+    "usage": 5
+  },
+  {
+    "name": "bap",
+    "usage": 5
+  },
+  {
+    "name": "ailo",
+    "usage": 5
+  },
+  {
+    "name": "fahima",
+    "usage": 5
+  },
+  {
+    "name": "trash",
+    "usage": 5
+  },
+  {
+    "name": "ttt",
+    "usage": 5
+  },
+  {
+    "name": "toilet",
+    "usage": 5
+  },
+  {
+    "name": "pair3",
+    "usage": 5
+  },
+  {
+    "name": "sim",
     "usage": 5
   },
   {
@@ -556,67 +772,71 @@
     "usage": 4
   },
   {
-    "name": "top",
-    "usage": 4
-  },
-  {
-    "name": "event",
-    "usage": 4
-  },
-  {
-    "name": "game",
-    "usage": 6
-  },
-  {
-    "name": "tor",
-    "usage": 4
-  },
-  {
-    "name": "tik",
-    "usage": 5
-  },
-  {
-    "name": "antiout",
-    "usage": 5
-  },
-  {
-    "name": "add",
-    "usage": 6
-  },
-  {
-    "name": "unsent",
-    "usage": 8
-  },
-  {
-    "name": "fahima",
-    "usage": 4
-  },
-  {
-    "name": "bot",
-    "usage": 4
-  },
-  {
-    "name": "😺",
-    "usage": 6
-  },
-  {
-    "name": "trash",
-    "usage": 4
-  },
-  {
     "name": "bard",
     "usage": 4
   },
   {
-    "name": "helo",
+    "name": "poke",
     "usage": 4
   },
   {
-    "name": "aniedit",
-    "usage": 10
+    "name": "called",
+    "usage": 4
   },
   {
-    "name": "poke",
+    "name": "setrankup",
+    "usage": 4
+  },
+  {
+    "name": "postfb",
+    "usage": 4
+  },
+  {
+    "name": "bl",
+    "usage": 4
+  },
+  {
+    "name": "sex",
+    "usage": 4
+  },
+  {
+    "name": "flirt",
+    "usage": 4
+  },
+  {
+    "name": "unsand",
+    "usage": 4
+  },
+  {
+    "name": "marry",
+    "usage": 4
+  },
+  {
+    "name": "got",
+    "usage": 4
+  },
+  {
+    "name": "draw",
+    "usage": 4
+  },
+  {
+    "name": "mew",
+    "usage": 4
+  },
+  {
+    "name": "badword",
+    "usage": 4
+  },
+  {
+    "name": "adminonly",
+    "usage": 4
+  },
+  {
+    "name": "tell",
+    "usage": 4
+  },
+  {
+    "name": "setlang",
     "usage": 4
   },
   {
@@ -628,28 +848,8 @@
     "usage": 3
   },
   {
-    "name": "tiktok",
-    "usage": 5
-  },
-  {
-    "name": "called",
-    "usage": 4
-  },
-  {
-    "name": "setrankup",
-    "usage": 3
-  },
-  {
-    "name": "pair2",
-    "usage": 5
-  },
-  {
     "name": "ranl",
     "usage": 3
-  },
-  {
-    "name": "videofb",
-    "usage": 5
   },
   {
     "name": "guessnum",
@@ -660,27 +860,7 @@
     "usage": 3
   },
   {
-    "name": "shuffle-cup",
-    "usage": 3
-  },
-  {
-    "name": "hi",
-    "usage": 4
-  },
-  {
-    "name": "mathgame",
-    "usage": 3
-  },
-  {
     "name": "who",
-    "usage": 3
-  },
-  {
-    "name": "alldl",
-    "usage": 6
-  },
-  {
-    "name": "info",
     "usage": 3
   },
   {
@@ -696,11 +876,123 @@
     "usage": 3
   },
   {
-    "name": "marry",
+    "name": "character",
     "usage": 3
   },
   {
-    "name": "character",
+    "name": "youtube",
+    "usage": 3
+  },
+  {
+    "name": "my",
+    "usage": 3
+  },
+  {
+    "name": "sorthelp",
+    "usage": 3
+  },
+  {
+    "name": "court",
+    "usage": 3
+  },
+  {
+    "name": "hentai",
+    "usage": 3
+  },
+  {
+    "name": "onlyadmin",
+    "usage": 3
+  },
+  {
+    "name": "what",
+    "usage": 3
+  },
+  {
+    "name": "bby",
+    "usage": 3
+  },
+  {
+    "name": "adboxonly",
+    "usage": 3
+  },
+  {
+    "name": "getfbstate",
+    "usage": 3
+  },
+  {
+    "name": "voice",
+    "usage": 3
+  },
+  {
+    "name": "paor",
+    "usage": 3
+  },
+  {
+    "name": "logsbot",
+    "usage": 4
+  },
+  {
+    "name": "emoji",
+    "usage": 3
+  },
+  {
+    "name": "8k",
+    "usage": 3
+  },
+  {
+    "name": "id",
+    "usage": 3
+  },
+  {
+    "name": "sad",
+    "usage": 3
+  },
+  {
+    "name": "ch",
+    "usage": 3
+  },
+  {
+    "name": "remove",
+    "usage": 3
+  },
+  {
+    "name": "akio",
+    "usage": 3
+  },
+  {
+    "name": "**",
+    "usage": 3
+  },
+  {
+    "name": "i'm",
+    "usage": 3
+  },
+  {
+    "name": "*****",
+    "usage": 3
+  },
+  {
+    "name": "waifu",
+    "usage": 3
+  },
+  {
+    "name": "pn",
+    "usage": 3
+  },
+  {
+    "name": "pd",
+    "usage": 3
+  },
+  {
+    "name": "withdraw",
+    "usage": 3
+  },
+  {
+    "name": "why",
+    "usage": 3
+  },
+  {
+    "name": "sadness",
     "usage": 3
   },
   {
@@ -724,10 +1016,6 @@
     "usage": 2
   },
   {
-    "name": "postfb",
-    "usage": 4
-  },
-  {
     "name": "via",
     "usage": 2
   },
@@ -748,10 +1036,6 @@
     "usage": 2
   },
   {
-    "name": "bql",
-    "usage": 6
-  },
-  {
     "name": "prompt",
     "usage": 2
   },
@@ -760,16 +1044,8 @@
     "usage": 2
   },
   {
-    "name": "emojimix",
-    "usage": 3
-  },
-  {
     "name": "setwelcome,",
     "usage": 2
-  },
-  {
-    "name": "pair3",
-    "usage": 3
   },
   {
     "name": "sc",
@@ -778,14 +1054,6 @@
   {
     "name": "😸",
     "usage": 2
-  },
-  {
-    "name": "8k",
-    "usage": 2
-  },
-  {
-    "name": "*",
-    "usage": 4
   },
   {
     "name": "hrlp",
@@ -808,24 +1076,12 @@
     "usage": 2
   },
   {
-    "name": "prefix.",
-    "usage": 2
-  },
-  {
-    "name": "tell",
-    "usage": 2
-  },
-  {
     "name": "guessnumbee",
     "usage": 2
   },
   {
     "name": "ballancetop",
     "usage": 2
-  },
-  {
-    "name": "youtube",
-    "usage": 3
   },
   {
     "name": "aijko",
@@ -837,14 +1093,6 @@
   },
   {
     "name": "supchat",
-    "usage": 2
-  },
-  {
-    "name": "user",
-    "usage": 2
-  },
-  {
-    "name": "my",
     "usage": 2
   },
   {
@@ -868,39 +1116,11 @@
     "usage": 2
   },
   {
-    "name": "ignoreonlyadbox",
-    "usage": 14
-  },
-  {
-    "name": "got",
-    "usage": 3
-  },
-  {
-    "name": "sorthelp",
-    "usage": 3
-  },
-  {
     "name": "gay",
     "usage": 2
   },
   {
-    "name": "id",
-    "usage": 2
-  },
-  {
-    "name": "spam",
-    "usage": 2
-  },
-  {
-    "name": "ttt",
-    "usage": 4
-  },
-  {
     "name": "ums",
-    "usage": 2
-  },
-  {
-    "name": "sad",
     "usage": 2
   },
   {
@@ -908,20 +1128,8 @@
     "usage": 2
   },
   {
-    "name": "bl",
-    "usage": 4
-  },
-  {
     "name": "rouletten",
     "usage": 2
-  },
-  {
-    "name": "ch",
-    "usage": 2
-  },
-  {
-    "name": "download",
-    "usage": 3
   },
   {
     "name": "box",
@@ -944,24 +1152,8 @@
     "usage": 2
   },
   {
-    "name": "draw",
-    "usage": 2
-  },
-  {
-    "name": "court",
-    "usage": 3
-  },
-  {
-    "name": "fuck",
-    "usage": 4
-  },
-  {
     "name": "squeeze",
     "usage": 2
-  },
-  {
-    "name": "hentai",
-    "usage": 3
   },
   {
     "name": "hentaivid",
@@ -972,15 +1164,339 @@
     "usage": 2
   },
   {
-    "name": "propose",
-    "usage": 2
-  },
-  {
     "name": "spotify",
     "usage": 2
   },
   {
     "name": "sicbo",
+    "usage": 2
+  },
+  {
+    "name": "addowner",
+    "usage": 2
+  },
+  {
+    "name": "cs",
+    "usage": 2
+  },
+  {
+    "name": "pic",
+    "usage": 2
+  },
+  {
+    "name": "good",
+    "usage": 2
+  },
+  {
+    "name": "off",
+    "usage": 2
+  },
+  {
+    "name": "countall",
+    "usage": 2
+  },
+  {
+    "name": "show",
+    "usage": 2
+  },
+  {
+    "name": "u0",
+    "usage": 2
+  },
+  {
+    "name": "ask",
+    "usage": 2
+  },
+  {
+    "name": "nigga",
+    "usage": 2
+  },
+  {
+    "name": "topexp",
+    "usage": 2
+  },
+  {
+    "name": "sucks",
+    "usage": 2
+  },
+  {
+    "name": "koi",
+    "usage": 2
+  },
+  {
+    "name": "naruto",
+    "usage": 2
+  },
+  {
+    "name": "chika",
+    "usage": 2
+  },
+  {
+    "name": "ba",
+    "usage": 2
+  },
+  {
+    "name": "hlw",
+    "usage": 2
+  },
+  {
+    "name": "ip",
+    "usage": 2
+  },
+  {
+    "name": "setbal",
+    "usage": 2
+  },
+  {
+    "name": "mention",
+    "usage": 2
+  },
+  {
+    "name": "pairdp",
+    "usage": 2
+  },
+  {
+    "name": "oi",
+    "usage": 2
+  },
+  {
+    "name": "aiki",
+    "usage": 2
+  },
+  {
+    "name": "mike",
+    "usage": 2
+  },
+  {
+    "name": "rank2",
+    "usage": 2
+  },
+  {
+    "name": "edit",
+    "usage": 2
+  },
+  {
+    "name": "anime",
+    "usage": 2
+  },
+  {
+    "name": "you",
+    "usage": 2
+  },
+  {
+    "name": "pqir",
+    "usage": 2
+  },
+  {
+    "name": "shawwa",
+    "usage": 2
+  },
+  {
+    "name": "oh",
+    "usage": 2
+  },
+  {
+    "name": "cdi",
+    "usage": 2
+  },
+  {
+    "name": "hlep",
+    "usage": 2
+  },
+  {
+    "name": "permission",
+    "usage": 2
+  },
+  {
+    "name": "hii",
+    "usage": 2
+  },
+  {
+    "name": "baler",
+    "usage": 2
+  },
+  {
+    "name": "pfp*",
+    "usage": 2
+  },
+  {
+    "name": "pehli",
+    "usage": 2
+  },
+  {
+    "name": "avatar2",
+    "usage": 2
+  },
+  {
+    "name": "dance",
+    "usage": 2
+  },
+  {
+    "name": "dai",
+    "usage": 2
+  },
+  {
+    "name": "tud",
+    "usage": 2
+  },
+  {
+    "name": "ee",
+    "usage": 2
+  },
+  {
+    "name": "astagfirullah",
+    "usage": 2
+  },
+  {
+    "name": "miku",
+    "usage": 2
+  },
+  {
+    "name": "heda",
+    "usage": 2
+  },
+  {
+    "name": "bot?",
+    "usage": 2
+  },
+  {
+    "name": "accept",
+    "usage": 2
+  },
+  {
+    "name": "chiku",
+    "usage": 2
+  },
+  {
+    "name": "gift",
+    "usage": 2
+  },
+  {
+    "name": "help2",
+    "usage": 2
+  },
+  {
+    "name": "milf",
+    "usage": 2
+  },
+  {
+    "name": "*roulette",
+    "usage": 2
+  },
+  {
+    "name": "sorry",
+    "usage": 2
+  },
+  {
+    "name": "fun",
+    "usage": 2
+  },
+  {
+    "name": "magi",
+    "usage": 2
+  },
+  {
+    "name": "media",
+    "usage": 2
+  },
+  {
+    "name": "meme",
+    "usage": 2
+  },
+  {
+    "name": "teach",
+    "usage": 2
+  },
+  {
+    "name": "tan",
+    "usage": 2
+  },
+  {
+    "name": "bamk",
+    "usage": 2
+  },
+  {
+    "name": "imgur",
+    "usage": 2
+  },
+  {
+    "name": "i",
+    "usage": 2
+  },
+  {
+    "name": "pair2,",
+    "usage": 2
+  },
+  {
+    "name": "shuffle",
+    "usage": 2
+  },
+  {
+    "name": "u",
+    "usage": 2
+  },
+  {
+    "name": "couple",
+    "usage": 2
+  },
+  {
+    "name": "no",
+    "usage": 2
+  },
+  {
+    "name": "hahahaha",
+    "usage": 2
+  },
+  {
+    "name": "ft",
+    "usage": 2
+  },
+  {
+    "name": "buy",
+    "usage": 2
+  },
+  {
+    "name": "free",
+    "usage": 2
+  },
+  {
+    "name": "level",
+    "usage": 2
+  },
+  {
+    "name": "muawaa",
+    "usage": 2
+  },
+  {
+    "name": "bann",
+    "usage": 2
+  },
+  {
+    "name": "dorapok-come",
+    "usage": 2
+  },
+  {
+    "name": "diba",
+    "usage": 2
+  },
+  {
+    "name": "cute",
+    "usage": 2
+  },
+  {
+    "name": "hm",
+    "usage": 2
+  },
+  {
+    "name": "change",
+    "usage": 2
+  },
+  {
+    "name": "fm",
+    "usage": 2
+  },
+  {
+    "name": "******",
     "usage": 2
   },
   {
@@ -1012,28 +1528,12 @@
     "usage": 1
   },
   {
-    "name": "addowner",
-    "usage": 1
-  },
-  {
     "name": "gpy",
     "usage": 1
   },
   {
-    "name": "setleave",
-    "usage": 3
-  },
-  {
-    "name": "mew",
-    "usage": 2
-  },
-  {
     "name": "out",
-    "usage": 1
-  },
-  {
-    "name": "cs",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "hayete",
@@ -1116,10 +1616,6 @@
     "usage": 1
   },
   {
-    "name": "pic",
-    "usage": 1
-  },
-  {
     "name": "suppgc",
     "usage": 1
   },
@@ -1129,10 +1625,6 @@
   },
   {
     "name": "bljkn20",
-    "usage": 1
-  },
-  {
-    "name": "good",
     "usage": 1
   },
   {
@@ -1165,10 +1657,6 @@
   },
   {
     "name": "s😂🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣",
-    "usage": 1
-  },
-  {
-    "name": "dance",
     "usage": 1
   },
   {
@@ -1240,10 +1728,6 @@
     "usage": 1
   },
   {
-    "name": "off",
-    "usage": 1
-  },
-  {
     "name": "mute",
     "usage": 1
   },
@@ -1284,18 +1768,6 @@
     "usage": 1
   },
   {
-    "name": "logsbot",
-    "usage": 1
-  },
-  {
-    "name": "toilet",
-    "usage": 3
-  },
-  {
-    "name": "countall",
-    "usage": 2
-  },
-  {
     "name": "sufflecup",
     "usage": 1
   },
@@ -1316,10 +1788,6 @@
     "usage": 1
   },
   {
-    "name": "show",
-    "usage": 2
-  },
-  {
     "name": "piar",
     "usage": 1
   },
@@ -1332,14 +1800,6 @@
     "usage": 1
   },
   {
-    "name": "u0",
-    "usage": 2
-  },
-  {
-    "name": "dai",
-    "usage": 1
-  },
-  {
     "name": "helpall",
     "usage": 1
   },
@@ -1349,10 +1809,6 @@
   },
   {
     "name": "gelp",
-    "usage": 1
-  },
-  {
-    "name": "ask",
     "usage": 1
   },
   {
@@ -1380,14 +1836,6 @@
     "usage": 1
   },
   {
-    "name": "tud",
-    "usage": 1
-  },
-  {
-    "name": "nigga",
-    "usage": 2
-  },
-  {
     "name": "chatgpt",
     "usage": 1
   },
@@ -1400,16 +1848,8 @@
     "usage": 1
   },
   {
-    "name": "remove",
-    "usage": 1
-  },
-  {
     "name": "removebg",
     "usage": 1
-  },
-  {
-    "name": "topexp",
-    "usage": 2
   },
   {
     "name": "cv",
@@ -1430,10 +1870,6 @@
   {
     "name": "doremo",
     "usage": 1
-  },
-  {
-    "name": "onlyadmin",
-    "usage": 2
   },
   {
     "name": "bold",
@@ -1496,19 +1932,11 @@
     "usage": 1
   },
   {
-    "name": "ee",
-    "usage": 1
-  },
-  {
     "name": "hel",
     "usage": 1
   },
   {
     "name": "aiku",
-    "usage": 1
-  },
-  {
-    "name": "astagfirullah",
     "usage": 1
   },
   {
@@ -1548,10 +1976,6 @@
     "usage": 1
   },
   {
-    "name": "miku",
-    "usage": 1
-  },
-  {
     "name": "love",
     "usage": 1
   },
@@ -1560,15 +1984,7 @@
     "usage": 1
   },
   {
-    "name": "badword",
-    "usage": 2
-  },
-  {
     "name": "nanir",
-    "usage": 1
-  },
-  {
-    "name": "heda",
     "usage": 1
   },
   {
@@ -1596,19 +2012,11 @@
     "usage": 1
   },
   {
-    "name": "sucks",
-    "usage": 1
-  },
-  {
     "name": "main",
     "usage": 1
   },
   {
     "name": "bon",
-    "usage": 1
-  },
-  {
-    "name": "koi",
     "usage": 1
   },
   {
@@ -1624,10 +2032,6 @@
     "usage": 1
   },
   {
-    "name": "naruto",
-    "usage": 1
-  },
-  {
     "name": "slot298",
     "usage": 1
   },
@@ -1640,10 +2044,6 @@
     "usage": 1
   },
   {
-    "name": "wordgame",
-    "usage": 2
-  },
-  {
     "name": "guessthenber",
     "usage": 1
   },
@@ -1652,24 +2052,12 @@
     "usage": 1
   },
   {
-    "name": "is",
-    "usage": 3
-  },
-  {
     "name": "ytb-slice",
     "usage": 1
   },
   {
     "name": "profit",
     "usage": 1
-  },
-  {
-    "name": "adminonly",
-    "usage": 2
-  },
-  {
-    "name": "akio",
-    "usage": 2
   },
   {
     "name": "kool",
@@ -1688,27 +2076,7 @@
     "usage": 1
   },
   {
-    "name": "what",
-    "usage": 1
-  },
-  {
-    "name": "**",
-    "usage": 1
-  },
-  {
-    "name": "bot?",
-    "usage": 1
-  },
-  {
     "name": "damn",
-    "usage": 1
-  },
-  {
-    "name": "chika",
-    "usage": 2
-  },
-  {
-    "name": "accept",
     "usage": 1
   },
   {
@@ -1725,10 +2093,6 @@
   },
   {
     "name": "luck",
-    "usage": 1
-  },
-  {
-    "name": "sim",
     "usage": 1
   },
   {
@@ -1760,14 +2124,6 @@
     "usage": 1
   },
   {
-    "name": "val",
-    "usage": 2
-  },
-  {
-    "name": "bby",
-    "usage": 3
-  },
-  {
     "name": "hublist",
     "usage": 1
   },
@@ -1796,16 +2152,8 @@
     "usage": 1
   },
   {
-    "name": "ba",
-    "usage": 2
-  },
-  {
     "name": "prefex",
     "usage": 1
-  },
-  {
-    "name": "hlw",
-    "usage": 2
   },
   {
     "name": "pey",
@@ -1836,10 +2184,6 @@
     "usage": 1
   },
   {
-    "name": "chiku",
-    "usage": 1
-  },
-  {
     "name": "aiko....",
     "usage": 1
   },
@@ -1849,10 +2193,6 @@
   },
   {
     "name": "rndm",
-    "usage": 1
-  },
-  {
-    "name": "ip",
     "usage": 1
   },
   {
@@ -1873,14 +2213,6 @@
   },
   {
     "name": "korean",
-    "usage": 1
-  },
-  {
-    "name": "bap",
-    "usage": 5
-  },
-  {
-    "name": "gift",
     "usage": 1
   },
   {
@@ -1948,18 +2280,6 @@
     "usage": 1
   },
   {
-    "name": "deposit",
-    "usage": 2
-  },
-  {
-    "name": "setbal",
-    "usage": 1
-  },
-  {
-    "name": "mention",
-    "usage": 2
-  },
-  {
     "name": "anidata",
     "usage": 1
   },
@@ -2020,10 +2340,6 @@
     "usage": 1
   },
   {
-    "name": "adboxonly",
-    "usage": 3
-  },
-  {
     "name": "money",
     "usage": 1
   },
@@ -2033,10 +2349,6 @@
   },
   {
     "name": "pokeinfo",
-    "usage": 1
-  },
-  {
-    "name": "flag",
     "usage": 1
   },
   {
@@ -2060,15 +2372,7 @@
     "usage": 1
   },
   {
-    "name": "pairdp",
-    "usage": 1
-  },
-  {
     "name": "paie",
-    "usage": 1
-  },
-  {
-    "name": "oi",
     "usage": 1
   },
   {
@@ -2081,10 +2385,6 @@
   },
   {
     "name": "noe",
-    "usage": 1
-  },
-  {
-    "name": "help2",
     "usage": 1
   },
   {
@@ -2116,15 +2416,7 @@
     "usage": 1
   },
   {
-    "name": "aiki",
-    "usage": 2
-  },
-  {
     "name": "do",
-    "usage": 1
-  },
-  {
-    "name": "i'm",
     "usage": 1
   },
   {
@@ -2156,23 +2448,11 @@
     "usage": 1
   },
   {
-    "name": "sex",
-    "usage": 3
-  },
-  {
     "name": "delete",
     "usage": 1
   },
   {
     "name": "un",
-    "usage": 1
-  },
-  {
-    "name": "ailo",
-    "usage": 1
-  },
-  {
-    "name": "*****",
     "usage": 1
   },
   {
@@ -2185,10 +2465,6 @@
   },
   {
     "name": "aniblur",
-    "usage": 1
-  },
-  {
-    "name": "waifu",
     "usage": 1
   },
   {
@@ -2265,10 +2541,6 @@
   },
   {
     "name": "nigganeinei",
-    "usage": 1
-  },
-  {
-    "name": "milf",
     "usage": 1
   },
   {
@@ -2365,7 +2637,7 @@
   },
   {
     "name": "ki",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "srch",
@@ -2386,18 +2658,6 @@
   {
     "name": "halal",
     "usage": 1
-  },
-  {
-    "name": "emoji",
-    "usage": 1
-  },
-  {
-    "name": "*roulette",
-    "usage": 1
-  },
-  {
-    "name": "loan",
-    "usage": 3
   },
   {
     "name": "al",
@@ -2422,10 +2682,6 @@
   {
     "name": "bang",
     "usage": 1
-  },
-  {
-    "name": "mike",
-    "usage": 2
   },
   {
     "name": "mg",
@@ -2456,10 +2712,6 @@
     "usage": 1
   },
   {
-    "name": "sorry",
-    "usage": 1
-  },
-  {
     "name": "wanna",
     "usage": 1
   },
@@ -2469,10 +2721,6 @@
   },
   {
     "name": "aaaaaaaa",
-    "usage": 1
-  },
-  {
-    "name": "rank2",
     "usage": 1
   },
   {
@@ -2492,16 +2740,8 @@
     "usage": 1
   },
   {
-    "name": "fun",
-    "usage": 1
-  },
-  {
     "name": "kickall",
     "usage": 1
-  },
-  {
-    "name": "edit",
-    "usage": 2
   },
   {
     "name": "join",
@@ -2510,18 +2750,6 @@
   {
     "name": "j",
     "usage": 1
-  },
-  {
-    "name": "anime",
-    "usage": 1
-  },
-  {
-    "name": "getfbstate",
-    "usage": 1
-  },
-  {
-    "name": "flirt",
-    "usage": 4
   },
   {
     "name": "amv",
@@ -2533,14 +2761,6 @@
   },
   {
     "name": "bokachoda",
-    "usage": 1
-  },
-  {
-    "name": "you",
-    "usage": 1
-  },
-  {
-    "name": "magi",
     "usage": 1
   },
   {
@@ -2560,19 +2780,11 @@
     "usage": 1
   },
   {
-    "name": "interest",
-    "usage": 2
-  },
-  {
     "name": "rizz2",
     "usage": 1
   },
   {
     "name": "rizz",
-    "usage": 1
-  },
-  {
-    "name": "ship",
     "usage": 1
   },
   {
@@ -2584,19 +2796,7 @@
     "usage": 1
   },
   {
-    "name": "media",
-    "usage": 1
-  },
-  {
-    "name": "pn",
-    "usage": 1
-  },
-  {
     "name": "somg",
-    "usage": 1
-  },
-  {
-    "name": "unsand",
     "usage": 1
   },
   {
@@ -2609,7 +2809,7 @@
   },
   {
     "name": "sendnoti",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "und",
@@ -2677,7 +2877,7 @@
   },
   {
     "name": "meow",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "meaw",
@@ -2716,14 +2916,6 @@
     "usage": 1
   },
   {
-    "name": "pqir",
-    "usage": 2
-  },
-  {
-    "name": "meme",
-    "usage": 1
-  },
-  {
     "name": "work",
     "usage": 1
   },
@@ -2744,15 +2936,7 @@
     "usage": 1
   },
   {
-    "name": "voice",
-    "usage": 1
-  },
-  {
     "name": "ilu",
-    "usage": 1
-  },
-  {
-    "name": "teach",
     "usage": 1
   },
   {
@@ -2825,6 +3009,938 @@
   },
   {
     "name": "upscal",
+    "usage": 1
+  },
+  {
+    "name": "best",
+    "usage": 1
+  },
+  {
+    "name": "war",
+    "usage": 1
+  },
+  {
+    "name": "chrome",
+    "usage": 1
+  },
+  {
+    "name": "shuna",
+    "usage": 1
+  },
+  {
+    "name": "votka",
+    "usage": 1
+  },
+  {
+    "name": "dandolines",
+    "usage": 1
+  },
+  {
+    "name": "iid",
+    "usage": 1
+  },
+  {
+    "name": "despacito",
+    "usage": 1
+  },
+  {
+    "name": "*bal",
+    "usage": 1
+  },
+  {
+    "name": "banjk",
+    "usage": 1
+  },
+  {
+    "name": "supposed",
+    "usage": 1
+  },
+  {
+    "name": "𝕣𝕦𝕝𝕖𝕤",
+    "usage": 1
+  },
+  {
+    "name": "refreshing",
+    "usage": 1
+  },
+  {
+    "name": "toi",
+    "usage": 1
+  },
+  {
+    "name": "png",
+    "usage": 1
+  },
+  {
+    "name": "nickname",
+    "usage": 1
+  },
+  {
+    "name": "sing.",
+    "usage": 1
+  },
+  {
+    "name": "aniout",
+    "usage": 1
+  },
+  {
+    "name": "phone",
+    "usage": 1
+  },
+  {
+    "name": "world",
+    "usage": 1
+  },
+  {
+    "name": "name",
+    "usage": 1
+  },
+  {
+    "name": "songs",
+    "usage": 1
+  },
+  {
+    "name": "frog",
+    "usage": 1
+  },
+  {
+    "name": "flu",
+    "usage": 1
+  },
+  {
+    "name": "puck",
+    "usage": 1
+  },
+  {
+    "name": "ok",
+    "usage": 1
+  },
+  {
+    "name": "gojo",
+    "usage": 1
+  },
+  {
+    "name": "ummah",
+    "usage": 1
+  },
+  {
+    "name": "climate",
+    "usage": 1
+  },
+  {
+    "name": "quite",
+    "usage": 1
+  },
+  {
+    "name": "flexeble",
+    "usage": 1
+  },
+  {
+    "name": "ytvid",
+    "usage": 1
+  },
+  {
+    "name": "when",
+    "usage": 1
+  },
+  {
+    "name": "বান",
+    "usage": 1
+  },
+  {
+    "name": "skaib",
+    "usage": 1
+  },
+  {
+    "name": "bjk",
+    "usage": 1
+  },
+  {
+    "name": "soft",
+    "usage": 1
+  },
+  {
+    "name": "87",
+    "usage": 1
+  },
+  {
+    "name": "π√",
+    "usage": 1
+  },
+  {
+    "name": "fbdl\nhttps://www.facebook.com/61558734532336/posts/pfbid06qna6rxz73xqdptugf7plt9tkk9c5ueqrfkj8ga6cs9jfpfhrzqakjs36cvaharsl/?app=fbl",
+    "usage": 1
+  },
+  {
+    "name": "farha",
+    "usage": 1
+  },
+  {
+    "name": "tore",
+    "usage": 1
+  },
+  {
+    "name": "25",
+    "usage": 1
+  },
+  {
+    "name": "umsend",
+    "usage": 1
+  },
+  {
+    "name": "add,members",
+    "usage": 1
+  },
+  {
+    "name": "pinterest,naruto",
+    "usage": 1
+  },
+  {
+    "name": "doreamon",
+    "usage": 1
+  },
+  {
+    "name": "spamshifu",
+    "usage": 1
+  },
+  {
+    "name": "hourly",
+    "usage": 1
+  },
+  {
+    "name": "prachurjo",
+    "usage": 1
+  },
+  {
+    "name": "tot",
+    "usage": 1
+  },
+  {
+    "name": "aibo",
+    "usage": 1
+  },
+  {
+    "name": "rule's",
+    "usage": 1
+  },
+  {
+    "name": "fb+space+link",
+    "usage": 1
+  },
+  {
+    "name": "🙂",
+    "usage": 1
+  },
+  {
+    "name": "usand",
+    "usage": 1
+  },
+  {
+    "name": "ranktop",
+    "usage": 1
+  },
+  {
+    "name": "yid",
+    "usage": 1
+  },
+  {
+    "name": "una",
+    "usage": 1
+  },
+  {
+    "name": "falg",
+    "usage": 1
+  },
+  {
+    "name": "music",
+    "usage": 1
+  },
+  {
+    "name": "uid\nhttps://www.facebook.com/profile.php?id=61552652528960&mibextid=zbwkwl",
+    "usage": 1
+  },
+  {
+    "name": "petgc",
+    "usage": 1
+  },
+  {
+    "name": ".....",
+    "usage": 1
+  },
+  {
+    "name": "kaj",
+    "usage": 1
+  },
+  {
+    "name": "pfgp",
+    "usage": 1
+  },
+  {
+    "name": "bentai",
+    "usage": 1
+  },
+  {
+    "name": "emtiaz",
+    "usage": 1
+  },
+  {
+    "name": "bad",
+    "usage": 1
+  },
+  {
+    "name": "adonly",
+    "usage": 1
+  },
+  {
+    "name": "ra",
+    "usage": 1
+  },
+  {
+    "name": "hack@adhira",
+    "usage": 1
+  },
+  {
+    "name": "bobby",
+    "usage": 1
+  },
+  {
+    "name": "lashley",
+    "usage": 1
+  },
+  {
+    "name": "bal🙂",
+    "usage": 1
+  },
+  {
+    "name": "aibi",
+    "usage": 1
+  },
+  {
+    "name": "amio",
+    "usage": 1
+  },
+  {
+    "name": "4l",
+    "usage": 1
+  },
+  {
+    "name": "ধাঁধা",
+    "usage": 1
+  },
+  {
+    "name": "banl",
+    "usage": 1
+  },
+  {
+    "name": "whitejack",
+    "usage": 1
+  },
+  {
+    "name": "apprrove",
+    "usage": 1
+  },
+  {
+    "name": "....😒",
+    "usage": 1
+  },
+  {
+    "name": "...🐸",
+    "usage": 1
+  },
+  {
+    "name": "...........😒",
+    "usage": 1
+  },
+  {
+    "name": ",.......,.......,.....,",
+    "usage": 1
+  },
+  {
+    "name": "..........🐸",
+    "usage": 1
+  },
+  {
+    "name": "cover4",
+    "usage": 1
+  },
+  {
+    "name": "aikoo",
+    "usage": 1
+  },
+  {
+    "name": "kemon",
+    "usage": 1
+  },
+  {
+    "name": "print",
+    "usage": 1
+  },
+  {
+    "name": "moveinfo",
+    "usage": 1
+  },
+  {
+    "name": "tomar",
+    "usage": 1
+  },
+  {
+    "name": "faisal",
+    "usage": 1
+  },
+  {
+    "name": "suck",
+    "usage": 1
+  },
+  {
+    "name": "autoreply",
+    "usage": 1
+  },
+  {
+    "name": "tank",
+    "usage": 1
+  },
+  {
+    "name": "bljkyou",
+    "usage": 1
+  },
+  {
+    "name": "loveee",
+    "usage": 1
+  },
+  {
+    "name": "/lumuhod",
+    "usage": 1
+  },
+  {
+    "name": "💰",
+    "usage": 1
+  },
+  {
+    "name": "pay",
+    "usage": 1
+  },
+  {
+    "name": "peg",
+    "usage": 1
+  },
+  {
+    "name": "helpp",
+    "usage": 1
+  },
+  {
+    "name": "6",
+    "usage": 1
+  },
+  {
+    "name": "ball",
+    "usage": 1
+  },
+  {
+    "name": "supportfc",
+    "usage": 1
+  },
+  {
+    "name": "🗿",
+    "usage": 1
+  },
+  {
+    "name": "emojimean",
+    "usage": 1
+  },
+  {
+    "name": "ai?",
+    "usage": 1
+  },
+  {
+    "name": "masaya",
+    "usage": 1
+  },
+  {
+    "name": "mobile",
+    "usage": 1
+  },
+  {
+    "name": "shuttle",
+    "usage": 1
+  },
+  {
+    "name": "hahahahahaha",
+    "usage": 1
+  },
+  {
+    "name": "what's",
+    "usage": 1
+  },
+  {
+    "name": "can",
+    "usage": 1
+  },
+  {
+    "name": "pi?",
+    "usage": 1
+  },
+  {
+    "name": "call",
+    "usage": 1
+  },
+  {
+    "name": "aiko🙂",
+    "usage": 1
+  },
+  {
+    "name": "kita",
+    "usage": 1
+  },
+  {
+    "name": "fish",
+    "usage": 1
+  },
+  {
+    "name": "ignore",
+    "usage": 1
+  },
+  {
+    "name": "/happy",
+    "usage": 1
+  },
+  {
+    "name": "unread",
+    "usage": 1
+  },
+  {
+    "name": "any",
+    "usage": 1
+  },
+  {
+    "name": "shramp",
+    "usage": 1
+  },
+  {
+    "name": "crup",
+    "usage": 1
+  },
+  {
+    "name": "trial",
+    "usage": 1
+  },
+  {
+    "name": "she",
+    "usage": 1
+  },
+  {
+    "name": "shep",
+    "usage": 1
+  },
+  {
+    "name": "trygun",
+    "usage": 1
+  },
+  {
+    "name": "/antok",
+    "usage": 1
+  },
+  {
+    "name": "sleep",
+    "usage": 1
+  },
+  {
+    "name": "hagis",
+    "usage": 1
+  },
+  {
+    "name": "renz",
+    "usage": 1
+  },
+  {
+    "name": "shesh",
+    "usage": 1
+  },
+  {
+    "name": "skadush",
+    "usage": 1
+  },
+  {
+    "name": "blijk",
+    "usage": 1
+  },
+  {
+    "name": "counter",
+    "usage": 1
+  },
+  {
+    "name": "𝕓𝕒𝕔𝕔𝕒𝕣𝕒𝕥",
+    "usage": 1
+  },
+  {
+    "name": "𝕒𝕕𝕧𝕖𝕟𝕥𝕦𝕣𝕖",
+    "usage": 1
+  },
+  {
+    "name": "b",
+    "usage": 1
+  },
+  {
+    "name": "cristiano",
+    "usage": 1
+  },
+  {
+    "name": "imagin",
+    "usage": 1
+  },
+  {
+    "name": "bilis",
+    "usage": 1
+  },
+  {
+    "name": "time",
+    "usage": 1
+  },
+  {
+    "name": "tae",
+    "usage": 1
+  },
+  {
+    "name": "peat",
+    "usage": 1
+  },
+  {
+    "name": "45",
+    "usage": 1
+  },
+  {
+    "name": "muffin",
+    "usage": 1
+  },
+  {
+    "name": "siya",
+    "usage": 1
+  },
+  {
+    "name": "lab",
+    "usage": 1
+  },
+  {
+    "name": "********piiiiiiiiiiiiiiii",
+    "usage": 1
+  },
+  {
+    "name": "deserve",
+    "usage": 1
+  },
+  {
+    "name": "cara",
+    "usage": 1
+  },
+  {
+    "name": "ℙ𝕚",
+    "usage": 1
+  },
+  {
+    "name": "**ako",
+    "usage": 1
+  },
+  {
+    "name": "cup",
+    "usage": 1
+  },
+  {
+    "name": "asan",
+    "usage": 1
+  },
+  {
+    "name": "pat",
+    "usage": 1
+  },
+  {
+    "name": "warm",
+    "usage": 1
+  },
+  {
+    "name": "useradd",
+    "usage": 1
+  },
+  {
+    "name": "per",
+    "usage": 1
+  },
+  {
+    "name": "pet-",
+    "usage": 1
+  },
+  {
+    "name": "shuffling",
+    "usage": 1
+  },
+  {
+    "name": "pett",
+    "usage": 1
+  },
+  {
+    "name": "instadl",
+    "usage": 1
+  },
+  {
+    "name": "administration",
+    "usage": 1
+  },
+  {
+    "name": "wether",
+    "usage": 1
+  },
+  {
+    "name": "hack@taha",
+    "usage": 1
+  },
+  {
+    "name": "paid",
+    "usage": 1
+  },
+  {
+    "name": "de",
+    "usage": 1
+  },
+  {
+    "name": "janina",
+    "usage": 1
+  },
+  {
+    "name": "bank3",
+    "usage": 1
+  },
+  {
+    "name": "ac0",
+    "usage": 1
+  },
+  {
+    "name": "গাজার",
+    "usage": 1
+  },
+  {
+    "name": "a9",
+    "usage": 1
+  },
+  {
+    "name": "ri",
+    "usage": 1
+  },
+  {
+    "name": "fav",
+    "usage": 1
+  },
+  {
+    "name": "cunt",
+    "usage": 1
+  },
+  {
+    "name": "bhore",
+    "usage": 1
+  },
+  {
+    "name": "oc",
+    "usage": 1
+  },
+  {
+    "name": "pair1",
+    "usage": 1
+  },
+  {
+    "name": "random",
+    "usage": 1
+  },
+  {
+    "name": "read",
+    "usage": 1
+  },
+  {
+    "name": "page",
+    "usage": 1
+  },
+  {
+    "name": "hack@luka",
+    "usage": 1
+  },
+  {
+    "name": "@psycho",
+    "usage": 1
+  },
+  {
+    "name": "facewap",
+    "usage": 1
+  },
+  {
+    "name": "anirdit",
+    "usage": 1
+  },
+  {
+    "name": "ee,",
+    "usage": 1
+  },
+  {
+    "name": "the",
+    "usage": 1
+  },
+  {
+    "name": "tag",
+    "usage": 1
+  },
+  {
+    "name": "pepe",
+    "usage": 1
+  },
+  {
+    "name": "mem",
+    "usage": 1
+  },
+  {
+    "name": "**************.********.*******.******.*****†*******.*****",
+    "usage": 1
+  },
+  {
+    "name": "ugh",
+    "usage": 1
+  },
+  {
+    "name": "ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh",
+    "usage": 1
+  },
+  {
+    "name": "ugh*ugh*ugh*ugh*ugh*ugh",
+    "usage": 1
+  },
+  {
+    "name": "ugh*ugh*ugh*ugh*ugh",
+    "usage": 1
+  },
+  {
+    "name": "ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh",
+    "usage": 1
+  },
+  {
+    "name": "bye🙂🐸",
+    "usage": 1
+  },
+  {
+    "name": "lvl",
+    "usage": 1
+  },
+  {
+    "name": "family",
+    "usage": 1
+  },
+  {
+    "name": "inas",
+    "usage": 1
+  },
+  {
+    "name": "mathgam",
+    "usage": 1
+  },
+  {
+    "name": "transfer",
+    "usage": 1
+  },
+  {
+    "name": "ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh*ugh",
+    "usage": 1
+  },
+  {
+    "name": "update",
+    "usage": 1
+  },
+  {
+    "name": "coun",
+    "usage": 1
+  },
+  {
+    "name": "baccara",
+    "usage": 1
+  },
+  {
+    "name": "usgae",
+    "usage": 1
+  },
+  {
+    "name": "doreman",
+    "usage": 1
+  },
+  {
+    "name": ",,দে",
+    "usage": 1
+  },
+  {
+    "name": "aika",
+    "usage": 1
+  },
+  {
+    "name": "/hinagis",
+    "usage": 1
+  },
+  {
+    "name": "banj",
+    "usage": 1
+  },
+  {
+    "name": "sent",
+    "usage": 1
+  },
+  {
+    "name": "scramble",
+    "usage": 1
+  },
+  {
+    "name": "bekar",
+    "usage": 1
+  },
+  {
+    "name": "goodnight",
+    "usage": 1
+  },
+  {
+    "name": "blakcjack",
+    "usage": 1
+  },
+  {
+    "name": "bechari",
+    "usage": 1
+  },
+  {
+    "name": "saing",
+    "usage": 1
+  },
+  {
+    "name": "aiko,arafat",
+    "usage": 1
+  },
+  {
+    "name": "dailu",
+    "usage": 1
+  },
+  {
+    "name": "oi,tui",
+    "usage": 1
+  },
+  {
+    "name": "jakaria",
+    "usage": 1
+  },
+  {
+    "name": "*facebook",
+    "usage": 1
+  },
+  {
+    "name": "ohh",
+    "usage": 1
+  },
+  {
+    "name": "mane",
+    "usage": 1
+  },
+  {
+    "name": "একন",
+    "usage": 1
+  },
+  {
+    "name": "apni",
     "usage": 1
   }
 ]

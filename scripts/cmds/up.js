@@ -35,11 +35,11 @@ module.exports = {
       const now = moment();
       const nehallovesMetaServerTime = now.format('DD-MMMM-Y || hh.mm.ss A');
 
-      const nehallovesMetaTotalMemory = `${Math.round(os.totalmem() / (1024 * 1024 * 1024))} GB`;
+      
       const nehallovesMetaUsers = await usersData.getAll();
       const nehallovesMetaThreads = await threadsData.getAll(); 
-      const nehallovesMetaOperatingSystem = `${os.type()} ${os.release()}`;
-      const nehallovesMetaCpuInfo = `${os.cpus()[0].model} (${os.cpus().length} cores)`;
+      
+      
 
       const nehallovesMetaEndTime = Date.now();
       const nehallovesMetaBotPing = nehallovesMetaEndTime - nehallovesMetaStartTime;
@@ -54,9 +54,6 @@ module.exports = {
 ❯ Bot Ping: ${nehallovesMetaBotPing} ms
 ❯ Total Users: ${nehallovesMetaUsers.length}
 ❯ Total Threads: ${nehallovesMetaThreads.length}
-❯ Memory: ${nehallovesMetaTotalMemory}
-❯ OS: ${nehallovesMetaOperatingSystem}
-❯ CPU: ${nehallovesMetaCpuInfo}
 ❯ D/T: ${nehallovesMetaServerTime}
 ${nehallovesMediaBanText}`;
 

@@ -40,5 +40,18 @@
       "gulliver tunnel": 1,
       "doubixir": 1
     }
+  },
+  {
+    "uid": "100020507867702",
+    "gadgets": {
+      "time machine": 1
+    }
+  },
+  {
+    "uid": "100089381832814",
+    "gadgets": {
+      "instant robot": 1,
+      "invisible cap": 1
+    }
   }
 ]

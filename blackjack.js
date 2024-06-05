@@ -5,7 +5,7 @@ module.exports = {
       "bljk"
     ],
     "version": "1.0",
-    "countDown": 50,
+    "countDown": 29,
     "author": "Abdul Kaiyum",
     "shortDescription": {
       "en": "Enjoy the Blackjack game with realistic features and a chance to win!"
@@ -13,7 +13,7 @@ module.exports = {
     "longDescription": {
       "en": "Play Blackjack with the bot and experience the thrill of winning big!"
     },
-    "category": "games"
+    "category": "Game"
   },
   "langs": {
     "en": {

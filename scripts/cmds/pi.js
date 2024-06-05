@@ -2,106 +2,94 @@ const axios = require("axios");
 
 module.exports = {
   config: {
-    name: 'pi',
-    version: '1.0.2',
-    author: 'Shikaki & Aliester Crowley',
-    countDown: 10,
+    name: "pi",
+    version: "1.0",
+    author: "Rishad",
+    countDown: 5,
     role: 0,
-    category: 'Ai',
-    description: {
-      en: 'pi ai : Can use Internet.',
+    shortDescription: {
+      vi: "chat with PI AI",
+      en: "chat with PI AI"
     },
+    longDescription: {
+      vi: "chat with PI AI",
+      en: "chat with PI AI"
+    },
+    category: "AI",
     guide: {
-      en: '{pn} [prompt]',
-    },
+      en: "{pn} 'prompt'\nexample:\n{pn} hi there \nyou can reply to chat\nuse clear to delete conversations"
+    }
   },
-
-  onStart: async function ({ api, message, event, args, commandName }) {
-    let prompt = args.join(" ");
-
+  onStart: async function ({ message, event, args, commandName }) {
+    const prompt = args.join(" ");
     if (!prompt) {
-      message.reply("Please enter a query.");
+      message.reply(`Please provide some text`);
       return;
     }
-
-    if (prompt.toLowerCase() === "clear") {
-      const clear = await axios.get(`https://pi.aliestercrowley.com/api/reset?uid=${event.senderID}`);
-      message.reply(clear.data.message);
-      return;
-    }
-
-    const startTime = new Date().getTime(); 
-
-    api.setMessageReaction("⌛", event.messageID, () => { }, true);
-
-    const url = `https://pi.aliestercrowley.com/api?prompt=${encodeURIComponent(prompt)}&uid=${event.senderID}`;
 
     try {
-      const response = await axios.get(url);
-      const result = response.data.response;
+      const uid = event.senderID;
+      const response = await axios.get(
+        `https://for-devs.onrender.com/api/pi?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=api1`
+      );
 
-      const endTime = new Date().getTime()
-      const completionTime = ((endTime - startTime) / 1000).toFixed(2);
-
-      const totalWords = result.split(/\s+/).filter(word => word !== '').length; 
-
-      message.reply(`${result}\nCompletion time: ${completionTime} seconds\nTotal words: ${totalWords}`, (err, info) => {
-        if (!err) {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName,
-            messageID: info.messageID,
-            author: event.senderID,
-          });
-        }
-      });
-
-      api.setMessageReaction("✅", event.messageID, () => { }, true);
+      if (response.data && response.data.result) {
+        message.reply(
+          {
+            body: response.data.result
+          },
+          (err, info) => {
+            global.GoatBot.onReply.set(info.messageID, {
+              commandName,
+              messageID: info.messageID,
+              author: event.senderID
+            });
+          }
+        );
+      } else {
+        console.error("API Error:", response.data);
+        sendErrorMessage(message, "Server not responding ❌");
+      }
     } catch (error) {
-      message.reply('An error occurred.');
-      api.setMessageReaction("❌", event.messageID, () => { }, true);
+      console.error("Request Error:", error.message);
+      sendErrorMessage(message, "Server not responding ❌");
     }
   },
-
-  onReply: async function ({ api, message, event, Reply, args }) {
-    const prompt = args.join(" ");
+  onReply: async function ({ message, event, Reply, args }) {
     let { author, commandName } = Reply;
     if (event.senderID !== author) return;
+    const prompt = args.join(" ");
 
-    const startTime = new Date().getTime(); 
-
-    if (prompt.toLowerCase() === "clear") {
-      const clear = await axios.get(`https://pi.aliestercrowley.com/api/reset?uid=${event.senderID}`);
-      message.reply(clear.data.message);
-      return;
-    }
-
-    api.setMessageReaction("⌛", event.messageID, () => { }, true);
-
-    const url = `https://pi.aliestercrowley.com/api?prompt=${encodeURIComponent(prompt)}&uid=${event.senderID}`;
     try {
-      const response = await axios.get(url);
+      const uid = event.senderID;
+      const response = await axios.get(
+        `https://for-devs.onrender.com/api/pi?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=api1`
+      );
 
-      const content = response.data.response;
-
-      const endTime = new Date().getTime()
-      const completionTime = ((endTime - startTime) / 1000).toFixed(2);
-      const totalWords = content.split(/\s+/).filter(word => word !== '').length;
-
-      message.reply(`${content}\nCompletion time: ${completionTime}\nTotal words: ${totalWords}`, (err, info) => {
-        if (!err) {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName,
-            messageID: info.messageID,
-            author: event.senderID,
-          });
-        }
-      });
-
-      api.setMessageReaction("✅", event.messageID, () => { }, true);
+      if (response.data && response.data.result) {
+        message.reply(
+          {
+            body: response.data.result
+          },
+          (err, info) => {
+            global.GoatBot.onReply.set(info.messageID, {
+              commandName,
+              messageID: info.messageID,
+              author: event.senderID
+            });
+          }
+        );
+      } else {
+        console.error("API Error:", response.data);
+        sendErrorMessage(message, "Server not responding ❌");
+      }
     } catch (error) {
-      console.error(error.message);
-      message.reply("An error occurred.");
-      api.setMessageReaction("❌", event.messageID, () => { }, true);
+      console.error("Request Error:", error.message);
+      sendErrorMessage(message, "Server not responding ❌");
     }
-  },
+  }
 };
+
+function sendErrorMessage(message, errorMessage) {
+  message.reply({ body: errorMessage });
+}

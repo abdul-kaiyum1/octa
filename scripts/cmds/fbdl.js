@@ -1,5 +1,6 @@
 const fs = require("fs-extra");
-const axios = require("axios");
+const http = require('https');
+const axios = require('axios');
 const path = require("path");
 const tinyurl = require("tinyurl");
 
@@ -37,52 +38,57 @@ module.exports = {
 
     const options = {
       method: 'GET',
-      url: 'https://apis-samir.onrender.com/fbdl',
-      params: { vid_url: videoUrl },
+      hostname: 'apis-samir.onrender.com',
+      path: `/fbdl?vid_url=${encodeURIComponent(videoUrl)}`,
     };
 
-    try {
-      const response = await axios.request(options);
-      const data = response.data;
+    http.request(options, function (res) {
+      const chunks = [];
 
-      if (!data || !data.links) {
-        return message.reply("There was an error downloading the video. Please try again later.");
-      }
-
-      const downloadUrl = data.links["Download High Quality"] || data.links["Download Low Quality"];
-      const videoTitle = data.title || "video";
-      const videoQuality = data.links["Download High Quality"] ? "High Quality" : "Low Quality";
-
-      if (!downloadUrl) {
-        return message.reply("There was an error downloading the video. Please try again later.");
-      }
-
-      const shortUrl = await tinyurl.shorten(downloadUrl);
-      const modifiedShortUrl = shortUrl.replace('.', '*');
-
-      if (isMediaBanned) {
-        const endTime = Date.now();
-        const processingTime = ((endTime - startTime) / 1000).toFixed(2);
-        return message.reply(`Media is banned in this chat. Here is the video link:\n${downloadUrl}\nQuality: ${videoQuality}\nTinyURL: ${modifiedShortUrl}\nPlease copy the link and replace '*' with '.' to access it.\nProcessing time: ${processingTime} seconds`);
-      }
-
-      const videoPath = path.join(__dirname, "tmp", `${videoTitle}.mp4`);
-      await fs.ensureDir(path.dirname(videoPath));
-      await downloadFile(downloadUrl, videoPath);
-
-      const endTime = Date.now();
-      const processingTime = ((endTime - startTime) / 1000).toFixed(2);
-
-      await message.reply({
-        body: `Successfully downloaded the video: ${videoTitle}\nQuality: ${videoQuality}\nTinyURL: ${modifiedShortUrl}\nPlease copy the link and replace '*' with '.' to access it.\nProcessing time: ${processingTime} seconds`,
-        attachment: fs.createReadStream(videoPath),
+      res.on('data', function (chunk) {
+        chunks.push(chunk);
       });
 
-      fs.unlinkSync(videoPath);
-    } catch (error) {
-      console.error(error);
-      return message.reply("There was an error downloading the video. Please try again later.");
-    }
+      res.on('end', async function () {
+        const body = Buffer.concat(chunks).toString();
+        const data = JSON.parse(body);
+
+        if (!data || !data.links) {
+          return message.reply("There was an error downloading the video. Please try again later.");
+        }
+
+        const downloadUrl = data.links["Download High Quality"] || data.links["Download Low Quality"];
+        const videoTitle = data.title || "video";
+        const videoQuality = data.links["Download High Quality"] ? "High Quality" : "Low Quality";
+
+        if (!downloadUrl) {
+          return message.reply("There was an error downloading the video. Please try again later.");
+        }
+
+        const shortUrl = await tinyurl.shorten(downloadUrl);
+        const modifiedShortUrl = shortUrl.replace('.', '*');
+
+        if (isMediaBanned) {
+          const endTime = Date.now();
+          const processingTime = ((endTime - startTime) / 1000).toFixed(2);
+          return message.reply(`Media is banned in this chat. Here is the video link:\n${downloadUrl}\nQuality: ${videoQuality}\nTinyURL: ${modifiedShortUrl}\nPlease copy the link and replace '*' with '.' to access it.\nProcessing time: ${processingTime} seconds`);
+        }
+
+        const videoPath = path.join(__dirname, "tmp", `${videoTitle}.mp4`);
+        await fs.ensureDir(path.dirname(videoPath));
+        await downloadFile(downloadUrl, videoPath);
+
+        const endTime = Date.now();
+        const processingTime = ((endTime - startTime) / 1000).toFixed(2);
+
+        await message.reply({
+          body: `Successfully downloaded the video: ${videoTitle}\nQuality: ${videoQuality}\nTinyURL: ${modifiedShortUrl}\nPlease copy the link and replace '*' with '.' to access it.\nProcessing time: ${processingTime} seconds`,
+          attachment: fs.createReadStream(videoPath),
+        });
+
+        fs.unlinkSync(videoPath);
+      });
+    }).end();
   },
 };
 

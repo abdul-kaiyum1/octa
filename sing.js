@@ -6,7 +6,7 @@ module.exports = {
     ],
     "version": "2.0",
     "author": "Abdul Kaiyum",
-    "countDown": 25,
+    "countDown": 40,
     "role": 0,
     "shortDescription": {
       "en": "Play songs, get lyrics, and manage a playlist."
