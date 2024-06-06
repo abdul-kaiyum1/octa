@@ -1,5 +1,2502 @@
 [   
      {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actor played the role of Tony Stark in the Marvel Cinematic Universe?",
+    "options": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth"
+    ],
+    "answer": "Robert Downey Jr."
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Au",
+      "Ag",
+      "Cu",
+      "Fe"
+    ],
+    "answer": "Au"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Australia?",
+    "options": [
+      "Canberra",
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "answer": "Canberra"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Norse god of mischief?",
+    "options": [
+      "Loki",
+      "Thor",
+      "Odin",
+      "Frigg"
+    ],
+    "answer": "Loki"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which painting by Leonardo da Vinci is known for its mysterious smile?",
+    "options": [
+      "Mona Lisa",
+      "The Last Supper",
+      "The Vitruvian Man",
+      "Lady with an Ermine"
+    ],
+    "answer": "Mona Lisa"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote the play 'Hamlet'?",
+    "options": [
+      "William Shakespeare",
+      "Charles Dickens",
+      "Mark Twain",
+      "Jane Austen"
+    ],
+    "answer": "William Shakespeare"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which composer wrote 'The Four Seasons'?",
+    "options": [
+      "Antonio Vivaldi",
+      "Johann Sebastian Bach",
+      "Wolfgang Amadeus Mozart",
+      "Ludwig van Beethoven"
+    ],
+    "answer": "Antonio Vivaldi"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the TV series 'Breaking Bad'?",
+    "options": [
+      "Vince Gilligan",
+      "David Chase",
+      "Matthew Weiner",
+      "David Simon"
+    ],
+    "answer": "Vince Gilligan"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'Inception'?",
+    "options": [
+      "Christopher Nolan",
+      "Steven Spielberg",
+      "Quentin Tarantino",
+      "Martin Scorsese"
+    ],
+    "answer": "Christopher Nolan"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the 'Legend of Zelda' series, what is the name of the protagonist?",
+    "options": [
+      "Link",
+      "Zelda",
+      "Ganondorf",
+      "Sheik"
+    ],
+    "answer": "Link"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which board game is known as 'The Game of Kings'?",
+    "options": [
+      "Chess",
+      "Checkers",
+      "Backgammon",
+      "Go"
+    ],
+    "answer": "Chess"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the co-founder of Apple Inc.?",
+    "options": [
+      "Steve Jobs",
+      "Bill Gates",
+      "Tim Cook",
+      "Steve Wozniak"
+    ],
+    "answer": "Steve Wozniak"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the approximate value of pi (π)?",
+    "options": [
+      "3.14",
+      "3.141",
+      "3.1416",
+      "3.14159"
+    ],
+    "answer": "3.14159"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the alter ego of Batman?",
+    "options": [
+      "Bruce Wayne",
+      "Clark Kent",
+      "Peter Parker",
+      "Tony Stark"
+    ],
+    "answer": "Bruce Wayne"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What year was the first iPhone released?",
+    "options": [
+      "2007",
+      "2008",
+      "2006",
+      "2009"
+    ],
+    "answer": "2007"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'Avatar: The Last Airbender'?",
+    "options": [
+      "Michael Dante DiMartino and Bryan Konietzko",
+      "Matt Groening",
+      "Seth MacFarlane",
+      "Mike Judge"
+    ],
+    "answer": "Michael Dante DiMartino and Bryan Konietzko"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Naruto', what is the name of the village hidden in the leaves?",
+    "options": [
+      "Konohagakure",
+      "Sunagakure",
+      "Kirigakure",
+      "Iwagakure"
+    ],
+    "answer": "Konohagakure"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actress won an Academy Award for her role in the movie 'La La Land'?",
+    "options": [
+      "Emma Stone",
+      "Jennifer Lawrence",
+      "Natalie Portman",
+      "Cate Blanchett"
+    ],
+    "answer": "Emma Stone"
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Canada?",
+    "options": [
+      "Ottawa",
+      "Toronto",
+      "Montreal",
+      "Vancouver"
+    ],
+    "answer": "Ottawa"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the largest country by land area?",
+    "options": [
+      "Russia",
+      "Canada",
+      "China",
+      "United States"
+    ],
+    "answer": "Russia"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Greek god of the sea?",
+    "options": [
+      "Poseidon",
+      "Zeus",
+      "Hades",
+      "Apollo"
+    ],
+    "answer": "Poseidon"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist painted 'The Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet"
+    ],
+    "answer": "Vincent van Gogh"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote 'The Catcher in the Rye'?",
+    "options": [
+      "J.D. Salinger",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway",
+      "Harper Lee"
+    ],
+    "answer": "J.D. Salinger"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who composed the 'Moonlight Sonata'?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach",
+      "Frederic Chopin"
+    ],
+    "answer": "Ludwig van Beethoven"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series features the character Walter White?",
+    "options": [
+      "Breaking Bad",
+      "The Wire",
+      "The Sopranos",
+      "Lost"
+    ],
+    "answer": "Breaking Bad"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'The Shawshank Redemption'?",
+    "options": [
+      "Frank Darabont",
+      "Quentin Tarantino",
+      "Steven Spielberg",
+      "Martin Scorsese"
+    ],
+    "answer": "Frank Darabont"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the 'Super Mario' series of video games, what is the name of Mario's brother?",
+    "options": [
+      "Luigi",
+      "Yoshi",
+      "Wario",
+      "Bowser"
+    ],
+    "answer": "Luigi"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which board game is known as 'The Game of Global Domination'?",
+    "options": [
+      "Risk",
+      "Monopoly",
+      "Scrabble",
+      "Clue"
+    ],
+    "answer": "Risk"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What was the first programming language created in the 1950s?",
+    "options": [
+      "Fortran",
+      "COBOL",
+      "LISP",
+      "Assembly"
+    ],
+    "answer": "Fortran"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the Pythagorean theorem used for?",
+    "options": [
+      "Calculating the length of the sides of a right triangle",
+      "Calculating the circumference of a circle",
+      "Solving quadratic equations",
+      "Finding the area of a triangle"
+    ],
+    "answer": "Calculating the length of the sides of a right triangle"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which superhero is known as the 'Man of Steel'?",
+    "options": [
+      "Superman",
+      "Batman",
+      "Spider-Man",
+      "Iron Man"
+    ],
+    "answer": "Superman"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What year was the first commercially available smartphone released?",
+    "options": [
+      "1992",
+      "1996",
+      "2000",
+      "2002"
+    ],
+    "answer": "1992"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'The Simpsons'?",
+    "options": [
+      "Matt Groening",
+      "Seth MacFarlane",
+      "Mike Judge",
+      "Justin Roiland and Dan Harmon"
+    ],
+    "answer": "Matt Groening"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in the manga 'Death Note'?",
+    "options": [
+      "Light Yagami",
+      "L Lawliet",
+      "Misa Amane",
+      "Ryuk"
+    ],
+    "answer": "Light Yagami"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who won the Academy Award for Best Actor in 2018 for his role in the movie 'Darkest Hour'?",
+    "options": [
+      "Gary Oldman",
+      "Daniel Day-Lewis",
+      "Tom Hanks",
+      "Leonardo DiCaprio"
+    ],
+    "answer": "Gary Oldman"
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the SI unit of luminous intensity?",
+    "options": [
+      "Candela",
+      "Lumen",
+      "Lux",
+      "Watt"
+    ],
+    "answer": "Candela"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which river is the longest in the world?",
+    "options": [
+      "Nile",
+      "Amazon",
+      "Mississippi",
+      "Yangtze"
+    ],
+    "answer": "Nile"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Egyptian god of the afterlife?",
+    "options": [
+      "Anubis",
+      "Ra",
+      "Osiris",
+      "Horus"
+    ],
+    "answer": "Anubis"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist painted 'Guernica'?",
+    "options": [
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Michelangelo"
+    ],
+    "answer": "Pablo Picasso"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "Kurt Vonnegut"
+    ],
+    "answer": "George Orwell"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who composed 'The Rite of Spring'?",
+    "options": [
+      "Igor Stravinsky",
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach"
+    ],
+    "answer": "Igor Stravinsky"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series features the character Don Draper?",
+    "options": [
+      "Mad Men",
+      "The Sopranos",
+      "Breaking Bad",
+      "The Wire"
+    ],
+    "answer": "Mad Men"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'Pulp Fiction'?",
+    "options": [
+      "Quentin Tarantino",
+      "Martin Scorsese",
+      "Steven Spielberg",
+      "Christopher Nolan"
+    ],
+    "answer": "Quentin Tarantino"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which video game series features characters such as Mario, Luigi, and Princess Peach?",
+    "options": [
+      "Super Mario",
+      "The Legend of Zelda",
+      "Final Fantasy",
+      "Minecraft"
+    ],
+    "answer": "Super Mario"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the maximum number of players allowed in a game of 'Catan'?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "4"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What was the first computer virus released in 1982?",
+    "options": [
+      "Elk Cloner",
+      "ILOVEYOU",
+      "Stuxnet",
+      "Brain"
+    ],
+    "answer": "Elk Cloner"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the square root of 144?",
+    "options": [
+      "12",
+      "10",
+      "14",
+      "16"
+    ],
+    "answer": "12"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the fictional metal found in the Marvel Universe that is used to make Captain America's shield?",
+    "options": [
+      "Vibranium",
+      "Adamantium",
+      "Kryptonite",
+      "Mithril"
+    ],
+    "answer": "Vibranium"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What does CPU stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Processor Unit",
+      "Core Processing Unit",
+      "Control Processing Unit"
+    ],
+    "answer": "Central Processing Unit"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'Family Guy'?",
+    "options": [
+      "Seth MacFarlane",
+      "Matt Groening",
+      "Mike Judge",
+      "Trey Parker and Matt Stone"
+    ],
+    "answer": "Seth MacFarlane"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in the anime 'Naruto'?",
+    "options": [
+      "Naruto Uzumaki",
+      "Sasuke Uchiha",
+      "Sakura Haruno",
+      "Kakashi Hatake"
+    ],
+    "answer": "Naruto Uzumaki"
+  },
+     {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actor played the role of Tony Stark in the Marvel Cinematic Universe?",
+    "options": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth"
+    ],
+    "answer": "Robert Downey Jr."
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Australia?",
+    "options": [
+      "Canberra",
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "answer": "Canberra"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Norse god of mischief?",
+    "options": [
+      "Loki",
+      "Thor",
+      "Odin",
+      "Frigg"
+    ],
+    "answer": "Loki"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which painting by Leonardo da Vinci is known for its mysterious smile?",
+    "options": [
+      "Mona Lisa",
+      "The Last Supper",
+      "The Vitruvian Man",
+      "Lady with an Ermine"
+    ],
+    "answer": "Mona Lisa"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote the play 'Hamlet'?",
+    "options": [
+      "William Shakespeare",
+      "Charles Dickens",
+      "Mark Twain",
+      "Jane Austen"
+    ],
+    "answer": "William Shakespeare"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which composer wrote 'The Four Seasons'?",
+    "options": [
+      "Antonio Vivaldi",
+      "Johann Sebastian Bach",
+      "Wolfgang Amadeus Mozart",
+      "Ludwig van Beethoven"
+    ],
+    "answer": "Antonio Vivaldi"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the TV series 'Breaking Bad'?",
+    "options": [
+      "Vince Gilligan",
+      "David Chase",
+      "Matthew Weiner",
+      "David Simon"
+    ],
+    "answer": "Vince Gilligan"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'Inception'?",
+    "options": [
+      "Christopher Nolan",
+      "Steven Spielberg",
+      "Quentin Tarantino",
+      "Martin Scorsese"
+    ],
+    "answer": "Christopher Nolan"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the 'Legend of Zelda' series, what is the name of the protagonist?",
+    "options": [
+      "Link",
+      "Zelda",
+      "Ganondorf",
+      "Sheik"
+    ],
+    "answer": "Link"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which board game is known as 'The Game of Kings'?",
+    "options": [
+      "Chess",
+      "Checkers",
+      "Backgammon",
+      "Go"
+    ],
+    "answer": "Chess"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the co-founder of Apple Inc.?",
+    "options": [
+      "Steve Jobs",
+      "Bill Gates",
+      "Tim Cook",
+      "Steve Wozniak"
+    ],
+    "answer": "Steve Wozniak"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the approximate value of pi (π)?",
+    "options": [
+      "3.14",
+      "3.141",
+      "3.1416",
+      "3.14159"
+    ],
+    "answer": "3.14159"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the alter ego of Batman?",
+    "options": [
+      "Bruce Wayne",
+      "Clark Kent",
+      "Peter Parker",
+      "Tony Stark"
+    ],
+    "answer": "Bruce Wayne"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What year was the first iPhone released?",
+    "options": [
+      "2007",
+      "2008",
+      "2006",
+      "2009"
+    ],
+    "answer": "2007"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'Avatar: The Last Airbender'?",
+    "options": [
+      "Michael Dante DiMartino and Bryan Konietzko",
+      "Matt Groening",
+      "Seth MacFarlane",
+      "Mike Judge"
+    ],
+    "answer": "Michael Dante DiMartino and Bryan Konietzko"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Naruto', what is the name of the village hidden in the leaves?",
+    "options": [
+      "Konohagakure",
+      "Sunagakure",
+      "Kirigakure",
+      "Iwagakure"
+    ],
+    "answer": "Konohagakure"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actress won an Academy Award for her role in the movie 'La La Land'?",
+    "options": [
+      "Emma Stone",
+      "Jennifer Lawrence",
+      "Natalie Portman",
+      "Cate Blanchett"
+    ],
+    "answer": "Emma Stone"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the largest country by land area?",
+    "options": [
+      "Russia",
+      "Canada",
+      "China",
+      "United States"
+    ],
+    "answer": "Russia"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Greek god of the sea?",
+    "options": [
+      "Poseidon",
+      "Zeus",
+      "Hades",
+      "Apollo"
+    ],
+    "answer": "Poseidon"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist painted 'The Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet"
+    ],
+    "answer": "Vincent van Gogh"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote 'The Catcher in the Rye'?",
+    "options": [
+      "J.D. Salinger",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway",
+      "Harper Lee"
+    ],
+    "answer": "J.D. Salinger"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who composed the 'Moonlight Sonata'?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach",
+      "Frederic Chopin"
+    ],
+    "answer": "Ludwig van Beethoven"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series features the character Walter White?",
+    "options": [
+      "Breaking Bad",
+      "The Wire",
+      "The Sopranos",
+      "Lost"
+    ],
+    "answer": "Breaking Bad"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'The Shawshank Redemption'?",
+    "options": [
+      "Frank Darabont",
+      "Quentin Tarantino",
+      "Steven Spielberg",
+      "Martin Scorsese"
+    ],
+    "answer": "Frank Darabont"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the 'Super Mario' series of video games, what is the name of Mario's brother?",
+    "options": [
+      "Luigi",
+      "Yoshi",
+      "Wario",
+      "Bowser"
+    ],
+    "answer": "Luigi"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which board game is known as 'The Game of Global Domination'?",
+    "options": [
+      "Risk",
+      "Monopoly",
+      "Scrabble",
+      "Clue"
+    ],
+    "answer": "Risk"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What was the first programming language created in the 1950s?",
+    "options": [
+      "Fortran",
+      "COBOL",
+      "LISP",
+      "Assembly"
+    ],
+    "answer": "Fortran"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the Pythagorean theorem used for?",
+    "options": [
+      "Calculating the length of the sides of a right triangle",
+      "Calculating the circumference of a circle",
+      "Solving quadratic equations",
+      "Finding the area of a triangle"
+    ],
+    "answer": "Calculating the length of the sides of a right triangle"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the alter ego of Batman?",
+    "options": [
+      "Bruce Wayne",
+      "Clark Kent",
+      "Peter Parker",
+      "Tony Stark"
+    ],
+    "answer": "Bruce Wayne"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What year was the first commercially available smartphone released?",
+    "options": [
+      "1992",
+      "1996",
+      "2000",
+      "2002"
+    ],
+    "answer": "1992"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'Avatar: The Last Airbender'?",
+    "options": [
+      "Michael Dante DiMartino and Bryan Konietzko",
+      "Matt Groening",
+      "Seth MacFarlane",
+      "Mike Judge"
+    ],
+    "answer": "Michael Dante DiMartino and Bryan Konietzko"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Naruto', what is the name of the village hidden in the leaves?",
+    "options": [
+      "Konohagakure",
+      "Sunagakure",
+      "Kirigakure",
+      "Iwagakure"
+    ],
+    "answer": "Konohagakure"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actress won an Academy Award for her role in the movie 'La La Land'?",
+    "options": [
+      "Emma Stone",
+      "Jennifer Lawrence",
+      "Natalie Portman",
+      "Cate Blanchett"
+    ],
+    "answer": "Emma Stone"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the largest country by land area?",
+    "options": [
+      "Russia",
+      "Canada",
+      "China",
+      "United States"
+    ],
+    "answer": "Russia"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Greek god of the sea?",
+    "options": [
+      "Poseidon",
+      "Zeus",
+      "Hades",
+      "Apollo"
+    ],
+    "answer": "Poseidon"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist painted 'The Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet"
+    ],
+    "answer": "Vincent van Gogh"
+  },
+     {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the scientific name for the Bengal Tiger?",
+    "options": [
+      "Panthera tigris tigris",
+      "Panthera tigris altaica",
+      "Panthera onca",
+      "Panthera leo"
+    ],
+    "answer": "Panthera tigris tigris"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the maximum recorded length of a reticulated python?",
+    "options": [
+      "Over 9 meters (30 feet)",
+      "Over 7 meters (23 feet)",
+      "Over 6 meters (20 feet)",
+      "Over 8 meters (26 feet)"
+    ],
+    "answer": "Over 9 meters (30 feet)"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the primary diet of the Narwhal?",
+    "options": [
+      "Fish",
+      "Squid",
+      "Seals",
+      "Kelp"
+    ],
+    "answer": "Fish"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of these is the largest species of kangaroo?",
+    "options": [
+      "Red Kangaroo",
+      "Eastern Grey Kangaroo",
+      "Western Grey Kangaroo",
+      "Antilopine Kangaroo"
+    ],
+    "answer": "Red Kangaroo"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the scientific name for the African Elephant?",
+    "options": [
+      "Loxodonta africana",
+      "Elephas maximus",
+      "Elephas africanus",
+      "Loxodonta cyclotis"
+    ],
+    "answer": "Loxodonta africana"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of these is the largest species of turtle?",
+    "options": [
+      "Leatherback Sea Turtle",
+      "Green Sea Turtle",
+      "Loggerhead Sea Turtle",
+      "Hawksbill Sea Turtle"
+    ],
+    "answer": "Leatherback Sea Turtle"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the scientific name for the Great White Shark?",
+    "options": [
+      "Carcharodon carcharias",
+      "Galeocerdo cuvier",
+      "Lamna nasus",
+      "Sphyrna mokarran"
+    ],
+    "answer": "Carcharodon carcharias"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the maximum recorded length of a Blue Whale?",
+    "options": [
+      "Over 30 meters (98 feet)",
+      "Over 25 meters (82 feet)",
+      "Over 35 meters (115 feet)",
+      "Over 40 meters (131 feet)"
+    ],
+    "answer": "Over 30 meters (98 feet)"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the collective term for a group of rhinoceroses?",
+    "options": [
+      "Crash",
+      "Herd",
+      "Tower",
+      "Gaggle"
+    ],
+    "answer": "Crash"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the primary food source of the Blue Whale?",
+    "options": [
+      "Krill",
+      "Plankton",
+      "Small Fish",
+      "Squid"
+    ],
+    "answer": "Krill"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the scientific name for the Snow Leopard?",
+    "options": [
+      "Panthera uncia",
+      "Panthera leo",
+      "Panthera pardus",
+      "Panthera tigris"
+    ],
+    "answer": "Panthera uncia"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the average lifespan of a Greenland Shark?",
+    "options": [
+      "Over 200 years",
+      "Over 100 years",
+      "Over 300 years",
+      "Over 400 years"
+    ],
+    "answer": "Over 200 years"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of these is the largest species of jellyfish?",
+    "options": [
+      "Lion's Mane Jellyfish",
+      "Box Jellyfish",
+      "Portuguese Man o' War",
+      "Moon Jellyfish"
+    ],
+    "answer": "Lion's Mane Jellyfish"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the scientific name for the Emperor Penguin?",
+    "options": [
+      "Aptenodytes forsteri",
+      "Aptenodytes patagonicus",
+      "Spheniscus demersus",
+      "Pygoscelis adeliae"
+    ],
+    "answer": "Aptenodytes forsteri"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the top speed of a Sailfish?",
+    "options": [
+      "Over 68 mph (110 km/h)",
+      "Over 75 mph (120 km/h)",
+      "Over 55 mph (90 km/h)",
+      "Over 60 mph (97 km/h)"
+    ],
+    "answer": "Over 68 mph (110 km/h)"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of these is the largest species of stingray?",
+    "options": [
+      "Giant Freshwater Stingray",
+      "Short-tail Stingray",
+      "Spotted Eagle Ray",
+      "Manta Ray"
+    ],
+    "answer": "Giant Freshwater Stingray"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the average wingspan of a Bald Eagle?",
+    "options": [
+      "Around 2.1 meters (7 feet)",
+      "Around 2.5 meters (8.2 feet)",
+      "Around 1.8 meters (6 feet)",
+      "Around 3 meters (10 feet)"
+    ],
+    "answer": "Around 2.5 meters (8.2 feet)"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the primary diet of the Sperm Whale?",
+    "options": [
+      "Squid",
+      "Krill",
+      "Plankton",
+      "Fish"
+    ],
+    "answer": "Squid"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the average lifespan of a Galápagos Tortoise?",
+    "options": [
+      "Over 150 years",
+      "Over 200 years",
+      "Over 250 years",
+      "Over 100 years"
+    ],
+    "answer": "Over 150 years"
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the collective term for a group of ferrets?",
+    "options": [
+      "Business",
+      "Clowder",
+      "Aerie",
+      "Business"
+    ],
+    "answer": "Business"
+  },
+     {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actor played the character of Tony Stark/Iron Man in the Marvel Cinematic Universe?",
+    "options": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "answer": "Robert Downey Jr."
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the chemical symbol for the element gold?",
+    "options": [
+      "Au",
+      "Ag",
+      "Fe",
+      "Cu"
+    ],
+    "answer": "Au"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Mongolia?",
+    "options": [
+      "Ulaanbaatar",
+      "Astana",
+      "Kuala Lumpur",
+      "Jakarta"
+    ],
+    "answer": "Ulaanbaatar"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In Greek mythology, who was the goddess of wisdom?",
+    "options": [
+      "Athena",
+      "Aphrodite",
+      "Artemis",
+      "Hera"
+    ],
+    "answer": "Athena"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who painted the famous work 'The Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet"
+    ],
+    "answer": "Vincent van Gogh"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote the novel 'One Hundred Years of Solitude'?",
+    "options": [
+      "Gabriel García Márquez",
+      "Haruki Murakami",
+      "Fyodor Dostoevsky",
+      "Leo Tolstoy"
+    ],
+    "answer": "Gabriel García Márquez"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which composer wrote the 'Moonlight Sonata'?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Johann Sebastian Bach",
+      "Wolfgang Amadeus Mozart",
+      "Frederic Chopin"
+    ],
+    "answer": "Ludwig van Beethoven"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series features characters known as the Lannisters, Starks, and Targaryens?",
+    "options": [
+      "Game of Thrones",
+      "Breaking Bad",
+      "The Sopranos",
+      "The Walking Dead"
+    ],
+    "answer": "Game of Thrones"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which movie won the Academy Award for Best Picture in 2019?",
+    "options": [
+      "Parasite",
+      "1917",
+      "Joker",
+      "The Shape of Water"
+    ],
+    "answer": "Parasite"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'The Legend of Zelda: Ocarina of Time', what is the name of the protagonist?",
+    "options": [
+      "Link",
+      "Zelda",
+      "Ganondorf",
+      "Sheik"
+    ],
+    "answer": "Link"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the maximum number of players allowed in a game of 'Risk'?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": "6"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is often credited with inventing the World Wide Web?",
+    "options": [
+      "Tim Berners-Lee",
+      "Bill Gates",
+      "Steve Jobs",
+      "Larry Page"
+    ],
+    "answer": "Tim Berners-Lee"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the number 'e' approximately equal to?",
+    "options": [
+      "2.71828",
+      "3.14159",
+      "1.61803",
+      "2.23607"
+    ],
+    "answer": "2.71828"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the alter ego of the comic book character Batman?",
+    "options": [
+      "Bruce Wayne",
+      "Clark Kent",
+      "Peter Parker",
+      "Tony Stark"
+    ],
+    "answer": "Bruce Wayne"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What was the name of the first commercially available handheld mobile phone?",
+    "options": [
+      "Motorola DynaTAC 8000X",
+      "Nokia 3310",
+      "Apple iPhone",
+      "BlackBerry"
+    ],
+    "answer": "Motorola DynaTAC 8000X"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'The Simpsons'?",
+    "options": [
+      "Matt Groening",
+      "Seth MacFarlane",
+      "Mike Judge",
+      "Trey Parker and Matt Stone"
+    ],
+    "answer": "Matt Groening"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in the anime 'Naruto'?",
+    "options": [
+      "Naruto Uzumaki",
+      "Sasuke Uchiha",
+      "Sakura Haruno",
+      "Kakashi Hatake"
+    ],
+    "answer": "Naruto Uzumaki"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who won the Academy Award for Best Actress in 2014 for her role in the movie 'Blue Jasmine'?",
+    "options": [
+      "Cate Blanchett",
+      "Sandra Bullock",
+      "Meryl Streep",
+      "Jennifer Lawrence"
+    ],
+    "answer": "Cate Blanchett"
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the SI unit of electric charge?",
+    "options": [
+      "Coulomb",
+      "Volt",
+      "Ampere",
+      "Ohm"
+    ],
+    "answer": "Coulomb"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Finland?",
+    "options": [
+      "Helsinki",
+      "Stockholm",
+      "Oslo",
+      "Copenhagen"
+    ],
+    "answer": "Helsinki"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In Norse mythology, who is the father of Thor?",
+    "options": [
+      "Odin",
+      "Loki",
+      "Frigg",
+      "Freyja"
+    ],
+    "answer": "Odin"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist is famous for his painting 'The Persistence of Memory', featuring melting clocks?",
+    "options": [
+      "Salvador Dalí",
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Leonardo da Vinci"
+    ],
+    "answer": "Salvador Dalí"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
+    "options": [
+      "Harper Lee",
+      "John Steinbeck",
+      "Ernest Hemingway",
+      "William Faulkner"
+    ],
+    "answer": "Harper Lee"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which composer wrote the opera 'The Marriage of Figaro'?",
+    "options": [
+      "Wolfgang Amadeus Mozart",
+      "Ludwig van Beethoven",
+      "Johann Sebastian Bach",
+      "Giuseppe Verdi"
+    ],
+    "answer": "Wolfgang Amadeus Mozart"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series featured the character Walter White, a high school chemistry teacher turned methamphetamine manufacturer?",
+    "options": [
+      "Breaking Bad",
+      "The Sopranos",
+      "Mad Men",
+      "Lost"
+    ],
+    "answer": "Breaking Bad"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'Inception'?",
+    "options": [
+      "Christopher Nolan",
+      "Quentin Tarantino",
+      "Martin Scorsese",
+      "Steven Spielberg"
+    ],
+    "answer": "Christopher Nolan"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which video game franchise features characters such as Mario, Luigi, and Princess Peach?",
+    "options": [
+      "Super Mario",
+      "The Legend of Zelda",
+      "Final Fantasy",
+      "Pokemon"
+    ],
+    "answer": "Super Mario"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'Scrabble', what is the point value of the letter 'Z'?",
+    "options": [
+      "10",
+      "8",
+      "6",
+      "4"
+    ],
+    "answer": "10"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who co-founded the tech company Apple Inc. along with Steve Jobs and Steve Wozniak?",
+    "options": [
+      "Ronald Wayne",
+      "Bill Gates",
+      "Paul Allen",
+      "Tim Cook"
+    ],
+    "answer": "Ronald Wayne"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the value of the mathematical constant 'π' (pi) to two decimal places?",
+    "options": [
+      "3.14",
+      "3.16",
+      "3.12",
+      "3.18"
+    ],
+    "answer": "3.14"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which comic book character is known as the 'Merc with a Mouth'?",
+    "options": [
+      "Deadpool",
+      "Spider-Man",
+      "Batman",
+      "Wolverine"
+    ],
+    "answer": "Deadpool"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which company produces the popular fitness tracker known as 'Fitbit'?",
+    "options": [
+      "Fitbit, Inc.",
+      "Apple Inc.",
+      "Samsung",
+      "Garmin Ltd."
+    ],
+    "answer": "Fitbit, Inc."
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which cartoon series features characters named Homer, Marge, Bart, Lisa, and Maggie?",
+    "options": [
+      "The Simpsons",
+      "Family Guy",
+      "South Park",
+      "Rick and Morty"
+    ],
+    "answer": "The Simpsons"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the giant humanoid creatures that serve as the main antagonists in the anime 'Attack on Titan'?",
+    "options": [
+      "Titans",
+      "Giants",
+      "Colossi",
+      "Behemoths"
+    ],
+    "answer": "Titans"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who won the Academy Award for Best Actor in 2016 for his role in the movie 'The Revenant'?",
+    "options": [
+      "Leonardo DiCaprio",
+      "Eddie Redmayne",
+      "Matthew McConaughey",
+      "Joaquin Phoenix"
+    ],
+    "answer": "Leonardo DiCaprio"
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the unit of electrical resistance?",
+    "options": [
+      "Ohm",
+      "Ampere",
+      "Volt",
+      "Watt"
+    ],
+    "answer": "Ohm"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of New Zealand?",
+    "options": [
+      "Wellington",
+      "Auckland",
+      "Christchurch",
+      "Sydney"
+    ],
+    "answer": "Wellington"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In Roman mythology, who was the god of the sea?",
+    "options": [
+      "Neptune",
+      "Jupiter",
+      "Pluto",
+      "Mars"
+    ],
+    "answer": "Neptune"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who painted the famous work 'The Birth of Venus'?",
+    "options": [
+      "Sandro Botticelli",
+      "Michelangelo",
+      "Leonardo da Vinci",
+      "Raphael"
+    ],
+    "answer": "Sandro Botticelli"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which Russian author wrote the novel 'Crime and Punishment'?",
+    "options": [
+      "Fyodor Dostoevsky",
+      "Leo Tolstoy",
+      "Anton Chekhov",
+      "Nikolai Gogol"
+    ],
+    "answer": "Fyodor Dostoevsky"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who composed the famous 'Rhapsody in Blue'?",
+    "options": [
+      "George Gershwin",
+      "Johann Sebastian Bach",
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart"
+    ],
+    "answer": "George Gershwin"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series is set in the fictional town of Twin Peaks?",
+    "options": [
+      "Twin Peaks",
+      "Stranger Things",
+      "The X-Files",
+      "Lost"
+    ],
+    "answer": "Twin Peaks"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'Schindler's List'?",
+    "options": [
+      "Steven Spielberg",
+      "Quentin Tarantino",
+      "Martin Scorsese",
+      "Christopher Nolan"
+    ],
+    "answer": "Steven Spielberg"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which video game series features the character Master Chief?",
+    "options": [
+      "Halo",
+      "Call of Duty",
+      "Gears of War",
+      "Destiny"
+    ],
+    "answer": "Halo"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'Catan', what is the maximum number of victory points needed to win?",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "7"
+    ],
+    "answer": "10"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What does 'HTTP' stand for in terms of internet technology?",
+    "options": [
+      "Hypertext Transfer Protocol",
+      "Hyperlink Text Transfer Protocol",
+      "Hypertext Terminal Protocol",
+      "Hyperlink Terminal Protocol"
+    ],
+    "answer": "Hypertext Transfer Protocol"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the value of 'i' in mathematics?",
+    "options": [
+      "The square root of -1",
+      "The ratio of a circle's circumference to its diameter",
+      "The base of the natural logarithm",
+      "The universal gravitational constant"
+    ],
+    "answer": "The square root of -1"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the real name of the superhero known as Superman?",
+    "options": [
+      "Clark Kent",
+      "Bruce Wayne",
+      "Peter Parker",
+      "Tony Stark"
+    ],
+    "answer": "Clark Kent"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who developed the first commercially successful portable MP3 player?",
+    "options": [
+      "Creative Technology",
+      "Apple Inc.",
+      "Sony Corporation",
+      "Samsung Electronics"
+    ],
+    "answer": "Creative Technology"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'Family Guy'?",
+    "options": [
+      "Seth MacFarlane",
+      "Matt Groening",
+      "Mike Judge",
+      "Trey Parker and Matt Stone"
+    ],
+    "answer": "Seth MacFarlane"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in the anime 'Dragon Ball Z'?",
+    "options": [
+      "Goku",
+      "Vegeta",
+      "Piccolo",
+      "Gohan"
+    ],
+    "answer": "Goku"
+  },
+     {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which actress won the Academy Award for Best Actress for her role in the movie 'Silver Linings Playbook'?",
+    "options": [
+      "Jennifer Lawrence",
+      "Emma Stone",
+      "Natalie Portman",
+      "Cate Blanchett"
+    ],
+    "answer": "Jennifer Lawrence"
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the chemical symbol for the element potassium?",
+    "options": [
+      "K",
+      "P",
+      "Po",
+      "Pt"
+    ],
+    "answer": "K"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Colombia?",
+    "options": [
+      "Bogotá",
+      "Medellín",
+      "Cali",
+      "Cartagena"
+    ],
+    "answer": "Bogotá"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who was the goddess of love and beauty in Greek mythology?",
+    "options": [
+      "Aphrodite",
+      "Artemis",
+      "Athena",
+      "Hera"
+    ],
+    "answer": "Aphrodite"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist painted 'Guernica'?",
+    "options": [
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Claude Monet"
+    ],
+    "answer": "Pablo Picasso"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote the novel 'The Catcher in the Rye'?",
+    "options": [
+      "J.D. Salinger",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway",
+      "Harper Lee"
+    ],
+    "answer": "J.D. Salinger"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who composed the opera 'La Traviata'?",
+    "options": [
+      "Giuseppe Verdi",
+      "Gioachino Rossini",
+      "Richard Wagner",
+      "Wolfgang Amadeus Mozart"
+    ],
+    "answer": "Giuseppe Verdi"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series features the character Don Draper?",
+    "options": [
+      "Mad Men",
+      "Breaking Bad",
+      "The Sopranos",
+      "The Wire"
+    ],
+    "answer": "Mad Men"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'The Shawshank Redemption'?",
+    "options": [
+      "Frank Darabont",
+      "Quentin Tarantino",
+      "Christopher Nolan",
+      "Martin Scorsese"
+    ],
+    "answer": "Frank Darabont"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'Fallout', what is the name of the protagonist?",
+    "options": [
+      "Vault Dweller",
+      "Sole Survivor",
+      "Courier",
+      "Dragonborn"
+    ],
+    "answer": "Vault Dweller"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'Chess', what is the name of the piece that can move any number of squares in one direction?",
+    "options": [
+      "Queen",
+      "Bishop",
+      "Rook",
+      "Knight"
+    ],
+    "answer": "Queen"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is often referred to as the 'father of the computer'?",
+    "options": [
+      "Charles Babbage",
+      "Alan Turing",
+      "John von Neumann",
+      "Tim Berners-Lee"
+    ],
+    "answer": "Charles Babbage"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the theorem that states that any positive integer greater than 1 can be written as a product of prime numbers in a unique way?",
+    "options": [
+      "Fundamental Theorem of Arithmetic",
+      "Pythagorean Theorem",
+      "Fermat's Last Theorem",
+      "Poincaré Conjecture"
+    ],
+    "answer": "Fundamental Theorem of Arithmetic"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the archenemy of Batman?",
+    "options": [
+      "The Joker",
+      "Lex Luthor",
+      "Green Goblin",
+      "The Riddler"
+    ],
+    "answer": "The Joker"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What was the first commercially available personal computer?",
+    "options": [
+      "Altair 8800",
+      "IBM 5150",
+      "Apple I",
+      "Commodore PET"
+    ],
+    "answer": "Altair 8800"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'SpongeBob SquarePants'?",
+    "options": [
+      "Stephen Hillenburg",
+      "Seth MacFarlane",
+      "Mike Judge",
+      "Matt Groening"
+    ],
+    "answer": "Stephen Hillenburg"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in the manga 'Death Note'?",
+    "options": [
+      "Light Yagami",
+      "L Lawliet",
+      "Misa Amane",
+      "Ryuk"
+    ],
+    "answer": "Light Yagami"
+  },
+  {
+    "category": "celebrities",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who won the Academy Award for Best Actor in 2018 for his role in the movie 'Darkest Hour'?",
+    "options": [
+      "Gary Oldman",
+      "Daniel Day-Lewis",
+      "Tom Hanks",
+      "Leonardo DiCaprio"
+    ],
+    "answer": "Gary Oldman"
+  },
+  {
+    "category": "general_knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the SI unit of luminous intensity?",
+    "options": [
+      "Candela",
+      "Lumen",
+      "Lux",
+      "Watt"
+    ],
+    "answer": "Candela"
+  },
+  {
+    "category": "geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the capital of Egypt?",
+    "options": [
+      "Cairo",
+      "Alexandria",
+      "Luxor",
+      "Giza"
+    ],
+    "answer": "Cairo"
+  },
+  {
+    "category": "mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the god of thunder in Norse mythology?",
+    "options": [
+      "Thor",
+      "Loki",
+      "Odin",
+      "Freya"
+    ],
+    "answer": "Thor"
+  },
+  {
+    "category": "art",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which artist painted 'The Last Supper'?",
+    "options": [
+      "Leonardo da Vinci",
+      "Raphael",
+      "Michelangelo",
+      "Donatello"
+    ],
+    "answer": "Leonardo da Vinci"
+  },
+  {
+    "category": "literature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who wrote the novel '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "J.D. Salinger"
+    ],
+    "answer": "George Orwell"
+  },
+  {
+    "category": "music",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who composed the opera 'Carmen'?",
+    "options": [
+      "Georges Bizet",
+      "Gioachino Rossini",
+      "Giuseppe Verdi",
+      "Richard Wagner"
+    ],
+    "answer": "Georges Bizet"
+  },
+  {
+    "category": "television",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which TV series features the character Frank Underwood?",
+    "options": [
+      "House of Cards",
+      "The West Wing",
+      "Breaking Bad",
+      "Mad Men"
+    ],
+    "answer": "House of Cards"
+  },
+  {
+    "category": "film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'The Godfather'?",
+    "options": [
+      "Francis Ford Coppola",
+      "Martin Scorsese",
+      "Alfred Hitchcock",
+      "Stanley Kubrick"
+    ],
+    "answer": "Francis Ford Coppola"
+  },
+  {
+    "category": "video_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'The Witcher 3: Wild Hunt', what is the name of the main protagonist?",
+    "options": [
+      "Geralt of Rivia",
+      "Ezio Auditore",
+      "Nathan Drake",
+      "Samus Aran"
+    ],
+    "answer": "Geralt of Rivia"
+  },
+  {
+    "category": "board_games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the game 'Monopoly', what is the name of the most expensive property?",
+    "options": [
+      "Boardwalk",
+      "Park Place",
+      "Marvin Gardens",
+      "Pennsylvania Avenue"
+    ],
+    "answer": "Boardwalk"
+  },
+  {
+    "category": "computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the founder of SpaceX and Tesla?",
+    "options": [
+      "Elon Musk",
+      "Mark Zuckerberg",
+      "Jeff Bezos",
+      "Bill Gates"
+    ],
+    "answer": "Elon Musk"
+  },
+  {
+    "category": "mathematics",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the mathematical term for a perfectly symmetrical curve?",
+    "options": [
+      "A parabola",
+      "A hyperbola",
+      "An ellipse",
+      "A circle"
+    ],
+    "answer": "A circle"
+  },
+  {
+    "category": "comic_books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the archenemy of Spider-Man?",
+    "options": [
+      "Green Goblin",
+      "Doctor Octopus",
+      "Venom",
+      "The Lizard"
+    ],
+    "answer": "Green Goblin"
+  },
+  {
+    "category": "gadgets",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who developed the first commercially available digital camera?",
+    "options": [
+      "Kodak",
+      "Sony",
+      "Canon",
+      "Nikon"
+    ],
+    "answer": "Kodak"
+  },
+  {
+    "category": "cartoon_animations",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who created the animated TV series 'Rick and Morty'?",
+    "options": [
+      "Justin Roiland and Dan Harmon",
+      "Seth MacFarlane",
+      "Matt Groening",
+      "Mike Judge"
+    ],
+    "answer": "Justin Roiland and Dan Harmon"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the protagonist in the anime 'One Piece'?",
+    "options": [
+      "Monkey D. Luffy",
+      "Roronoa Zoro",
+      "Nami",
+      "Usopp"
+    ],
+    "answer": "Monkey D. Luffy"
+  },
+     
+     {
     "category": "Animals",
     "type": "multiple",
     "difficulty": "hard",
@@ -389,149 +2886,6 @@
     ],
     "answer": "Sloth"
   },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What is a group of wolves called?",
-    "options": [
-      "Pack",
-      "Herd",
-      "Flock",
-      "Pod"
-    ],
-    "answer": "Pack"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What do you call a baby dog?",
-    "options": [
-      "Puppy",
-      "Calf",
-      "Foal",
-      "Kitten"
-    ],
-    "answer": "Puppy"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "Which bird can fly backward?",
-    "options": [
-      "Hummingbird",
-      "Eagle",
-      "Ostrich",
-      "Sparrow"
-    ],
-    "answer": "Hummingbird"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What is the largest bird in the world?",
-    "options": [
-      "Ostrich",
-      "Eagle",
-      "Albatross",
-      "Condor"
-    ],
-    "answer": "Ostrich"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "Which animal is known as the 'king of the jungle'?",
-    "options": [
-      "Lion",
-      "Tiger",
-      "Leopard",
-      "Cheetah"
-    ],
-    "answer": "Lion"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What is the largest living species of cat?",
-    "options": [
-      "Tiger",
-      "Lion",
-      "Leopard",
-      "Cheetah"
-    ],
-    "answer": "Tiger"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What do you call a group of fish?",
-    "options": [
-      "School",
-      "Flock",
-      "Herd",
-      "Pack"
-    ],
-    "answer": "School"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "Which bird is a symbol of peace?",
-    "options": [
-      "Dove",
-      "Eagle",
-      "Hawk",
-      "Crow"
-    ],
-    "answer": "Dove"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What is a baby cow called?",
-    "options": [
-      "Calf",
-      "Foal",
-      "Kid",
-      "Puppy"
-    ],
-    "answer": "Calf"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What is the fastest water animal?",
-    "options": [
-      "Sailfish",
-      "Dolphin",
-      "Shark",
-      "Tuna"
-    ],
-    "answer": "Sailfish"
-  },
-  {
-    "category": "Animals",
-    "type": "multiple",
-    "difficulty": "easy",
-    "question": "What is the fastest bird in level flight?",
-    "options": [
-      "Swift",
-      "Peregrine Falcon",
-      "Sparrow",
-      "Albatross"
-    ],
-    "answer": "Peregrine Falcon"
-  }, 
 {
     "category": "Animals",
     "type": "multiple",
@@ -4880,5 +7234,421 @@
       "Turkey"
     ],
     "answer": "Tango"
+  },
+     {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in the anime 'Naruto'?",
+    "options": [
+      "Naruto Uzumaki",
+      "Sasuke Uchiha",
+      "Sakura Haruno",
+      "Kakashi Hatake"
+    ],
+    "answer": "Naruto Uzumaki"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Attack on Titan', what is the name of the city protected by the walls?",
+    "options": [
+      "Shiganshina",
+      "Trost",
+      "Wall Maria",
+      "Wall Rose"
+    ],
+    "answer": "Shiganshina"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the giant humanoid creatures in 'Attack on Titan'?",
+    "options": [
+      "Titans",
+      "Giants",
+      "Colossi",
+      "Behemoths"
+    ],
+    "answer": "Titans"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Death Note', what is the name of the Shinigami who owns the Death Note?",
+    "options": [
+      "Ryuk",
+      "Rem",
+      "Shinigami",
+      "Kira"
+    ],
+    "answer": "Ryuk"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Dragon Ball Z', what is the name of Goku's father?",
+    "options": [
+      "Bardock",
+      "Vegeta",
+      "Raditz",
+      "King Vegeta"
+    ],
+    "answer": "Bardock"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the main character in 'Fullmetal Alchemist'?",
+    "options": [
+      "Edward Elric",
+      "Alphonse Elric",
+      "Roy Mustang",
+      "Winry Rockbell"
+    ],
+    "answer": "Edward Elric"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'One Piece', what is the name of Monkey D. Luffy's signature attack?",
+    "options": [
+      "Gomu Gomu no Pistol",
+      "Gomu Gomu no Gatling",
+      "Gomu Gomu no Red Hawk",
+      "Gomu Gomu no Elephant Gatling"
+    ],
+    "answer": "Gomu Gomu no Pistol"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Naruto', what is the name of Kakashi Hatake's Sharingan eye technique?",
+    "options": [
+      "Kamui",
+      "Chidori",
+      "Amaterasu",
+      "Mangekyou Sharingan"
+    ],
+    "answer": "Kamui"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the female protagonist in 'Sword Art Online'?",
+    "options": [
+      "Asuna Yuuki",
+      "Kirito",
+      "Leafa",
+      "Sinon"
+    ],
+    "answer": "Asuna Yuuki"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'My Hero Academia', what is the name of Izuku Midoriya's quirk?",
+    "options": [
+      "One For All",
+      "All For One",
+      "Explosion",
+      "Half-Cold Half-Hot"
+    ],
+    "answer": "One For All"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Tokyo Ghoul', what is the name of the main protagonist who becomes a half-ghoul?",
+    "options": [
+      "Ken Kaneki",
+      "Touka Kirishima",
+      "Rize Kamishiro",
+      "Hideyoshi Nagachika"
+    ],
+    "answer": "Ken Kaneki"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the protagonist in 'Attack on Titan'?",
+    "options": [
+      "Eren Yeager",
+      "Mikasa Ackerman",
+      "Armin Arlert",
+      "Levi Ackerman"
+    ],
+    "answer": "Eren Yeager"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'One Punch Man', what is the name of the protagonist who can defeat any opponent with a single punch?",
+    "options": [
+      "Saitama",
+      "Genos",
+      "Mumen Rider",
+      "Speed-o'-Sound Sonic"
+    ],
+    "answer": "Saitama"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Cowboy Bebop', what is the name of Spike Spiegel's former crime syndicate?",
+    "options": [
+      "Red Dragon Syndicate",
+      "Black Dog Syndicate",
+      "Blue Falcon Syndicate",
+      "Green Serpent Syndicate"
+    ],
+    "answer": "Red Dragon Syndicate"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the creator of 'Dragon Ball'?",
+    "options": [
+      "Akira Toriyama",
+      "Masashi Kishimoto",
+      "Eiichiro Oda",
+      "Rumiko Takahashi"
+    ],
+    "answer": "Akira Toriyama"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Neon Genesis Evangelion', what is the name of the main character?",
+    "options": [
+      "Shinji Ikari",
+      "Rei Ayanami",
+      "Asuka Langley Soryu",
+      "Misato Katsuragi"
+    ],
+    "answer": "Shinji Ikari"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the magical notebook in 'Death Note'?",
+    "options": [
+      "Death Note",
+      "Shinigami Notebook",
+      "Dark Diary",
+      "Soul Note"
+    ],
+    "answer": "Death Note"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Fairy Tail', what is the name of Natsu's flying cat companion?",
+    "options": [
+      "Happy",
+      "Carla",
+      "Lily",
+      "Frosch"
+    ],
+    "answer": "Happy"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the creator of 'One Piece'?",
+    "options": [
+      "Eiichiro Oda",
+      "Akira Toriyama",
+      "Hiromu Arakawa",
+      "Masashi Kishimoto"
+    ],
+    "answer": "Eiichiro Oda"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the military organization in 'Attack on Titan'?",
+    "options": [
+      "Survey Corps",
+      "Military Police Brigade",
+      "Garrison Regiment",
+      "Scouting Legion"
+    ],
+    "answer": "Survey Corps"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'My Hero Academia', what is the name of the hero who can create objects from his body?",
+    "options": [
+      "Eijiro Kirishima",
+      "Denki Kaminari",
+      "Mina Ashido",
+      "Momo Yaoyorozu"
+    ],
+    "answer": "Momo Yaoyorozu"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Sword Art Online', what is the name of the virtual reality MMORPG?",
+    "options": [
+      "Sword Art Online",
+      "ALfheim Online",
+      "Gun Gale Online",
+      "Underworld"
+    ],
+    "answer": "Sword Art Online"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the organization that trains Assassins in 'Assassination Classroom'?",
+    "options": [
+      "Kunugigaoka Junior High School",
+      "Akatsuki",
+      "Black Order",
+      "League of Villains"
+    ],
+    "answer": "Kunugigaoka Junior High School"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the creator of 'Attack on Titan'?",
+    "options": [
+      "Hajime Isayama",
+      "Masashi Kishimoto",
+      "Tite Kubo",
+      "Naoko Takeuchi"
+    ],
+    "answer": "Hajime Isayama"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Hunter x Hunter', what is the name of the protagonist searching for his father?",
+    "options": [
+      "Gon Freecss",
+      "Killua Zoldyck",
+      "Kurapika",
+      "Leorio Paradinight"
+    ],
+    "answer": "Gon Freecss"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the demon fox sealed inside Naruto in 'Naruto'?",
+    "options": [
+      "Kurama",
+      "Shukaku",
+      "Matatabi",
+      "Son Goku"
+    ],
+    "answer": "Kurama"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'My Hero Academia', what is the name of All Might's ultimate move?",
+    "options": [
+      "United States of Smash",
+      "Detroit Smash",
+      "Texas Smash",
+      "Oklahoma Smash"
+    ],
+    "answer": "United States of Smash"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the protagonist in 'Tokyo Ghoul'?",
+    "options": [
+      "Ken Kaneki",
+      "Touka Kirishima",
+      "Rize Kamishiro",
+      "Hideyoshi Nagachika"
+    ],
+    "answer": "Ken Kaneki"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Naruto', what is the name of the village hidden in the sand?",
+    "options": [
+      "Sunagakure",
+      "Konohagakure",
+      "Kirigakure",
+      "Iwagakure"
+    ],
+    "answer": "Sunagakure"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of the protagonist in 'One Punch Man'?",
+    "options": [
+      "Saitama",
+      "Genos",
+      "Mumen Rider",
+      "Speed-o'-Sound Sonic"
+    ],
+    "answer": "Saitama"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In 'Dragon Ball Z', what is the name of Goku's wife?",
+    "options": [
+      "Chi-Chi",
+      "Bulma",
+      "Android 18",
+      "Videl"
+    ],
+    "answer": "Chi-Chi"
+  },
+  {
+    "category": "anime_manga",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What is the name of Luffy's signature attack in 'One Piece'?",
+    "options": [
+      "Gomu Gomu no Pistol",
+      "Gomu Gomu no Gatling",
+      "Gomu Gomu no Red Hawk",
+      "Gomu Gomu no Elephant Gatling"
+    ],
+    "answer": "Gomu Gomu no Pistol"
   }
 ]
