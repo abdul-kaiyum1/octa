@@ -5621,29 +5621,36 @@
   {
     "petID": "1716717400032",
     "uid": "61559865575918",
-    "petName": "zakey",
+    "petName": "yumi",
     "gender": "female",
     "bio": "ACOSMIST >>>",
-    "energy": 31,
+    "energy": 100,
     "happiness": 100,
     "hungry": 0,
     "winCount": 45,
     "rank": "Bronze",
-    "level": 9,
-    "exp": 3222,
-    "coins": 17831,
+    "level": 11,
+    "exp": 756,
+    "coins": 13415,
     "home": true,
     "job": {
-      "salary": 67,
-      "lastWorkDate": 1717596494873
+      "salary": 140,
+      "lastWorkDate": 1717655246127
     },
-    "injury": 333,
+    "injury": 0,
     "items": {
-      "pancake": 10,
-      "water": 10,
-      "redbull": 10,
-      "pizza": 10,
-      "cookie": 10
+      "pancake": 155,
+      "water": 155,
+      "redbull": 30,
+      "pizza": 30,
+      "cookie": 30,
+      "burger": 30,
+      "chocolate": 30,
+      "cigarette": 30,
+      "nachos": 30,
+      "marshmallow": 30,
+      "hotdog": 50,
+      "kiwi": 155
     },
     "donateCount": 3053,
     "friends": [
@@ -5652,7 +5659,9 @@
       "1708779683414"
     ],
     "hide": false,
-    "sleep": false
+    "sleep": false,
+    "energyLimit": 80,
+    "hungryLimit": 80
   },
   {
     "petID": "1716723256680",
@@ -5660,23 +5669,23 @@
     "petName": "Alexa",
     "gender": "female",
     "bio": "(*-*)",
-    "energy": null,
+    "energy": 100,
     "happiness": 100,
     "hungry": 0,
     "winCount": 35,
     "rank": "Bronze",
     "level": 6,
-    "exp": 971,
-    "coins": 7493,
+    "exp": 2027,
+    "coins": 6802,
     "home": true,
     "job": {
-      "salary": 120,
-      "lastWorkDate": 1717577793168
+      "salary": 85,
+      "lastWorkDate": 1717644707058
     },
     "items": {
       "salad": 0,
-      "apple": 5,
-      "orange": 5,
+      "apple": 75,
+      "orange": 45,
       "strawberry": 5,
       "cherry": 5,
       "avocado": 5,
@@ -5694,7 +5703,8 @@
       "1708779683414",
       "1716711496050",
       "1713535114917"
-    ]
+    ],
+    "injury": 0
   },
   {
     "petID": "1716902715466",
@@ -7509,14 +7519,14 @@
     "rank": "Bronze",
     "level": 3,
     "exp": 295,
-    "coins": 61,
+    "coins": 148,
     "items": {
       "cake": 0,
       "cookie": 1
     },
     "job": {
-      "salary": 58,
-      "lastWorkDate": 1717584105927
+      "salary": 87,
+      "lastWorkDate": 1717667494889
     },
     "injury": 0,
     "sleep": false,
@@ -7536,18 +7546,26 @@
     "petName": "izumi",
     "gender": "male",
     "bio": "sigma male",
-    "energy": 50,
+    "energy": 100,
     "happiness": 50,
     "hungry": 50,
     "winCount": 0,
     "rank": "Bronze",
     "level": 1,
-    "exp": 0,
-    "coins": 50,
+    "exp": 168,
+    "coins": 56,
     "friends": [
       "1717511573038",
       "1717564989363"
-    ]
+    ],
+    "job": {
+      "salary": 71,
+      "lastWorkDate": 1717636502647
+    },
+    "items": {
+      "cigarette": 5,
+      "water": 0
+    }
   },
   {
     "petID": "1717512017167",
@@ -7600,28 +7618,29 @@
     "petName": "Sky",
     "gender": "female",
     "bio": "cute",
-    "energy": 150,
+    "energy": 127,
     "happiness": 100,
-    "hungry": 20,
+    "hungry": 0,
     "winCount": 0,
     "rank": "Bronze",
     "level": 5,
-    "exp": 49,
-    "coins": 318,
+    "exp": 569,
+    "coins": 294,
     "job": {
-      "salary": 138,
-      "lastWorkDate": 1717597854289
+      "salary": 137,
+      "lastWorkDate": 1717667477203
     },
     "items": {
       "muffin": 0,
       "cigarette": 0,
-      "cheese": 2,
+      "cheese": 1,
       "candy": 0,
-      "donut": 5,
+      "donut": 2,
       "redbull": 1,
       "pancake": 1,
       "cookie": 0,
-      "cake": 2
+      "cake": 2,
+      "sushi": 4
     },
     "sleep": false,
     "lastSleepTime": 1717565304084,
@@ -7633,7 +7652,8 @@
     "marriageRequest": {
       "status": "pending",
       "requesterID": null
-    }
+    },
+    "injury": 0
   },
   {
     "petID": "1717572571186",
@@ -7641,17 +7661,20 @@
     "petName": "lala",
     "gender": "male",
     "bio": "bio",
-    "energy": 23,
-    "happiness": 86,
-    "hungry": 50,
+    "energy": 105,
+    "happiness": 100,
+    "hungry": 6,
     "winCount": 0,
     "rank": "Bronze",
-    "level": 1,
-    "exp": 147,
-    "coins": 50,
+    "level": 2,
+    "exp": 106,
+    "coins": 40,
     "friends": [
       "1717564989363"
-    ]
+    ],
+    "items": {
+      "croissant": 6
+    }
   },
   {
     "petID": "1717573196766",
@@ -7659,22 +7682,23 @@
     "petName": "kerl",
     "gender": "male",
     "bio": "pogi",
-    "energy": 132,
-    "happiness": 72,
-    "hungry": 9,
+    "energy": 131,
+    "happiness": 100,
+    "hungry": 15,
     "winCount": 0,
     "rank": "Bronze",
     "level": 2,
-    "exp": 101,
-    "coins": 256,
+    "exp": 396,
+    "coins": 289,
     "injury": 22,
     "job": {
-      "salary": 146,
-      "lastWorkDate": 1717584092467
+      "salary": 123,
+      "lastWorkDate": 1717637188744
     },
     "items": {
       "salad": 0,
-      "donut": 0
+      "donut": 0,
+      "taco": 5
     },
     "marriageRequest": {
       "status": "pending",

@@ -7,8 +7,9 @@ module.exports = {
       "en": "Pair with a random member of the opposite gender 😗",
       "vi": ""
     },
-    "category": "60",
-    "guide": "{prefix}pair"
+    "category": "fun",
+    "guide": "{prefix}pair",
+    "countDown": 40
   },
   "location": "/home/abdulkaiyum/octa/scripts/cmds/pair.js"
 };

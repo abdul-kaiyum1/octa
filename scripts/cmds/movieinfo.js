@@ -1,5 +1,5 @@
 const axios = require("axios");
-const fs = require("fs-extra"); 
+const fs = require("fs-extra");
 
 module.exports = {
   config: {
@@ -38,13 +38,15 @@ module.exports = {
     }
 
     try {
+      const initialMessage = await api.sendMessage(getLang("sending_movie_info"), event.threadID);
       const response = await axios.get(`https://api.popcat.xyz/imdb?q=${encodeURIComponent(movieName)}`);
       console.log(`API Response: ${JSON.stringify(response.data)}`);
       const data = response.data;
 
       if (!data || data.error || data.title === "N/A") {
         console.log("No valid data found.");
-        return message.reply(getLang("no_results"));
+        await api.editMessage(getLang("no_results"), initialMessage.messageID);
+        return;
       }
 
       const movieInfo = `
@@ -64,9 +66,8 @@ module.exports = {
 🔗 [IMDb Page](${data.imdburl})
 `;
 
-      console.log("Sending movie information.");
-      await message.reply(getLang("sending_movie_info"));
-      await api.sendMessage({ body: movieInfo }, event.threadID);
+      console.log("Editing message to send movie information.");
+      await api.editMessage(movieInfo, initialMessage.messageID);
 
       if (data.poster) {
         try {

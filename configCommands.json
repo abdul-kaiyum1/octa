@@ -51,6 +51,8 @@
     "gemini.js",
     "rank.js",
     "adventure.js",
-    "pb.js"
+    "pb.js",
+    "bank.js",
+    "quiz.js"
   ]
 }
