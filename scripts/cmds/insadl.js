@@ -5,11 +5,11 @@ const TinyURL = require('tinyurl');
 
 module.exports = {
   config: {
-    name: "fbdl",
+    name: "instadl",
     version: "1.0",
     author: "Abdul Kaiyum",
-    shortDescription: "Download Facebook videos by link",
-    longDescription: "Download Facebook videos",
+    shortDescription: "Download Instagram videos by link",
+    longDescription: "Download Instagram videos",
     category: "download",
     guide: "{pn} link or reply to a link with {pn}"
   },
@@ -21,11 +21,11 @@ module.exports = {
     }
 
     if (!link) {
-      return message.reply(`Please provide the Facebook video link.`);
+      return message.reply(`Please provide the Instagram video link.`);
     }
 
     const apiKey = 'api1'; // Your API key here
-    const apiUrl = `https://for-devs.onrender.com/api/fbdl?url=${encodeURIComponent(link)}&apikey=${apiKey}`;
+    const apiUrl = `https://for-devs.onrender.com/api/instadl?url=${encodeURIComponent(link)}&apikey=${apiKey}`;
 
     message.reply("Processing your request... Please wait.");
 
@@ -35,35 +35,35 @@ module.exports = {
         return message.reply(`Failed to retrieve content. Status code: ${res.status}`);
       }
 
-      if (!res.data.downloadUrl) {
-        return message.reply("No download URL found.");
+      if (!res.data.video) {
+        return message.reply("No video found.");
       }
 
       // Generate a TinyURL for the download link
-      const tinyUrl = await TinyURL.shorten(res.data.downloadUrl);
+      const tinyUrl = await TinyURL.shorten(res.data.video);
 
-      message.reply(`Here's your Facebook video download link: ${tinyUrl}`);
+      message.reply(`Here's your Instagram video download link: ${tinyUrl}`);
 
       // Download the video
-      const videoFileName = path.basename(res.data.downloadUrl);
-      const videoFilePath = path.join(__dirname, 'cache', fbdl69.mp4);
+      const videoFileName = "igdl69.m4";
+      const videoFilePath = path.join(__dirname, 'cache', videoFileName);
 
       const writer = fs.createWriteStream(videoFilePath);
-      const response = await axios.get(res.data.downloadUrl, { responseType: 'stream' });
+      const response = await axios.get(res.data.video, { responseType: 'stream' });
 
       response.data.pipe(writer);
 
       writer.on('finish', async () => {
         try {
           await message.reply({
-            body: "Here's your Facebook video:",
+            body: "Here's your Instagram video:",
             attachment: fs.createReadStream(videoFilePath)
           });
           // Clean up the downloaded file
           fs.unlinkSync(videoFilePath);
         } catch (error) {
-          console.error("Error sending Facebook video:", error);
-          message.reply(`Failed to send Facebook video: ${error.message}`);
+          console.error("Error sending Instagram video:", error);
+          message.reply(`Failed to send Instagram video: ${error.message}`);
         }
       });
     } catch (error) {

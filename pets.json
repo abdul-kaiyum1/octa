@@ -289,7 +289,8 @@
       "1709025936570",
       "1709775275783",
       "1708867573155",
-      "1712927605046"
+      "1712927605046",
+      "1709296828321"
     ],
     "items": {
       "burger": 0,
@@ -880,10 +881,10 @@
     "rank": "Bronze",
     "level": 9,
     "exp": 1102,
-    "coins": 4304,
+    "coins": 4455,
     "job": {
-      "salary": 97,
-      "lastWorkDate": 1717577886576
+      "salary": 80,
+      "lastWorkDate": 1717846834209
     },
     "sleep": false,
     "items": {
@@ -2538,8 +2539,8 @@
     "winCount": 88,
     "rank": "Bronze",
     "level": 7,
-    "exp": 2167,
-    "coins": 23917.5,
+    "exp": 2225,
+    "coins": 23907.5,
     "items": {
       "grape": 1,
       "cake": 1,
@@ -2551,7 +2552,7 @@
       "hotdog": 5,
       "taco": 2,
       "pretzel": 1,
-      "burger": 13,
+      "burger": 14,
       "cigarette": 6,
       "redbull": 0,
       "coconut": 1,
@@ -2927,7 +2928,8 @@
     "exp": 0,
     "coins": 50,
     "friends": [
-      "1703913007658"
+      "1703913007658",
+      "1706865792215"
     ],
     "sleep": false
   },
@@ -2972,10 +2974,10 @@
     "rank": "Bronze",
     "level": 5,
     "exp": 773,
-    "coins": 10,
+    "coins": 136,
     "job": {
-      "salary": 90,
-      "lastWorkDate": 1710578036396
+      "salary": 126,
+      "lastWorkDate": 1717790564950
     },
     "items": {
       "cookie": 0,
@@ -5350,8 +5352,12 @@
     "rank": "Bronze",
     "level": 1,
     "exp": 0,
-    "coins": 50,
-    "home": true
+    "coins": 103,
+    "home": true,
+    "job": {
+      "salary": 53,
+      "lastWorkDate": 1717790574218
+    }
   },
   {
     "petID": "1713121317667",
@@ -5630,12 +5636,12 @@
     "winCount": 45,
     "rank": "Bronze",
     "level": 11,
-    "exp": 756,
-    "coins": 13415,
+    "exp": 2399,
+    "coins": 12575,
     "home": true,
     "job": {
-      "salary": 140,
-      "lastWorkDate": 1717655246127
+      "salary": 125,
+      "lastWorkDate": 1717846694858
     },
     "injury": 0,
     "items": {
@@ -5648,8 +5654,8 @@
       "chocolate": 30,
       "cigarette": 30,
       "nachos": 30,
-      "marshmallow": 30,
-      "hotdog": 50,
+      "marshmallow": 130,
+      "hotdog": 155,
       "kiwi": 155
     },
     "donateCount": 3053,
@@ -7618,17 +7624,17 @@
     "petName": "Sky",
     "gender": "female",
     "bio": "cute",
-    "energy": 127,
+    "energy": 150,
     "happiness": 100,
-    "hungry": 0,
+    "hungry": 20,
     "winCount": 0,
     "rank": "Bronze",
     "level": 5,
-    "exp": 569,
-    "coins": 294,
+    "exp": 1163,
+    "coins": 774,
     "job": {
       "salary": 137,
-      "lastWorkDate": 1717667477203
+      "lastWorkDate": 1717768529600
     },
     "items": {
       "muffin": 0,
@@ -7639,8 +7645,8 @@
       "redbull": 1,
       "pancake": 1,
       "cookie": 0,
-      "cake": 2,
-      "sushi": 4
+      "cake": 5,
+      "sushi": 3
     },
     "sleep": false,
     "lastSleepTime": 1717565304084,
@@ -7661,19 +7667,23 @@
     "petName": "lala",
     "gender": "male",
     "bio": "bio",
-    "energy": 105,
+    "energy": 150,
     "happiness": 100,
-    "hungry": 6,
+    "hungry": 0,
     "winCount": 0,
     "rank": "Bronze",
     "level": 2,
-    "exp": 106,
-    "coins": 40,
+    "exp": 226,
+    "coins": 11,
     "friends": [
       "1717564989363"
     ],
     "items": {
-      "croissant": 6
+      "croissant": 13
+    },
+    "job": {
+      "salary": 51,
+      "lastWorkDate": 1717768437665
     }
   },
   {
@@ -7682,13 +7692,13 @@
     "petName": "kerl",
     "gender": "male",
     "bio": "pogi",
-    "energy": 131,
+    "energy": 125,
     "happiness": 100,
-    "hungry": 15,
+    "hungry": 20,
     "winCount": 0,
     "rank": "Bronze",
     "level": 2,
-    "exp": 396,
+    "exp": 446,
     "coins": 289,
     "injury": 22,
     "job": {
@@ -7703,6 +7713,28 @@
     "marriageRequest": {
       "status": "pending",
       "requesterID": "61558303554125"
+    }
+  },
+  {
+    "petID": "1717842249177",
+    "uid": "61560845964578",
+    "petName": "Lyn",
+    "gender": "female",
+    "bio": "cute and beautiful",
+    "energy": 58,
+    "happiness": 76,
+    "hungry": 24,
+    "winCount": 0,
+    "rank": "Bronze",
+    "level": 1,
+    "exp": 273,
+    "coins": 109,
+    "job": {
+      "salary": 109,
+      "lastWorkDate": 1717842305453
+    },
+    "items": {
+      "sushi": 2
     }
   }
 ]

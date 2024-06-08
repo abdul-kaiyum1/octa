@@ -31,7 +31,7 @@ module.exports = {
     try {
       const uid = event.senderID;
       const response = await axios.get(
-        `https://for-devs.onrender.com/api/llama?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=fucked`
+        `https://for-devs.onrender.com/api/llama?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=api1`
       );
 
       if (response.data && response.data.result) {
@@ -65,7 +65,7 @@ module.exports = {
     try {
       const uid = event.senderID;
       const response = await axios.get(
-        `https://for-devs.onrender.com/api/llama?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=fucked`
+        `https://for-devs.onrender.com/api/llama?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=ai1`
       );
 
       if (response.data && response.data.result) {

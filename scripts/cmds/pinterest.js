@@ -31,7 +31,12 @@ module.exports = {
         return api.sendMessage(`Please enter the search query and number of images to return in the format: ${this.config.guide.en}`, event.threadID, event.messageID);
       }
       const keySearchs = keySearch.substr(0, keySearch.indexOf('-')).trim();
-      const numberSearch = parseInt(keySearch.split("-").pop().trim()) || 6;
+      let numberSearch = parseInt(keySearch.split("-").pop().trim()) || 6;
+
+      // Limit the number of images to a maximum of 8
+      if (numberSearch > 8) {
+        numberSearch = 8;
+      }
 
       const res = await axios.get(`https://celestial-dainsleif.onrender.com/pinterest?pinte=${encodeURIComponent(keySearchs)}`);
       const data = res.data;

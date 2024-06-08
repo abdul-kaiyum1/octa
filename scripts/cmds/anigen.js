@@ -3,56 +3,56 @@ const axios = require("axios");
 module.exports = {
   config: {
     name: "anigen",
-    author: "Abdul Kaiyum",
+    aliases: ["aiimage"],
     version: "1.0",
+    author: "Abdul Kaiyum",
+    category: "AI",
     role: 0,
-    countDown: 10,
-    shortDescription: "Generates an image from a text description",
-    longDescription: "Generates an image from a text description",
-    category: "ai",
+    longDescription: "Generate images based on a prompt.",
     guide: {
-      en: "{pn} <prompt> | <resolution>\nExample:\n{pn} a futuristic city | 16:9"
-    }
+      en: "{pn} <prompt>\nExample: {pn} cat",
+    },
   },
-
-  langs: {
-    en: {
-      loading: "Generating image, please wait...",
-      error: "An error occurred, please try again later.",
-      no_prompt: "Please provide a prompt to generate an image."
-    }
-  },
-
-  onStart: async function ({ event, message, getLang, api, args }) {
-    const { threadID } = event;
-    const input = args.join(' ');
-    const [prompt, resolution = '1:1'] = input.split('|').map(s => s.trim());
-
+  onStart: async function ({ api, message, event, args, isMediaBanned }) {
+    const prompt = args.join(" ");
     if (!prompt) {
-      return message.reply(getLang("no_prompt"));
+      return message.reply("Please provide a prompt.");
     }
-
-    api.setMessageReaction("⏳", event.messageID, () => {}, true);
 
     try {
-      message.reply(getLang("loading"));
-      const apiUrl = `https://apis-samir.onrender.com/niji?prompt=${encodeURIComponent(prompt)}&resolution=${encodeURIComponent(resolution)}`;
-      const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
+      const waitingMessage = await api.sendMessage("✅ | Creating your Imagination...", event.threadID);
 
-      if (response.status !== 200) {
-        throw new Error("Failed to fetch the generated image.");
+      const response = await axios.get(`https://api.vyturex.com/niji?text=${encodeURIComponent(prompt)}`);
+      const imageUrl = response.data.imageUrl;
+
+      if (!imageUrl) {
+        return message.reply("Failed to generate image. Please try again.");
       }
 
-      // Directly reply with the image
-      message.reply({
-        body: `Here's your AI generated image\nPrompt: "${prompt}"`,
-        attachment: Buffer.from(response.data, 'binary')
-      });
+      // Upload the generated image to ImgBB
+      const apiKey = 'fc5b574c7b0834fe36e7ce4e9ec3e9aa';
+      const imgbbResponse = await axios.get(`https://api.imgbb.com/1/upload?key=${apiKey}&image=${encodeURIComponent(imageUrl)}`);
+      const imgbbUrl = imgbbResponse.data.data.url;
 
-      api.setMessageReaction("✅", event.messageID, () => {}, true);
+      if (isMediaBanned) {
+        return message.reply(`Image generated!\nPrompt: ${prompt}\nDownload link: ${imgbbUrl}`);
+      }
+
+      // Send the link first
+      message.reply(`Image generated!\nPrompt: ${prompt}\nDownload link: ${imgbbUrl}`);
+
+      // Fetch the generated image and send it as an attachment
+      const attachment = await global.utils.getStreamFromURL(imageUrl);
+      await api.sendMessage({
+        attachment: attachment
+      }, event.threadID);
+
+      if (waitingMessage) {
+        await api.unsendMessage(waitingMessage.messageID);
+      }
     } catch (error) {
-      console.error("Error generating image:", error);
-      message.reply(getLang("error"));
+      console.error(error);
+      return message.reply("There was an error generating the image. Please try again later.");
     }
   }
 };

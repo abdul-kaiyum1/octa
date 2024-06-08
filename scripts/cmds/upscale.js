@@ -1,4 +1,5 @@
 const axios = require("axios");
+const fs = require("fs-extra");
 
 module.exports = {
   config: {
@@ -13,7 +14,7 @@ module.exports = {
       en: "${pn} reply to an image to upscale it"
     }
   },
-  onStart: async function ({ message, api, args, event }) {
+  onStart: async function ({ message, api, args, event, isMediaBanned }) {
     if (!event.messageReply || !event.messageReply.attachments || !event.messageReply.attachments[0]) {
       return message.reply("Please reply to an image to upscale it.");
     }
@@ -56,24 +57,26 @@ module.exports = {
         if (upscaledImageResponse.data.code === 200 && upscaledImageResponse.data.data.status === 'success' && upscaledImageResponse.data.data.downloadUrls) {
           const upscaledImageUrl = upscaledImageResponse.data.data.downloadUrls[0];
 
-          try {
-            // Upload the upscaled image to ImgBB
-            const apiKey = 'fc5b574c7b0834fe36e7ce4e9ec3e9aa';
-            const imgbbResponse = await axios.get(`https://api.imgbb.com/1/upload?key=${apiKey}&image=${encodeURIComponent(upscaledImageUrl)}`);
-            const imgbbUrl = imgbbResponse.data.data.url;
+          // Upload the upscaled image to ImgBB
+          const apiKey = 'fc5b574c7b0834fe36e7ce4e9ec3e9aa';
+          const imgbbResponse = await axios.get(`https://api.imgbb.com/1/upload?key=${apiKey}&image=${encodeURIComponent(upscaledImageUrl)}`);
+          const imgbbUrl = imgbbResponse.data.data.url;
 
-            const attachment = await global.utils.getStreamFromURL(upscaledImageUrl);
-            message.reply({
-              body: ` Successfully upscaled! ✅\nDownload link: ${imgbbUrl}`,
-              attachment: attachment
-            });
-            api.setMessageReaction("✅", event.messageID, () => {}, true);
-            return;
-          } catch (error) {
-            console.error("Error uploading image to ImgBB:", error);
-            message.reply("Failed to upload the upscaled image. Please try again later.");
+          if (isMediaBanned) {
+            message.reply(`Download link: ${imgbbUrl}`);
             return;
           }
+
+          const attachment = await global.utils.getStreamFromURL(upscaledImageUrl);
+          message.reply(`Successfully upscaled! ✅\nDownload link: ${imgbbUrl}`);
+
+          // Send the upscaled image separately
+          await api.sendMessage({
+            attachment: attachment
+          }, event.threadID);
+
+          api.setMessageReaction("✅", event.messageID, () => {}, true);
+          return;
         } else if (upscaledImageResponse.data.data.status === 'waiting') {
           console.log("Upscaling in progress. Retrying later...");
           await new Promise(resolve => setTimeout(resolve, 30000)); // Wait for 30 seconds
@@ -91,7 +94,7 @@ module.exports = {
       }
     } catch (error) {
       console.error("Error processing image:", error);
-      message.reply("Failed to process the image.");
+      message.reply("Media is banded plx click on the Link to download the upscaled image.");
     }
   }
 };

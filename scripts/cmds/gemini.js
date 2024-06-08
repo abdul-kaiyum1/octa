@@ -1,64 +1,93 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-
-const genAI = new GoogleGenerativeAI("AIzaSyBhke9zA6HV5nQctR6RPnkl_nJUh6p9jLk");
+const axios = require('axios');
 
 module.exports = {
   config: {
     name: "gemini",
-    aliases: ["ai", "askai"],
+    aliases: [],
     version: "1.0",
     author: "Abdul Kaiyum",
-    longDescription: "Ask questions to the Gemini AI and generate images.",
+    countDown: 5,
     role: 0,
-    category: "Utility",
+    longDescription: {
+      vi: '',
+      en: "Gmenimi ai, Api by dipto"
+    },
+    category: "ai",
     guide: {
-      en: "{pn} [your_question]\n\nExample:\n{pn} What is the weather today?\n{pn} Generate an image of a futuristic city.",
-    },
-  },
-  langs: {
-    en: {
-      invalid_question: "Please enter a valid question or command for the AI.",
-      query_error: "There was an error querying the AI. Please try again later.",
-      image_error: "There was an error generating the image. Please try again later.",
-      text_error: "There was an error generating the text. Please try again later.",
-    },
-  },
-  onStart: async function ({ interaction, args }) {
-    const userQuestion = args.join(" ");
-
-    if (!userQuestion) {
-      return interaction.respond(this.langs.en.invalid_question);
+      vi: '',
+      en: "{pn} <prompt>"
     }
+  },
+
+  onStart: async function ({ api, commandName, event, args }) {
+    if (!args.length) {
+      return api.sendMessage("Please provide a prompt. Usage: {pn} <prompt>", event.threadID, event.messageID);
+    }
+
+    const text = args.join(" ").trim();
+    const senderID = event.senderID;
+
+    const options = {
+      method: 'GET',
+      url: 'https://noobs-api2.onrender.com/dipto/llama',
+      params: { text, senderID },
+      headers: { accept: '*/*' }
+    };
 
     try {
-      // Check if the user is requesting an image
-      if (userQuestion.toLowerCase().startsWith("generate an image of")) {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const prompt = userQuestion;
+      api.setMessageReaction('⏳', event.messageID, () => {}, true);
 
-        const result = await model.generateContent(prompt);
-        if (result.response && result.response.images && result.response.images.length > 0) {
-          const imageUrl = result.response.images[0].url;
-          await interaction.respond(imageUrl);
-        } else {
-          await interaction.respond(this.langs.en.image_error);
-        }
-      } else {
-        // Handle text generation
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const prompt = userQuestion;
+      const { data } = await axios.request(options);
 
-        const result = await model.generateContent(prompt);
-        if (result.response && result.response.text) {
-          const text = result.response.text;
-          await interaction.respond(text);
-        } else {
-          await interaction.respond(this.langs.en.text_error);
+      return api.sendMessage(data.data, event.threadID, (error, message) => {
+        if (!error) {
+          global.GoatBot.onReply.set(message.messageID, {
+            commandName,
+            author: event.senderID,
+            prompt: text,
+            conversation: [data.data]
+          });
         }
-      }
+      }, event.messageID);
+
     } catch (error) {
-      console.error(error);
-      return interaction.respond(this.langs.en.query_error);
+      return api.sendMessage("Error: " + error.message, event.threadID, event.messageID) && api.setMessageReaction('⚠️', event.messageID, () => {}, true);
     }
   },
+
+  onReply: async function ({ api, event, Reply }) {
+    if (event.senderID !== Reply.author) return;
+
+    const text = event.body;
+    const senderID = event.senderID;
+
+    const options = {
+      method: 'GET',
+      url: 'https://noobs-api2.onrender.com/dipto/llama',
+      params: { text, senderID },
+      headers: { accept: '*/*' }
+    };
+
+    try {
+      api.setMessageReaction('⏳', event.messageID, () => {}, true);
+
+      const { data } = await axios.request(options);
+
+      const updatedConversation = [...Reply.conversation, data.data];
+
+      return api.sendMessage(data.data, event.threadID, (error, message) => {
+        if (!error) {
+          global.GoatBot.onReply.set(message.messageID, {
+            commandName: Reply.commandName,
+            author: Reply.author,
+            prompt: text,
+            conversation: updatedConversation
+          });
+        }
+      }, event.messageID);
+
+    } catch (error) {
+      return api.sendMessage("Error: " + error.message, event.threadID, event.messageID) && api.setMessageReaction('⚠️', event.messageID, () => {}, true);
+    }
+  }
 };
