@@ -21,7 +21,7 @@ module.exports = {
     }
 
     if (!link) {
-      return message.reply(`Please provide the Facebook video link.`);
+      return message.reply("Please provide the Facebook video link.");
     }
 
     const apiKey = 'api1'; // Your API key here
@@ -45,8 +45,8 @@ module.exports = {
       message.reply(`Here's your Facebook video download link: ${tinyUrl}`);
 
       // Download the video
-      const videoFileName = path.basename(res.data.downloadUrl);
-      const videoFilePath = path.join(__dirname, 'cache', fbdl69.mp4);
+      const videoFileName = 'fbdl69.mp4';
+      const videoFilePath = path.join(__dirname, 'cache', videoFileName);
 
       const writer = fs.createWriteStream(videoFilePath);
       const response = await axios.get(res.data.downloadUrl, { responseType: 'stream' });

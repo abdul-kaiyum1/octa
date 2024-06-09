@@ -207,15 +207,12 @@ module.exports = {
           return message.reply("No valid data found for the selected episode.");
         }
 
-        let watchLinks = `Watch and download links for ${animeData.title} Episode ${episodeNumber}:\n`;
+        let watchLinks = `Watch links for ${animeData.title} Episode ${episodeNumber}:\n`;
         for (const source of episodeData.sources) {
           const shortUrl = await tinyurl.shorten(source.url);
           watchLinks += `🔗 [${source.quality}](${shortUrl})\n`;
         }
-        if (episodeData.download) {
-          const downloadShortUrl = await tinyurl.shorten(episodeData.download);
-          watchLinks += `\n🔽 [Download Link](${downloadShortUrl})\n`;
-        }
+      
 
         message.reply(watchLinks);
       } catch (error) {

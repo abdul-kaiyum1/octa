@@ -290,7 +290,8 @@
       "1709775275783",
       "1708867573155",
       "1712927605046",
-      "1709296828321"
+      "1709296828321",
+      "1717521100843"
     ],
     "items": {
       "burger": 0,
@@ -873,22 +874,22 @@
     "petName": "Epic",
     "gender": "male",
     "bio": "wazzup people",
-    "energy": 880,
+    "energy": 1080,
     "happiness": 100,
     "hungry": 0,
     "winCount": 31,
     "clan": null,
     "rank": "Bronze",
     "level": 9,
-    "exp": 1102,
-    "coins": 4455,
+    "exp": 1192,
+    "coins": 4474,
     "job": {
-      "salary": 80,
-      "lastWorkDate": 1717846834209
+      "salary": 99,
+      "lastWorkDate": 1717912931454
     },
     "sleep": false,
     "items": {
-      "redbull": 90,
+      "redbull": 95,
       "burger": 28,
       "pancake": 0
     },
@@ -896,7 +897,8 @@
     "friends": [
       "1716717400032",
       "1716723256680",
-      "1713535114917"
+      "1713535114917",
+      "1717521100843"
     ],
     "donateCount": 1
   },
@@ -7616,7 +7618,15 @@
     "rank": "Bronze",
     "level": 1,
     "exp": 0,
-    "coins": 50
+    "coins": 117,
+    "job": {
+      "salary": 67,
+      "lastWorkDate": 1717913749623
+    },
+    "friends": [
+      "1706865792215",
+      "1708779683414"
+    ]
   },
   {
     "petID": "1717564989363",
