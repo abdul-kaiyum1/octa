@@ -103,7 +103,7 @@ module.exports = {
 
           api.setMessageReaction('⏳', event.messageID, () => {}, true);
 
-          const response = await axios.get('https://consumet-api-s5m2.onrender.com/manga/mangadex/info/' + selectedData.id);
+          const response = await axios.get('https://aiko-mangadex.vercel.app/manga/mangadex/info/' + selectedData.id);
           const mangaInfo = response.data;
           const description = `Title: ${mangaInfo.title}\n\nDescription: ${mangaInfo.description.en}\n\nGenres: ${mangaInfo.genres.join(", ")}\nThemes: ${mangaInfo.themes.join(", ")}\nStatus: ${mangaInfo.status}\nRelease Date: ${mangaInfo.releaseDate}\nChapters: ${mangaInfo.chapters.length}\n\nReply with the chapter number to read. Ex: 2`;
 
@@ -128,7 +128,7 @@ module.exports = {
         const chapterData = Reply.mangaInfo.chapters.reverse()[chapterNumber];
         api.setMessageReaction('⏳', event.messageID, async () => {
           try {
-            const response = await axios.get("https://consumet-api-s5m2.onrender.com/manga/mangadex/read/" + chapterData.id);
+            const response = await axios.get("https://aiko-mangadex.vercel.app/manga/mangadex/read/" + chapterData.id);
             const images = response.data.map(item => item.img);
 
             for (let i = 0; i < images.length; i += 10) {
@@ -167,7 +167,7 @@ async function getAllSearchResults(search) {
   let results = [];
 
   do {
-    const searchResult = await axios.get(`https://consumet-api-s5m2.onrender.com/manga/mangadex/${search}?page=${page}`);
+    const searchResult = await axios.get(`https://aiko-mangadex.vercel.app/manga/mangadex/${search}?page=${page}`);
     results = searchResult.data.results;
     allResults = allResults.concat(results);
     page++;
