@@ -38,7 +38,7 @@ module.exports = {
     }
 
     try {
-      const response = await axios.get(`https://consumet-api-s5m2.onrender.com/anime/gogoanime/${encodeURIComponent(animeName)}`);
+      const response = await axios.get(`https://aiko-mangadex.vercel.app/anime/gogoanime/${encodeURIComponent(animeName)}`);
       console.log(`API Response: ${JSON.stringify(response.data)}`);
       const data = response.data;
 
@@ -50,7 +50,7 @@ module.exports = {
       const animeId = data.results[0].id;
 
       // Fetch detailed information about the anime
-      const detailedResponse = await axios.get(`https://consumet-api-s5m2.onrender.com/anime/gogoanime/info/${animeId}`);
+      const detailedResponse = await axios.get(`https://aiko-mangadex.vercel.app/anime/gogoanime/info/${animeId}`);
       const detailedData = detailedResponse.data;
 
       const animeInfo = `
