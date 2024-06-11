@@ -61,7 +61,7 @@ module.exports = {
 
       // Fetch data if not found in cache
       if (!data) {
-        const response = await axios.get(`https://consumet-api-s5m2.onrender.com/anime/gogoanime/${encodeURIComponent(animeName)}`);
+        const response = await axios.get(`https://aiko-mangadex.vercel.app/anime/gogoanime/${encodeURIComponent(animeName)}`);
         data = response.data;
         await fs.outputJson(cachePath, { timestamp: Date.now(), data });
       }
@@ -129,7 +129,7 @@ module.exports = {
 
         // Fetch data if not found in cache
         if (!animeInfoData) {
-          const animeInfoResponse = await axios.get(`https://consumet-api-s5m2.onrender.com/anime/gogoanime/info/${selectedAnimeId}`);
+          const animeInfoResponse = await axios.get(`https://aiko-mangadex.vercel.app/anime/gogoanime/info/${selectedAnimeId}`);
           animeInfoData = animeInfoResponse.data;
           await fs.outputJson(cachePath, { timestamp: Date.now(), data: animeInfoData });
         }
@@ -186,7 +186,7 @@ module.exports = {
 
         // Fetch data if not found in cache
         if (!animeData) {
-          const response = await axios.get(`https://consumet-api-s5m2.onrender.com/anime/gogoanime/info/${selectedAnimeId}`);
+          const response = await axios.get(`https://aiko-mangadex.vercel.app/anime/gogoanime/info/${selectedAnimeId}`);
           animeData = response.data;
           await fs.outputJson(cachePath, { timestamp: Date.now(), data: animeData });
         }
@@ -200,7 +200,7 @@ module.exports = {
           return message.reply(`No episode ${episodeNumber} found for the selected anime.`);
         }
 
-        const episodeResponse = await axios.get(`https://consumet-api-s5m2.onrender.com/anime/gogoanime/watch/${episode.id}`);
+        const episodeResponse = await axios.get(`https://aiko-mangadex.vercel.app/anime/gogoanime/watch/${episode.id}`);
         const episodeData = episodeResponse.data;
 
         if (!episodeData || !episodeData.sources || episodeData.sources.length === 0) {
