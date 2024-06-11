@@ -30,7 +30,7 @@ module.exports = {
     try {
       const uid = event.senderID;
       const response = await axios.get(
-        `https://for-devs.onrender.com/api/pi?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=api1`
+        `https://for-devs.onrender.com/api/pi?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=rishadboss`
       );
 
       if (response.data && response.data.result) {
@@ -63,7 +63,7 @@ module.exports = {
     try {
       const uid = event.senderID;
       const response = await axios.get(
-        `https://for-devs.onrender.com/api/pi?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=api1`
+        `https://for-devs.onrender.com/api/pi?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=rishadboss`
       );
 
       if (response.data && response.data.result) {

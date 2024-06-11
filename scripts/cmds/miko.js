@@ -101,7 +101,7 @@ function sendErrorMessage(message, errorMessage) {
 
 async function callMikoAPI(prompt, uid, imageUrl) {
   try {
-    const apiUrl = `https://for-devs.onrender.com/api/miko?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=fucked`;
+    const apiUrl = `https://for-devs.onrender.com/api/miko?query=${encodeURIComponent(prompt)}&uid=${uid}&apikey=rishadboss`;
     const apiUrlWithImage = imageUrl ? `${apiUrl}&vision=${encodeURIComponent(imageUrl)}` : apiUrl;
     const response = await axios.get(apiUrlWithImage);
     return response.data;

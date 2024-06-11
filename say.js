@@ -3,7 +3,7 @@ module.exports = {
     "name": "say",
     "version": "1.1.1.1",
     "author": "JARiF@Cat",
-    "countDown": 50,
+    "countDown": 30,
     "role": 0,
     "category": "Voice",
     "shortDescription": "",
