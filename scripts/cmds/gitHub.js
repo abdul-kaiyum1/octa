@@ -5,6 +5,7 @@ module.exports = {
     name: "github",
     aliases: ["gh"],
     version: "1.0",
+    role:2,
     author: "Abdul Kaiyum",
     shortDescription: "GitHub pull and push operations",
     longDescription: "Execute GitHub pull and push commands from the bot",
@@ -53,7 +54,7 @@ module.exports = {
       if (!commitMessage) {
         return message.reply("Please provide a commit message for push.");
       }
-      execGitCommand(`git add . && git commit -m "${commitMessage}" && git push`, 'Successfully pushed to GitHub.');
+      execGitCommand(`git add . && git commit -m "${commitMessage}" && git push origin main`, 'Successfully pushed to GitHub.');
     }
   }
 };
