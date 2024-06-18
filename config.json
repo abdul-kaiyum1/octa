@@ -60,7 +60,7 @@
   },
   "serverUptime": {
     "enable": false,
-    "port": 3001,
+    "port": 8000,
     "socket": {
       "enable": true,
       "channelName": "uptime",
