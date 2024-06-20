@@ -10,7 +10,7 @@ module.exports = {
   config: {
     name: "anigen",
     aliases: ["animeimagine"],
-    author: "Your Name",
+    author: "Abdul Kaiyum",
     version: "1.0",
     countDown: 10,
     role: 0,
@@ -18,7 +18,8 @@ module.exports = {
     longDescription: "Generates an anime image from a text description using the Animagine API.",
     category: "ai",
     guide: {
-      en: "{pn} <prompt> | <resolution> | <qualitytag>\nExample: {pn} 'A fantasy landscape' | '1:1' | '4'",
+          en: "{pn} <prompt> | <resolution> | <qualitytag> \nExample: {pn} 'Naruto in battle' | '1:1' | '4'",
+
     }
   },
 
