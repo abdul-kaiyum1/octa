@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 global.api = {
-  samirApi: "https://apis-samir.onrender.com"
+  samirApi: "https://samirxpikachu.onrender.com"
 };
 
 module.exports = {
