@@ -2,7 +2,7 @@ const a = require("axios"),
       t = require("tinyurl");
 
 global.api = {
-  s: "https://apis-samir.onrender.com"
+  s: "https://samirxpikachu.onrender.com/"
 };
 
 const fm = {

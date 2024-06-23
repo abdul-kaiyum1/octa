@@ -27,7 +27,7 @@ onStart: async function ({ api, event, args, message }) {
     return message.reply("Please provide a song name to search for lyrics.");
   }
 
-  const searchApiUrl = `https://for-devs.onrender.com/api/lyrics/search?query=${encodeURIComponent(query)}&apikey=api1`;
+  const searchApiUrl = `https://for-devs.onrender.com/api/lyrics/search?query=${encodeURIComponent(query)}&apikey=rishadbosss`;
 
   try {
     const response = await axios.get(searchApiUrl);

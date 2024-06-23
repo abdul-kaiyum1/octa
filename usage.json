@@ -1,7 +1,7 @@
 [
   {
     "name": "aiko",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "ping",
@@ -21,7 +21,7 @@
   },
   {
     "name": "upt",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "stats",
@@ -29,7 +29,7 @@
   },
   {
     "name": "dcmd",
-    "usage": 1
+    "usage": 5
   },
   {
     "name": "upt2",
@@ -37,6 +37,42 @@
   },
   {
     "name": "gh",
+    "usage": 2
+  },
+  {
+    "name": "sing",
+    "usage": 2
+  },
+  {
+    "name": "",
+    "usage": 3
+  },
+  {
+    "name": "uid",
+    "usage": 1
+  },
+  {
+    "name": "bd",
+    "usage": 1
+  },
+  {
+    "name": "ms",
+    "usage": 1
+  },
+  {
+    "name": "bal",
+    "usage": 1
+  },
+  {
+    "name": "roulette",
+    "usage": 1
+  },
+  {
+    "name": "slot",
+    "usage": 2
+  },
+  {
+    "name": "daily",
     "usage": 1
   }
 ]

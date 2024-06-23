@@ -24,7 +24,7 @@ module.exports = {
       return message.reply("Please provide the Facebook video link.");
     }
 
-    const apiKey = 'api1'; // Your API key here
+    const apiKey = 'rishadboss'; // Your API key here
     const apiUrl = `https://for-devs.onrender.com/api/fbdl?url=${encodeURIComponent(link)}&apikey=${apiKey}`;
 
     message.reply("Processing your request... Please wait.");

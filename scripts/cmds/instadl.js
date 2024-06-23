@@ -21,18 +21,18 @@ module.exports = {
     }
 
     if (!link) {
-      return message.reply(Please provide the Instagram video link.);
+      return message.reply("Please provide the Instagram video link.");
     }
 
-    const apiKey = 'api1'; // Your API key here
-    const apiUrl = https://for-devs.onrender.com/api/instadl?url=${encodeURIComponent(link)}&apikey=${apiKey};
+    const apiKey = 'rishadboss'; // Your API key here
+    const apiUrl = `https://for-devs.onrender.com/api/instadl?url=${encodeURIComponent(link)}&apikey=${apiKey}`;
 
     message.reply("Processing your request... Please wait.");
 
     try {
       const res = await axios.get(apiUrl);
       if (res.status !== 200) {
-        return message.reply(Failed to retrieve content. Status code: ${res.status});
+        return message.reply(`Failed to retrieve content. Status code: ${res.status}`);
       }
 
       if (!res.data.video) {
@@ -42,10 +42,10 @@ module.exports = {
       // Generate a TinyURL for the download link
       const tinyUrl = await TinyURL.shorten(res.data.video);
 
-      message.reply(Here's your Instagram video download link: ${tinyUrl});
+      message.reply(`Here's your Instagram video download link: ${tinyUrl}`);
 
       // Download the video
-      const videoFileName = "igdl69.m4";
+      const videoFileName = "igdl69.mp4";
       const videoFilePath = path.join(__dirname, 'cache', videoFileName);
 
       const writer = fs.createWriteStream(videoFilePath);
@@ -63,12 +63,12 @@ module.exports = {
           fs.unlinkSync(videoFilePath);
         } catch (error) {
           console.error("Error sending Instagram video:", error);
-          message.reply(Failed to send Instagram video: ${error.message});
+          message.reply(`Failed to send Instagram video: ${error.message}`);
         }
       });
     } catch (error) {
       console.error(error);
-      message.reply(Sorry, an error occurred while processing your request: ${error.message});
+      message.reply(`Sorry, an error occurred while processing your request: ${error.message}`);
     }
   }
 };
