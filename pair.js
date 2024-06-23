@@ -9,7 +9,7 @@ module.exports = {
     },
     "category": "fun",
     "guide": "{prefix}pair",
-    "countDown": 40
+    "countDown": 60
   },
-  "location": "/home/abdulkaiyum/octa/scripts/cmds/pair.js"
+  "location": "/workspaces/codespaces-blank/scripts/cmds/pair.js"
 };

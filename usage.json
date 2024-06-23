@@ -1,7 +1,7 @@
 [
   {
     "name": "aiko",
-    "usage": 2
+    "usage": 8
   },
   {
     "name": "ping",
@@ -13,7 +13,7 @@
   },
   {
     "name": "help",
-    "usage": 1
+    "usage": 3
   },
   {
     "name": "mi",
@@ -21,7 +21,7 @@
   },
   {
     "name": "upt",
-    "usage": 2
+    "usage": 6
   },
   {
     "name": "stats",
@@ -37,15 +37,15 @@
   },
   {
     "name": "gh",
-    "usage": 2
+    "usage": 4
   },
   {
     "name": "sing",
-    "usage": 2
+    "usage": 4
   },
   {
     "name": "",
-    "usage": 3
+    "usage": 7
   },
   {
     "name": "uid",
@@ -61,11 +61,11 @@
   },
   {
     "name": "bal",
-    "usage": 1
+    "usage": 4
   },
   {
     "name": "roulette",
-    "usage": 1
+    "usage": 9
   },
   {
     "name": "slot",
@@ -74,5 +74,73 @@
   {
     "name": "daily",
     "usage": 1
+  },
+  {
+    "name": "aikoooo",
+    "usage": 1
+  },
+  {
+    "name": "pinterest",
+    "usage": 1
+  },
+  {
+    "name": "pair",
+    "usage": 37
+  },
+  {
+    "name": "onlyadminbox",
+    "usage": 1
+  },
+  {
+    "name": "unsend",
+    "usage": 15
+  },
+  {
+    "name": "pair2",
+    "usage": 1
+  },
+  {
+    "name": "ytb",
+    "usage": 2
+  },
+  {
+    "name": "prefix",
+    "usage": 2
+  },
+  {
+    "name": "setcd",
+    "usage": 1
+  },
+  {
+    "name": "hack",
+    "usage": 8
+  },
+  {
+    "name": "l",
+    "usage": 1
+  },
+  {
+    "name": "thread",
+    "usage": 2
+  },
+  {
+    "name": "approve",
+    "usage": 3
+  },
+  {
+    "name": "bank",
+    "usage": 4
+  },
+  {
+    "name": "count",
+    "usage": 3
+  },
+  {
+    "name": "**i",
+    "usage": 1
+  },
+  {
+    "name": "pet",
+    "usage": 3
   }
 ]
