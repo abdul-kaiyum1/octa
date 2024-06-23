@@ -1,0 +1,42 @@
+[
+  {
+    "name": "aiko",
+    "usage": 1
+  },
+  {
+    "name": "ping",
+    "usage": 1
+  },
+  {
+    "name": "uptime",
+    "usage": 1
+  },
+  {
+    "name": "help",
+    "usage": 1
+  },
+  {
+    "name": "mi",
+    "usage": 1
+  },
+  {
+    "name": "upt",
+    "usage": 1
+  },
+  {
+    "name": "stats",
+    "usage": 2
+  },
+  {
+    "name": "dcmd",
+    "usage": 1
+  },
+  {
+    "name": "upt2",
+    "usage": 1
+  },
+  {
+    "name": "gh",
+    "usage": 1
+  }
+]
