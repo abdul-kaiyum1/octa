@@ -37,7 +37,7 @@
 		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot👙"
 	},
   
-  "nickNameBot": "Aiko", // 👙🤤
+  "nickNameBot": "Aiko", 
   "prefix": "*",
   "database": {
     "type": "mongodb",
@@ -128,7 +128,7 @@
     "needRoleToUseCmdOnReply": false,
     "needRoleToUseCmdOnReaction": false
   },
-  "logEvents": { // 👙 
+  "logEvents": {
     "disableAll": false,
     "message": true,
     "message_reaction": true,
