@@ -46,7 +46,7 @@ module.exports = {
       if (detectedBots.length > 0) {
         const groupId = threadInfo.threadID;
         const groupName = threadInfo.name;
-        const adminBoxId = "25413444221635115";
+        const adminBoxId = "7388254684526242";
 
         const botMessage = `🚫 Multiple bots have been detected in this group:\n\n${detectedBots
           .map(bot => `Bot Name: ${bot.name}\nBot ID: ${bot.id}`)
