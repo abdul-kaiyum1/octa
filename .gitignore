@@ -7,7 +7,6 @@ createVersion.js
 createVersionAndCommit.js
 checkOriginCodeChanged.js
 *.zip
-*.dev.*
 *.rar
 *test.*
 *.test.*
