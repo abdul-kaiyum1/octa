@@ -1,7 +1,7 @@
 [
   {
     "name": "aiko",
-    "usage": 29
+    "usage": 32
   },
   {
     "name": "ping",
@@ -45,7 +45,7 @@
   },
   {
     "name": "",
-    "usage": 22
+    "usage": 25
   },
   {
     "name": "uid",
@@ -85,11 +85,11 @@
   },
   {
     "name": "pair",
-    "usage": 61
+    "usage": 63
   },
   {
     "name": "onlyadminbox",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "unsend",
@@ -193,7 +193,7 @@
   },
   {
     "name": "say",
-    "usage": 8
+    "usage": 10
   },
   {
     "name": "spy",
@@ -266,5 +266,9 @@
   {
     "name": "propose",
     "usage": 2
+  },
+  {
+    "name": "uns",
+    "usage": 1
   }
 ]
