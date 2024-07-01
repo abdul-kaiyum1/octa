@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
 const { createCanvas } = require('canvas');
 const path = require('path');
 const fs = require('fs');
-const config = require('config.json');
+const config = require('./config.json');
+const mongoose = require('mongoose');
 
 // MongoDB connection
-mongoose.connect(config.mongoUri, {
+mongoose.connect(config.database.uriMongodb, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
@@ -86,8 +86,8 @@ module.exports = {
         const barHeight = (cmd.usage / maxUsage) * (canvasHeight - 100);
         const hue = Math.floor(Math.random() * 360);
         const gradientBar = ctx.createLinearGradient(xPos, canvasHeight - barHeight - 50, xPos + barWidth, canvasHeight);
-        gradientBar.addColorStop(0, hsl(${hue}, 70%, 50%));
-        gradientBar.addColorStop(1, hsl(${hue}, 50%, 70%));
+        gradientBar.addColorStop(0, `hsl(${hue}, 70%, 50%)`);
+        gradientBar.addColorStop(1, `hsl(${hue}, 50%, 70%)`);
         ctx.fillStyle = gradientBar;
         ctx.fillRect(xPos, canvasHeight - barHeight - 50, barWidth, barHeight);
         ctx.strokeStyle = '#34495e';
