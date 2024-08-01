@@ -91,7 +91,7 @@ module.exports = {
 		ctx.font = "40px BeVietnamPro-SemiBold";
 		ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
 		ctx.textAlign = "center";
-		ctx.fillText("Octa Via", width / 2, 50);
+		ctx.fillText("Aiko ,The cutie", width / 2, 50);
 
 		let X = 100;
 		ctx.fillStyle = "#ffffff";
