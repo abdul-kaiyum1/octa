@@ -1,5 +1,5 @@
 global.api = {
-  samirApi: "https://apis-samir.onrender.com"
+  samirApi: "https://www.samirxpikachu.run.place"
 };
 
 const axios = require('axios');
