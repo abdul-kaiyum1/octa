@@ -15,7 +15,7 @@
   "adminOnly": {
     "enable": true,
     "ignoreCommand": [],
-    "hideNotiMessage": true
+    "hideNotiMessage": false
   },
   "adminBot": [
      "100057399829870",
@@ -31,7 +31,7 @@
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "whiteListModeThread": {
-    "enable": false,
+    "enable": true,
     "whiteListThreadIds": [
       "4631206170332575",
       "7388254684526242"
