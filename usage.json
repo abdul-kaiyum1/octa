@@ -5,7 +5,7 @@
   },
   {
     "name": "ping",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "uptime",
@@ -13,7 +13,7 @@
   },
   {
     "name": "help",
-    "usage": 24
+    "usage": 25
   },
   {
     "name": "mi",
@@ -21,7 +21,7 @@
   },
   {
     "name": "upt",
-    "usage": 6
+    "usage": 8
   },
   {
     "name": "stats",
@@ -37,7 +37,7 @@
   },
   {
     "name": "gh",
-    "usage": 6
+    "usage": 7
   },
   {
     "name": "sing",
@@ -45,7 +45,7 @@
   },
   {
     "name": "",
-    "usage": 25
+    "usage": 26
   },
   {
     "name": "uid",
@@ -181,7 +181,7 @@
   },
   {
     "name": "update",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "chat",
@@ -270,5 +270,9 @@
   {
     "name": "uns",
     "usage": 1
+  },
+  {
+    "name": "up",
+    "usage": 2
   }
 ]

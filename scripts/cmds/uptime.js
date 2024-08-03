@@ -36,7 +36,7 @@ module.exports = {
             if (args[0] === "ban" && (args[1] === "on" || args[1] === "off")) {
                 const newBanStatus = args[1] === "on";
                 writeBanStatus(newBanStatus);
-                return api.sendMessage(Media ban has been turned ${newBanStatus ? "on" : "off"}., event.threadID);
+                return api.sendMessage(`Media ban has been turned ${newBanStatus ? "on" : "off"}.`, event.threadID);
             }
 
             const totalUsers = await usersData.getAll();

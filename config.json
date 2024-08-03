@@ -18,8 +18,8 @@
     "hideNotiMessage": false
   },
   "adminBot": [
-     "100057399829870",
-     "100084568197142",
+    "100057399829870",
+    "100084568197142",
     "100042061672382",
     "100041931226770",
     "61550247638208",
@@ -36,7 +36,7 @@
     "whiteListThreadIds": [
       "4631206170332575",
       "7388254684526242"
-      ],
+    ],
     "notes": "if you enable this feature,👙 only the thread in the whiteListThreadIds list can use the bot",
     "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot👙"
   },
