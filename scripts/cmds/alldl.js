@@ -1,116 +1,280 @@
-const axios = require('axios');
-const fs = require('fs');
-const TinyURL = require('tinyurl');
+const fs = require("fs-extra");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const qs = require("qs");
+const tinyurl = require("tinyurl");
+const { getStreamFromURL, randomString } = global.utils;
+
+async function shortenURL(url) {
+  try {
+    const shortUrl = await tinyurl.shorten(url);
+    return shortUrl;
+  } catch (error) {
+    console.error(error);
+    throw new Error("Failed to shorten URL");
+  }
+}
 
 module.exports = {
+  threadStates: {},
   config: {
-    name: "alldl",
-    version: "2.0",
-    author: "ABDUL KAIYUM",
+    name: 'alldl',
+    version: '5.1',
+    author: 'Abdul Kaiyum',
     countDown: 5,
     role: 0,
-    shortDescription: "Download content by link",
-    longDescription: "Download content from various sources",
-    category: "download",
-    guide: "{pn} link or reply to a link with {pn}"
+    shortDescription: 'Download videos from Instagram, Facebook, TikTok, Twitter, Pinterest, and YouTube',
+    longDescription: '',
+    category: 'media',
+    guide: {
+      en: '{p}{n} [URL or reply to a message containing a link]',
+    }
   },
+  onStart: async function ({ api, event }) {
+    const threadID = event.threadID;
 
-  onStart: async function ({ message, args, event }) {
-    let link = args.join(" ");
-    if (!link && event.messageReply && event.messageReply.body) {
-      link = event.messageReply.body.trim();
+    if (!this.threadStates[threadID]) {
+      this.threadStates[threadID] = {};
     }
+  },
+  onChat: async function ({ api, event }) {
+    const threadID = event.threadID;
+    const message = event.body ? event.body.trim() : "";
+    const replyMessage = event.messageReply ? event.messageReply.body : "";
 
-    if (!link) {
-      return message.reply(`Please provide the link.`);
+    let url = this.extractUrl(message) || this.extractUrl(replyMessage);
+    if (url) {
+      console.log(`Attempting to download from URL: ${url}`);
+      this.downLoad(url, api, event);
+      api.setMessageReaction("✅", event.messageID, (err) => {}, true);
     }
+  },
+  downLoad: function (url, api, event) {
+    const time = Date.now();
+    const path = __dirname + `/cache/${time}.mp4`;
 
-    const apiUrlMap = {
-      facebook: `https://for-devs.onrender.com/api/fbdl?url=${encodeURIComponent(link)}&apikey=api1`,
-      twitter: `https://for-devs.onrender.com/api/twitterdl?url=${encodeURIComponent(link)}&apikey=api1`,
-      tiktok: `https://for-devs.onrender.com/api/tiktokdl?url=${encodeURIComponent(link)}&apikey=api1`,
-      instagram: `https://for-devs.onrender.com/api/instadl?url=${encodeURIComponent(link)}&apikey=api1`,
-      terabox: `https://for-devs.onrender.com/api/teraboxdl?url=${encodeURIComponent(link)}&apikey=api1`
-    };
-
-    const backupUrl = `https://for-devs.onrender.com/api/alldl?url=${encodeURIComponent(link)}&apikey=api1`;
-
-    let BASE_URL;
-    if (link.includes("facebook.com") || link.includes("fb.watch")) {
-      BASE_URL = apiUrlMap.facebook;
-    } else if (link.includes("twitter.com") || link.includes("x.com")) {
-      BASE_URL = apiUrlMap.twitter;
-    } else if (link.includes("tiktok.com")) {
-      BASE_URL = apiUrlMap.tiktok;
-    } else if (link.includes("instagram.com")) {
-      BASE_URL = apiUrlMap.instagram;
-    } else if (link.includes("terabox.com")) {
-      BASE_URL = apiUrlMap.terabox;
-    } else {
-      return message.reply(`Unsupported source.`);
+    if (url.includes("instagram")) {
+      this.downloadInstagram(url, api, event, path);
+    } else if (url.includes("facebook") || url.includes("fb.watch")) {
+      this.downloadFacebook(url, api, event, path);
+    } else if (url.includes("tiktok")) {
+      this.downloadTikTok(url, api, event, path);
+    } else if (url.includes("x.com")) {
+      this.downloadTwitter(url, api, event, path);
+    } else if (url.includes("pin.it")) {
+      this.downloadPinterest(url, api, event, path);
+    } else if (url.includes("youtu")) {
+      this.downloadYouTube(url, api, event, path);
     }
-
-    async function fetchData(url) {
-      try {
-        const res = await axios.get(url);
-        if (res.status !== 200) {
-          throw new Error(`Failed to retrieve content. Status code: ${res.status}`);
-        }
-        return res.data;
-      } catch (error) {
-        console.error(`Error fetching data from ${url}:`, error);
-        throw error;
-      }
-    }
-
-    message.reply("Processing your request... Please wait.");
-
+  },
+  downloadInstagram: async function (url, api, event, path) {
     try {
-      let resData = await fetchData(BASE_URL);
-
-      // Fallback to backup URL if no download URLs found in the initial response
-      if (!resData.downloadUrl && (!resData.downloadUrls || resData.downloadUrls.length === 0)) {
-        resData = await fetchData(backupUrl);
+      const res = await this.getLink(url, api, event, path);
+      const response = await axios({
+        method: "GET",
+        url: res,
+        responseType: "arraybuffer"
+      });
+      fs.writeFileSync(path, Buffer.from(response.data, "utf-8"));
+      if (fs.statSync(path).size / 1024 / 1024 > 25) {
+        return api.sendMessage("❌ The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
       }
 
-      let downloadUrl;
-      let title = "Downloaded Content";
+      const shortUrl = await shortenURL(res);
+      const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
+      api.sendMessage({
+        body: messageBody,
+        attachment: fs.createReadStream(path)
+      }, event.threadID, () => fs.unlinkSync(path), event.messageID);
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  downloadFacebook: async function (url, api, event, path) {
+    try {
+      const res = await fbDownloader(url);
+      if (res.success && res.download && res.download.length > 0) {
+        const videoUrl = res.download[0].url;
+        const response = await axios({
+          method: "GET",
+          url: videoUrl,
+          responseType: "stream"
+        });
+        if (response.headers['content-length'] > 87031808) {
+          return api.sendMessage("❌ The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
+        }
+        response.data.pipe(fs.createWriteStream(path));
+        response.data.on('end', async () => {
+          const shortUrl = await shortenURL(videoUrl);
+          const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
 
-      if (link.includes("facebook.com") || link.includes("fb.watch")) {
-        downloadUrl = resData.downloadUrl;
-      } else if (link.includes("tiktok.com")) {
-        downloadUrl = resData.no_watermark || resData.watermark;
-        title = resData.title || title;
-      } else if (link.includes("instagram.com")) {
-        downloadUrl = resData.video;
-        title = resData.author ? resData.author.name : title;
-      } else if (resData.downloadUrls && resData.downloadUrls.length > 0) {
-        downloadUrl = resData.downloadUrls[0].url;
-        title = resData.title || title;
+          api.sendMessage({
+            body: messageBody,
+            attachment: fs.createReadStream(path)
+          }, event.threadID, () => fs.unlinkSync(path), event.messageID);
+        });
       } else {
-        return message.reply("No download URLs found.");
+        api.sendMessage("❌ Unable to download the video.", event.threadID, event.messageID);
       }
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  downloadTikTok: async function (url, api, event, path) {
+    try {
+      const res = await axios.get(`https://tikdl-video.vercel.app/tiktok?url=${encodeURIComponent(url)}`);
+      if (res.data.videoUrl) {
+        const videoUrl = res.data.videoUrl;
+        const response = await axios({
+          method: "GET",
+          url: videoUrl,
+          responseType: "stream"
+        });
+        if (response.headers['content-length'] > 87031808) {
+          return api.sendMessage("❌ The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
+        }
+        response.data.pipe(fs.createWriteStream(path));
+        response.data.on('end', async () => {
+          const shortUrl = await shortenURL(videoUrl);
+          const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
 
-      // Generate a TinyURL for the download link
-      const tinyUrl = await TinyURL.shorten(downloadUrl);
+          api.sendMessage({
+            body: messageBody,
+            attachment: fs.createReadStream(path)
+          }, event.threadID, () => fs.unlinkSync(path), event.messageID);
+        });
+      } else {
+        api.sendMessage("❌ Unable to download the video.", event.threadID, event.messageID);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  downloadTwitter: async function (url, api, event, path) {
+    try {
+      const res = await axios.get(`https://xdl-twitter.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
+      const videoUrl = res.data.videoUrl;
 
-      message.reply(`• Title: ${title}\n• Download link: ${tinyUrl}`);
-
-      // Download the video and send it
-      const videoResponse = await axios.get(downloadUrl, { responseType: 'arraybuffer' });
-      const videoPath = `${__dirname}/cache/video.mp4`;
-      fs.writeFileSync(videoPath, Buffer.from(videoResponse.data));
-
-      await message.reply({
-        body: "Here's your video:",
-        attachment: fs.createReadStream(videoPath)
+      const response = await axios({
+        method: "GET",
+        url: videoUrl,
+        responseType: "stream"
       });
 
-      // Clean up the downloaded file
-      fs.unlinkSync(videoPath);
+      if (response.headers['content-length'] > 87031808) {
+        return api.sendMessage("❌ The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
+      }
+
+      response.data.pipe(fs.createWriteStream(path));
+      response.data.on('end', async () => {
+        const shortUrl = await shortenURL(videoUrl);
+        const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
+
+        api.sendMessage({
+          body: messageBody,
+          attachment: fs.createReadStream(path)
+        }, event.threadID, () => fs.unlinkSync(path), event.messageID);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  downloadPinterest: async function (url, api, event, path) {
+    try {
+      const res = await axios.get(`https://pindl-pinterest.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
+      const videoUrl = res.data.url;
+
+      const response = await axios({
+        method: "GET",
+        url: videoUrl,
+        responseType: "stream"
+      });
+
+      if (response.headers['content-length'] > 87031808) {
+        return api.sendMessage("❌ The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
+      }
+
+      response.data.pipe(fs.createWriteStream(path));
+      response.data.on('end', async () => {
+        const shortUrl = await shortenURL(videoUrl);
+        const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
+
+        api.sendMessage({
+          body: messageBody,
+          attachment: fs.createReadStream(path)
+        }, event.threadID, () => fs.unlinkSync(path), event.messageID);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  downloadYouTube: async function (url, api, event, path) {
+    try {
+      const res = await axios.get(`https://yt-downloader-eta.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
+      const videoUrl = res.data.url;
+
+      const response = await axios({
+        method: "GET",
+        url: videoUrl,
+        responseType: "stream"
+      });
+
+      if (response.headers['content-length'] > 87031808) {
+        return api.sendMessage("❌ The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
+      }
+
+      response.data.pipe(fs.createWriteStream(path));
+      response.data.on('end', async () => {
+        const shortUrl = await shortenURL(videoUrl);
+        const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
+
+        api.sendMessage({
+          body: messageBody,
+          attachment: fs.createReadStream(path)
+        }, eventthreadID, () => fs.unlinkSync(path), event.messageID);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  
+  extractUrl: function (message) {
+    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    const urls = message.match(urlPattern);
+    return urls ? urls[0] : null;
+  },
+
+  getLink: async function (url, api, event, path) {
+    try {
+      const res = await axios.get(url);
+      const $ = cheerio.load(res.data);
+      let result = $('meta[property="og:video"]').attr('content') || $('meta[property="og:video:url"]').attr('content') || $('meta[name="twitter:player"]').attr('content');
+      if (!result) {
+        api.sendMessage("❌ Unable to download the video.", event.threadID, event.messageID);
+      }
+      return result;
     } catch (error) {
       console.error(error);
-      message.reply(`Sorry, an error occurred while processing your request: ${error.message}`);
     }
-  }
+  },
+
+  fbDownloader: async function (url) {
+    try {
+      const res = await axios({
+        method: "POST",
+        url: "https://fbdownloader.net/download.php",
+        data: qs.stringify({ URL: url }),
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+        },
+      });
+      const $ = cheerio.load(res.data);
+      const videoUrl = $("a[download]").attr("href");
+      return { success: !!videoUrl, download: [{ url: videoUrl }] };
+    } catch (err) {
+      console.error(err);
+      return { success: false };
+    }
+  },
 };
+
