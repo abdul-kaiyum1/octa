@@ -1,9 +1,6 @@
 const axios = require('axios');
 const fs = require('fs');
-const { Octokit } = require("@octokit/rest");
 const shortid = require('shortid');
-
-const octokit = new Octokit({ auth: "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" });
 
 module.exports = {
   config: {
@@ -20,11 +17,11 @@ module.exports = {
     if (!event.messageReply || !event.messageReply.attachments) {
       return api.sendMessage("Please reply to a media file (image, video, or audio) to save it.", event.threadID);
     }
-    
+
     const attachment = event.messageReply.attachments[0];
     const fileUrl = attachment.url;
     let fileExtension;
-    
+
     // Check the type of media and set the correct file extension
     if (attachment.type === 'photo') {
       fileExtension = 'jpg';
@@ -37,10 +34,14 @@ module.exports = {
     }
 
     const fileName = `${shortid.generate()}.${fileExtension}`;
-    
+
     try {
       const fileResponse = await axios.get(fileUrl, { responseType: 'arraybuffer' });
       const base64Content = Buffer.from(fileResponse.data).toString('base64');
+
+      // Dynamically import Octokit to fix module error
+      const { Octokit } = await import("@octokit/rest");
+      const octokit = new Octokit({ auth: "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" });
 
       const filePath = `${tag}/${fileName}`;
       await octokit.repos.createOrUpdateFileContents({
