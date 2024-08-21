@@ -1,7 +1,7 @@
 [
   {
     "name": "aiko",
-    "usage": 32
+    "usage": 33
   },
   {
     "name": "ping",
@@ -37,7 +37,7 @@
   },
   {
     "name": "gh",
-    "usage": 7
+    "usage": 8
   },
   {
     "name": "sing",
@@ -45,7 +45,7 @@
   },
   {
     "name": "",
-    "usage": 26
+    "usage": 27
   },
   {
     "name": "uid",
@@ -85,7 +85,7 @@
   },
   {
     "name": "pair",
-    "usage": 63
+    "usage": 64
   },
   {
     "name": "onlyadminbox",
@@ -105,7 +105,7 @@
   },
   {
     "name": "prefix",
-    "usage": 3
+    "usage": 4
   },
   {
     "name": "setcd",
@@ -181,7 +181,7 @@
   },
   {
     "name": "update",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "chat",
