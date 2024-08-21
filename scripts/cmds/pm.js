@@ -26,7 +26,7 @@ module.exports = {
     const messageContent = args.slice(1).join(" ");
 
     api.sendMessage({
-      body: `🕵‍♀ Shh... A secret message awaits: ${messageContent}`,
+      body: ` ${messageContent}`,
       mentions: [{ id: event.senderID, tag: "Agent 007 🕵‍♀  " }]
     }, recipient, (err, info) => {
       if (err) {
@@ -57,7 +57,7 @@ module.exports = {
           if (err) {
             return message.err("The encrypted reply could not be delivered. It seems like the sender is hiding in the shadows!");
           }
-          message.reply("🕵‍♂ Message has been sent 🕵‍♀ ");
+          message.reply("");
           global.GoatBot.onReply.set(info.messageID, {
             commandName: "pm",
             messageID: info.messageID,

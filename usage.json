@@ -209,7 +209,7 @@
   },
   {
     "name": "file",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "umsend",
@@ -274,5 +274,13 @@
   {
     "name": "up",
     "usage": 2
+  },
+  {
+    "name": "pm",
+    "usage": 3
+  },
+  {
+    "name": "🔪",
+    "usage": 1
   }
 ]
