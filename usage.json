@@ -37,7 +37,7 @@
   },
   {
     "name": "gh",
-    "usage": 9
+    "usage": 10
   },
   {
     "name": "sing",
@@ -285,7 +285,7 @@
   },
   {
     "name": "save",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "anigen",
@@ -297,6 +297,10 @@
   },
   {
     "name": "video",
+    "usage": 1
+  },
+  {
+    "name": "view",
     "usage": 1
   }
 ]

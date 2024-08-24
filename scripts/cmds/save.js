@@ -1,61 +1,81 @@
 const axios = require('axios');
-const fs = require('fs');
-const shortid = require('shortid');
+const path = require('path');
+const crypto = require('crypto'); // To generate a unique identifier for file names
 
 module.exports = {
-  config: {
-    name: "save",
-    aliases: ["store"],
-    version: "2.0",
-    author: "Abdul Kaiyum",
-    description: "Save media files (images/videos/audio) to GitHub",
-    category: "storage",
-    guide: "{pn} <optional_tag>",
-  },
-  onStart: async function ({ api, event, args }) {
-    const tag = args.join(" ") || "untagged";
-    if (!event.messageReply || !event.messageReply.attachments) {
-      return api.sendMessage("Please reply to a media file (image, video, or audio) to save it.", event.threadID);
+    config: {
+        name: "save",
+        aliases: ["store", "backup"],
+        version: "1.3",
+        author: "Abdul Kaiyum",
+        role: 1,
+        shortDescription: "Save audio, videos, and pictures to GitHub with a tag",
+        longDescription: "This command will save replied audio, videos, and pictures to your GitHub repository with an optional tag for better organization.",
+        category: "storage",
+        guide: "{pn} <tag> (optional)"
+    },
+
+    onStart: async function ({ api, event, args }) {
+        const { messageReply } = event;
+
+        // Check if the message has a reply and if it has attachments
+        if (!messageReply || !messageReply.attachments || messageReply.attachments.length === 0) {
+            return api.sendMessage("❌ Please reply to a message containing an audio, video, or picture.", event.threadID);
+        }
+
+        const attachment = messageReply.attachments[0];
+        const fileType = attachment.type;
+
+        // Check for supported file types: photo, video, and audio
+        if (fileType !== 'photo' && fileType !== 'video' && fileType !== 'audio') {
+            return api.sendMessage("❌ Unsupported file type. Only audio, video, and pictures are allowed.", event.threadID);
+        }
+
+        const fileUrl = attachment.url;
+
+        // Use the provided tag, or "untagged" if no tag is provided
+        const tag = args.join(" ") || "untagged";
+        
+        // Generate a unique name for the file (e.g., audio_<randomID>.mp3, video_<randomID>.mp4, photo_<randomID>.jpg)
+        const fileExt = path.extname(fileUrl); // Get the file extension based on the attachment
+        const fileName = `${fileType}_${crypto.randomBytes(4).toString('hex')}${fileExt}`; // Create a unique file name
+
+        try {
+            // Download the file from the provided URL
+            const response = await axios.get(fileUrl, { responseType: 'arraybuffer' });
+            const fileData = Buffer.from(response.data, 'binary').toString('base64'); // Convert the file to Base64
+
+            // GitHub repository details
+            const owner = "abdul-kaiyum1";
+            const repo = "save";
+            const token = "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";
+
+            // GitHub API URL for creating/updating file (organized by tag)
+            const githubUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${tag}/${fileName}`;
+
+            // GitHub commit data
+            const githubData = {
+                message: `Save ${fileName} under tag ${tag}`, // Commit message
+                content: fileData, // Base64 content
+                committer: {
+                    name: "Abdul Kaiyum", // Committer's name
+                    email: "abdulkaiyum22113344@gmail.com" // Committer's email
+                }
+            };
+
+            // Send request to GitHub API
+            await axios.put(githubUrl, githubData, {
+                headers: {
+                    Authorization: `token ${token}`, // GitHub token for authentication
+                    "Content-Type": "application/json"
+                }
+            });
+
+            // Success message
+            return api.sendMessage(`✅ File "${fileName}" has been successfully saved under tag "${tag}".`, event.threadID);
+        } catch (error) {
+            console.error(error); // Log any error to the console
+            return api.sendMessage("❌ Failed to save the file to GitHub.", event.threadID); // Error message
+        }
     }
-
-    const attachment = event.messageReply.attachments[0];
-    const fileUrl = attachment.url;
-    let fileExtension;
-
-    // Check the type of media and set the correct file extension
-    if (attachment.type === 'photo') {
-      fileExtension = 'jpg';
-    } else if (attachment.type === 'video') {
-      fileExtension = 'mp4';
-    } else if (attachment.type === 'audio') {
-      fileExtension = 'mp3'; // Assuming the audio is mp3 format, adjust as necessary
-    } else {
-      return api.sendMessage("Unsupported file type. Please reply to an image, video, or audio file.", event.threadID);
-    }
-
-    const fileName = `${shortid.generate()}.${fileExtension}`;
-
-    try {
-      const fileResponse = await axios.get(fileUrl, { responseType: 'arraybuffer' });
-      const base64Content = Buffer.from(fileResponse.data).toString('base64');
-
-      // Dynamically import Octokit to fix module error
-      const { Octokit } = await import("@octokit/rest");
-      const octokit = new Octokit({ auth: "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" });
-
-      const filePath = `${tag}/${fileName}`;
-      await octokit.repos.createOrUpdateFileContents({
-        owner: "abdul-kaiyum1",
-        repo: "save",
-        path: filePath,
-        message: `Save media: ${fileName}`,
-        content: base64Content,
-      });
-
-      return api.sendMessage(`File saved as ${fileName} under tag: ${tag}`, event.threadID);
-    } catch (error) {
-      console.error("Error saving file:", error);
-      return api.sendMessage("Error occurred while saving the file.", event.threadID);
-    }
-  }
 };
