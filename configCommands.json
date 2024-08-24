@@ -52,8 +52,8 @@
     "pb.js",
     "moviedl.js",
     "bank.js",
-    "alldl.js",
     "bank2.js",
-    "autolink.js"
+    "autolink.js",
+    "prefix.js"
   ]
 }

@@ -21,11 +21,11 @@
   },
   {
     "name": "upt",
-    "usage": 10
+    "usage": 11
   },
   {
     "name": "stats",
-    "usage": 5
+    "usage": 6
   },
   {
     "name": "dcmd",
@@ -37,7 +37,7 @@
   },
   {
     "name": "gh",
-    "usage": 10
+    "usage": 11
   },
   {
     "name": "sing",
@@ -57,7 +57,7 @@
   },
   {
     "name": "ms",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "bal",
@@ -85,7 +85,7 @@
   },
   {
     "name": "pair",
-    "usage": 67
+    "usage": 68
   },
   {
     "name": "onlyadminbox",
@@ -105,7 +105,7 @@
   },
   {
     "name": "prefix",
-    "usage": 5
+    "usage": 6
   },
   {
     "name": "setcd",
@@ -302,5 +302,9 @@
   {
     "name": "view",
     "usage": 1
+  },
+  {
+    "name": "alldl",
+    "usage": 8
   }
 ]
