@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "",
-    "password": "",
+    "email": "kaiyumabdul376@gmail.com",
+    "password": "kaiyum@5426",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -24,7 +24,8 @@
     "100041931226770",
     "61550247638208",
     "61557519455411",
-    "100080195076753"
+    "100080195076753",
+    "100070712751672"
   ],
   "whiteListMode": {
     "enable": false,
@@ -149,7 +150,7 @@
     "listenTyping": true,
     "logLevel": "error",
     "selfListen": false,
-    "selfListenEvent": true,
+    "selfListenEvent": false,
     "autoMarkDelivery": false,
     "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "

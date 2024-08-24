@@ -1,7 +1,7 @@
 [
   {
     "name": "aiko",
-    "usage": 33
+    "usage": 35
   },
   {
     "name": "ping",
@@ -21,11 +21,11 @@
   },
   {
     "name": "upt",
-    "usage": 8
+    "usage": 10
   },
   {
     "name": "stats",
-    "usage": 2
+    "usage": 5
   },
   {
     "name": "dcmd",
@@ -37,19 +37,19 @@
   },
   {
     "name": "gh",
-    "usage": 8
+    "usage": 9
   },
   {
     "name": "sing",
-    "usage": 8
+    "usage": 18
   },
   {
     "name": "",
-    "usage": 27
+    "usage": 30
   },
   {
     "name": "uid",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "bd",
@@ -57,7 +57,7 @@
   },
   {
     "name": "ms",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "bal",
@@ -85,7 +85,7 @@
   },
   {
     "name": "pair",
-    "usage": 64
+    "usage": 67
   },
   {
     "name": "onlyadminbox",
@@ -97,7 +97,7 @@
   },
   {
     "name": "pair2",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "ytb",
@@ -105,7 +105,7 @@
   },
   {
     "name": "prefix",
-    "usage": 4
+    "usage": 5
   },
   {
     "name": "setcd",
@@ -177,7 +177,7 @@
   },
   {
     "name": "getlink",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "update",
@@ -201,7 +201,7 @@
   },
   {
     "name": "silent",
-    "usage": 2
+    "usage": 6
   },
   {
     "name": "leaveall",
@@ -209,7 +209,7 @@
   },
   {
     "name": "file",
-    "usage": 2
+    "usage": 4
   },
   {
     "name": "umsend",
@@ -273,7 +273,7 @@
   },
   {
     "name": "up",
-    "usage": 2
+    "usage": 4
   },
   {
     "name": "pm",
@@ -281,6 +281,22 @@
   },
   {
     "name": "🔪",
+    "usage": 1
+  },
+  {
+    "name": "save",
+    "usage": 2
+  },
+  {
+    "name": "anigen",
+    "usage": 1
+  },
+  {
+    "name": "refresh",
+    "usage": 1
+  },
+  {
+    "name": "video",
     "usage": 1
   }
 ]
