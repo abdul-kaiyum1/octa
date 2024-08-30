@@ -13,7 +13,7 @@
   },
   {
     "name": "help",
-    "usage": 25
+    "usage": 27
   },
   {
     "name": "mi",
@@ -37,15 +37,15 @@
   },
   {
     "name": "gh",
-    "usage": 11
+    "usage": 12
   },
   {
     "name": "sing",
-    "usage": 18
+    "usage": 34
   },
   {
     "name": "",
-    "usage": 30
+    "usage": 32
   },
   {
     "name": "uid",
@@ -61,7 +61,7 @@
   },
   {
     "name": "bal",
-    "usage": 4
+    "usage": 6
   },
   {
     "name": "roulette",
@@ -141,7 +141,7 @@
   },
   {
     "name": "pet",
-    "usage": 3
+    "usage": 4
   },
   {
     "name": "bot",
@@ -193,7 +193,7 @@
   },
   {
     "name": "say",
-    "usage": 10
+    "usage": 11
   },
   {
     "name": "spy",
@@ -201,7 +201,7 @@
   },
   {
     "name": "silent",
-    "usage": 6
+    "usage": 9
   },
   {
     "name": "leaveall",
@@ -269,7 +269,7 @@
   },
   {
     "name": "uns",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "up",
@@ -285,7 +285,7 @@
   },
   {
     "name": "save",
-    "usage": 3
+    "usage": 4
   },
   {
     "name": "anigen",
@@ -305,6 +305,26 @@
   },
   {
     "name": "alldl",
-    "usage": 8
+    "usage": 9
+  },
+  {
+    "name": "flag",
+    "usage": 1
+  },
+  {
+    "name": "gpt",
+    "usage": 3
+  },
+  {
+    "name": "animedl",
+    "usage": 1
+  },
+  {
+    "name": "got",
+    "usage": 1
+  },
+  {
+    "name": "prompt",
+    "usage": 1
   }
 ]

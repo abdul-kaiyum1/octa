@@ -1,6 +1,6 @@
-const axios = require("axios");
 const fs = require('fs-extra');
 const path = require('path');
+const axios = require('axios');
 const TinyURL = require('tinyurl');
 
 const API_KEYS = [
@@ -12,117 +12,6 @@ const API_KEYS = [
     '8e906ff706msh33ffb3d489a561ap108b70jsne55d8d497698',
     '4bd76967f9msh2ba46c8cf871b4ep1eab38jsn19c9067a90bb'
 ];
-
-async function playVideo(api, event, args, message) {
-    api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
-    try {
-        let title = '';
-        let shortUrl = '';
-        let videoId = '';
-
-        const extractShortUrl = async () => {
-            const attachment = event.messageReply.attachments[0];
-            if (attachment.type === "video" || attachment.type === "audio") {
-                return attachment.url;
-            } else {
-                throw new Error("Invalid attachment type.");
-            }
-        };
-
-        const getRandomApiKey = () => {
-            const randomIndex = Math.floor(Math.random() * API_KEYS.length);
-            return API_KEYS[randomIndex];
-        };
-
-        if (event.messageReply && event.messageReply.attachments && event.messageReply.attachments.length > 0) {
-            shortUrl = await extractShortUrl();
-            const musicRecognitionResponse = await axios.get(`https://audio-recon-ahcw.onrender.com/kshitiz?url=${encodeURIComponent(shortUrl)}`);
-            title = musicRecognitionResponse.data.title;
-
-            const searchResponse = await axios.get(`https://youtube-kshitiz-gamma.vercel.app/yt?search=${encodeURIComponent(title)}`);
-            if (searchResponse.data.length > 0) {
-                videoId = searchResponse.data[0].videoId;
-            }
-
-            shortUrl = await TinyURL.shorten(shortUrl);
-        } else if (args.length === 0) {
-            message.reply("Please provide a video name or reply to a video or audio attachment.");
-            return;
-        } else {
-            title = args.join(" ");
-            const searchResponse = await axios.get(`https://youtube-kshitiz-gamma.vercel.app/yt?search=${encodeURIComponent(title)}`);
-            if (searchResponse.data.length > 0) {
-                videoId = searchResponse.data[0].videoId;
-            }
-
-            const videoUrlResponse = await axios.get(`https://yt-kshitiz.vercel.app/download?id=${encodeURIComponent(videoId)}&apikey=${getRandomApiKey()}`);
-            if (videoUrlResponse.data.length > 0) {
-                shortUrl = await TinyURL.shorten(videoUrlResponse.data[0]);
-            }
-        }
-
-        if (!videoId) {
-            message.reply("No video found for the given query.");
-            return;
-        }
-
-        const downloadResponse = await axios.get(`https://yt-kshitiz.vercel.app/download?id=${encodeURIComponent(videoId)}&apikey=${getRandomApiKey()}`);
-        const videoUrl = downloadResponse.data[0];
-
-        if (!videoUrl) {
-            message.reply("Failed to retrieve download link for the video.");
-            return;
-        }
-
-        const writer = fs.createWriteStream(path.join(__dirname, "cache", `${videoId}.mp3`));
-        const response = await axios({
-            url: videoUrl,
-            method: 'GET',
-            responseType: 'stream'
-        });
-
-        response.data.pipe(writer);
-
-        writer.on('finish', () => {
-            const videoStream = fs.createReadStream(path.join(__dirname, "cache", `${videoId}.mp3`));
-            message.reply({ body: `🎵 Playing: ${title}\n📄 Shortened URL: ${shortUrl}`, attachment: videoStream });
-            api.setMessageReaction("✅", event.messageID, () => {}, true);
-        });
-
-        writer.on('error', (error) => {
-            console.error("Error:", error);
-            message.reply("Error downloading the video.");
-        });
-    } catch (error) {
-        console.error("Error:", error);
-        message.reply("An error occurred.");
-    }
-}
-
-async function fetchLyrics(api, event, args, message) {
-    if (args.length === 0) {
-        message.reply("Please provide the name of the song to fetch lyrics for.");
-        return;
-    }
-
-    const title = args.join(" ");
-    try {
-        const lyricsResponse = await axios.get(`https://some-lyrics-api/lyrics?title=${encodeURIComponent(title)}`);
-        if (lyricsResponse.data.lyrics) {
-            message.reply(`🎤 Lyrics for "${title}":\n\n${lyricsResponse.data.lyrics}`);
-        } else {
-            message.reply("Lyrics not found.");
-        }
-    } catch (error) {
-        console.error("Error:", error);
-        message.reply("Failed to fetch lyrics.");
-    }
-}
-
-async function managePlaylist(api, event, args, message) {
-    // Implement playlist management logic here (add, remove, list)
-    message.reply("Playlist management not yet implemented.");
-}
 
 module.exports = {
   config: {
@@ -143,13 +32,162 @@ module.exports = {
       en: "{pn} <song name>\n{pn} playlist -a <song name>\n{pn} playlist -p <index>\n{pn} lyrics <song name>\n\nTo play a song from your playlist, use 'sing playlist play [number]'.",
     },
   },
-    onStart: function ({ api, event, args, message }) {
-        if (args[0] === "lyrics") {
-            return fetchLyrics(api, event, args.slice(1), message);
-        } else if (args[0] === "playlist") {
-            return managePlaylist(api, event, args.slice(1), message);
+
+  onStart: async function ({ api, event, args, message, usersData }) {
+    const userID = event.senderID;
+    const userName = await usersData.getName(userID);
+
+    try {
+      if (args[0] === "playlist") {
+        const action = args[1];
+        const playlists = await this.getPlaylists();
+        const userPlaylist = playlists[userID] || [];
+
+        if (action === "-a" || action === "add") {
+          const songName = args.slice(2).join(" ");
+          userPlaylist.push(songName);
+          playlists[userID] = userPlaylist;
+          await this.savePlaylists(playlists);
+          api.setMessageReaction("✅", event.messageID, () => {}, true);
+          return api.sendMessage(`🎵 Added "${songName}" to your playlist, ${userName}.`, event.threadID);
+        } else if (action === "-p" || action === "play") {
+          const index = parseInt(args[2]) - 1;
+          if (isNaN(index) || index < 0 || index >= userPlaylist.length) {
+            api.setMessageReaction("⚠", event.messageID, () => {}, true);
+            return api.sendMessage("⚠ Invalid playlist index.", event.threadID);
+          }
+          const songName = userPlaylist[index];
+          api.setMessageReaction("⏳", event.messageID, () => {}, true);
+          await this.playSong(api, event.threadID, songName, userName, event.messageID);
+        } else if (action === "list") {
+          let reply = `🎵 Here's your playlist, ${userName}:\n` + userPlaylist.map((song, i) => `${i + 1}. ${song}`).join("\n");
+          reply += "\nReply by number or use 'sing playlist play [number]' to play.";
+          const replyMessage = await api.sendMessage(reply, event.threadID);
+          api.setMessageReaction("✅", event.messageID, () => {}, true);
+
+          global.GoatBot.onReply.set(replyMessage.messageID, {
+            commandName: this.config.name,
+            userID,
+            userPlaylist,
+          });
         } else {
-            return playVideo(api, event, args, message);
+          api.setMessageReaction("❌", event.messageID, () => {}, true);
+          return api.sendMessage("Invalid action. Use 'playlist -a' to add, 'playlist -p' to play, or 'playlist list' to view your playlist.", event.threadID);
         }
+      } else if (args[0] === "lyrics") {
+        const songName = args.slice(1).join(" ");
+        api.setMessageReaction("⏳", event.messageID, () => {}, true);
+        await this.fetchLyrics(api, event.threadID, songName, userName, event.messageID);
+      } else {
+        const songName = args.join(" ");
+        api.setMessageReaction("⏳", event.messageID, () => {}, true);
+        await this.playSong(api, event.threadID, songName, userName, event.messageID);
+      }
+    } catch (error) {
+      console.error("Error processing command:", error);
+      api.setMessageReaction("❌", event.messageID, () => {}, true);
+      return api.sendMessage("❌ An error occurred while processing your request.", event.threadID);
     }
+  },
+
+  async getPlaylists() {
+    try {
+      const playlistsData = await fs.readFile("playlists.json", "utf8");
+      return JSON.parse(playlistsData);
+    } catch (error) {
+      return {};
+    }
+  },
+
+  async savePlaylists(playlists) {
+    await fs.writeFile("playlists.json", JSON.stringify(playlists), "utf8");
+  },
+
+  async playSong(api, threadID, songName, userName, messageID) {
+    try {
+      const searchResponse = await axios.get(`https://youtube-kshitiz-gamma.vercel.app/yt?search=${encodeURIComponent(songName)}`);
+      if (searchResponse.data.length === 0) {
+        api.setMessageReaction("❌", messageID, () => {}, true);
+        return api.sendMessage("❌ No videos found for that song.", threadID);
+      }
+      const video = searchResponse.data[0];
+      const videoUrl = `https://www.youtube.com/watch?v=${video.videoId}`;
+
+      const downloadResponse = await axios.get(`https://yt-kshitiz.vercel.app/download?id=${encodeURIComponent(video.videoId)}&apikey=${this.getRandomApiKey()}`);
+      if (downloadResponse.data.length === 0) {
+        api.setMessageReaction("❌", messageID, () => {}, true);
+        return api.sendMessage("❌ Failed to retrieve download link.", threadID);
+      }
+      const shortUrl = await TinyURL.shorten(videoUrl);
+      const videoDownloadUrl = downloadResponse.data[0];
+
+      const writer = fs.createWriteStream(path.join(__dirname, "cache", `${video.videoId}.mp3`));
+      const response = await axios({
+        url: videoDownloadUrl,
+        method: 'GET',
+        responseType: 'stream'
+      });
+
+      response.data.pipe(writer);
+      const messageBody = `🎵 Here's the song you requested, ${userName}. Enjoy!\n\nTitle: ${video.title}\nDuration: ${video.timestamp}\nYouTube Link: ${videoUrl}`;
+
+      writer.on('finish', () => {
+        const videoStream = fs.createReadStream(path.join(__dirname, "cache", `${video.videoId}.mp3`));
+        api.sendMessage({
+          body: messageBody,
+          attachment: videoStream
+        }, threadID, () => {
+          fs.unlinkSync(path.join(__dirname, "cache", `${video.videoId}.mp3`));
+          api.setMessageReaction("✅", messageID, () => {}, true);
+        });
+      });
+
+      writer.on('error', (error) => {
+        console.error("Error:", error);
+        api.setMessageReaction("❌", messageID, () => {}, true);
+        api.sendMessage("❌ An error occurred while downloading the song.", threadID);
+      });
+    } catch (error) {
+      console.error("Error playing song:", error);
+      api.setMessageReaction("❌", messageID, () => {}, true);
+      api.sendMessage("❌ An error occurred while playing the song.", threadID);
+    }
+  },
+
+  async fetchLyrics(api, threadID, songName, userName, messageID) {
+    try {
+      const apiUrl = `https://lyrist-woad.vercel.app/api/${encodeURIComponent(songName)}`;
+      const response = await axios.get(apiUrl);
+
+      if (response.data.lyrics) {
+        api.setMessageReaction("✅", messageID, () => {}, true);
+        api.sendMessage(`🎤 Lyrics for "${response.data.title}" by ${response.data.artist}:\n\n${response.data.lyrics}`, threadID);
+      } else {
+        api.setMessageReaction("❌", messageID, () => {}, true);
+        api.sendMessage("❌ No lyrics found for that song.", threadID);
+      }
+    } catch (error) {
+      console.error("Error fetching lyrics:", error);
+      api.setMessageReaction("❌", messageID, () => {}, true);
+      api.sendMessage("❌ An error occurred while fetching the lyrics.", threadID);
+    }
+  },
+
+  onReply: async function ({ api, event, Reply }) {
+    const replyIndex = parseInt(event.body);
+    const { userPlaylist } = Reply;
+
+        if (isNaN(replyIndex) || replyIndex < 1 || replyIndex > userPlaylist.length) {
+      return api.sendMessage("⚠ Invalid playlist number. Please enter a valid number from your playlist.", event.threadID);
+    }
+
+    const songName = userPlaylist[replyIndex - 1];
+    const userName = await api.getUserInfo(event.senderID);
+    api.setMessageReaction("⏳", event.messageID, () => {}, true);
+    await this.playSong(api, event.threadID, songName, userName[event.senderID].name, event.messageID);
+  },
+
+  getRandomApiKey() {
+    return API_KEYS[Math.floor(Math.random() * API_KEYS.length)];
+  }
 };

@@ -3,7 +3,6 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: "prompt",
-    aliases: ["p"],
     version: "1.0",
     author: "JARiF",
     countDown: 5,
@@ -32,18 +31,18 @@ module.exports = {
       }
 
       if (imageUrl) {
-        const response = await axios.get(https://www.api.vyturex.com/describe?url=${encodeURIComponent(imageUrl)});
+        const response = await axios.get(`https://www.api.vyturex.com/describe?url=${encodeURIComponent(imageUrl)}`);
         const description = response.data;
 
         await message.reply(description);
       } else if (khankirChele) {
-        const response = await axios.get(https://www.api.vyturex.com/promptgen?content=${encodeURIComponent(khankirChele)});
+        const response = await axios.get(`https://www.api.vyturex.com/promptgen?content=${encodeURIComponent(khankirChele)}`);
         const prompt = response.data;
 
         await message.reply(prompt);
       }
     } catch (error) {
-     message.reply(${error});
+     message.reply(`${error}`);
     }
   }
 };
