@@ -129,7 +129,7 @@ module.exports = {
       });
 
       response.data.pipe(writer);
-      const messageBody = `🎵 Here's the song you requested, ${userName}. Enjoy!\n\nTitle: ${video.title}\nDuration: ${video.timestamp}\nYouTube Link: ${videoUrl}`;
+      const messageBody = `🎵 Here's the song you requested, ${userName}. Enjoy!\n\nYouTube Link: ${videoUrl}`;
 
       writer.on('finish', () => {
         const videoStream = fs.createReadStream(path.join(__dirname, "cache", `${video.videoId}.mp3`));
