@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "kaiyumabdul376@gmail.com",
-    "password": "kaiyum@5426",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -24,12 +24,18 @@
     "100041931226770",
     "61550247638208",
     "61557519455411",
-    "100080195076753",
-    "100070712751672"
+    "100080195076753"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [],
+    "whiteListIds": [
+      "100057399829870",
+      "100041931226770",
+      "100080099546468",
+      "100057414155805",
+      "100090944270176",
+      "100089174281287",
+      "61554347765626"],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "whiteListModeThread": {
@@ -150,7 +156,7 @@
     "listenTyping": true,
     "logLevel": "error",
     "selfListen": true,
-    "selfListenEvent": false,
+    "selfListenEvent": true,
     "autoMarkDelivery": false,
     "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
