@@ -63,7 +63,7 @@ module.exports = {
           let reply = `🎵 Here's your playlist, ${userName}:\n` + userPlaylist.map((song, i) => `${i + 1}. ${song}`).join("\n");
           reply += "\nReply by number or use 'sing playlist play [number]' to play.";
           const replyMessage = await api.sendMessage(reply, event.threadID);
-          api.setMessageReaction("✅", event.messageID, () => {}, true);
+          api.setMessageReaction("📜", event.messageID, () => {}, true);
 
           global.GoatBot.onReply.set(replyMessage.messageID, {
             commandName: this.config.name,
@@ -138,7 +138,7 @@ module.exports = {
           attachment: videoStream
         }, threadID, () => {
           fs.unlinkSync(path.join(__dirname, "cache", `${video.videoId}.mp3`));
-          api.setMessageReaction("✅", messageID, () => {}, true);
+          api.setMessageReaction("🎧", messageID, () => {}, true);
         });
       });
 
@@ -160,7 +160,7 @@ module.exports = {
       const response = await axios.get(apiUrl);
 
       if (response.data.lyrics) {
-        api.setMessageReaction("✅", messageID, () => {}, true);
+        api.setMessageReaction("📒", messageID, () => {}, true);
         api.sendMessage(`🎤 Lyrics for "${response.data.title}" by ${response.data.artist}:\n\n${response.data.lyrics}`, threadID);
       } else {
         api.setMessageReaction("❌", messageID, () => {}, true);
@@ -183,7 +183,7 @@ module.exports = {
 
     const songName = userPlaylist[replyIndex - 1];
     const userName = await api.getUserInfo(event.senderID);
-    api.setMessageReaction("⏳", event.messageID, () => {}, true);
+    api.setMessageReaction("🗒", event.messageID, () => {}, true);
     await this.playSong(api, event.threadID, songName, userName[event.senderID].name, event.messageID);
   },
 
