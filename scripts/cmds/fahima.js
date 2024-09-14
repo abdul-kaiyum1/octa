@@ -1,89 +1,87 @@
-const axios = require("axios")
-const Prefixes = [
-  'fahima',
-];
+const axios = require("axios");
+const Prefixes = ['aiko'];
+const AbdulUID = "100057399829870"; // Replace this with Abdul's actual user ID
 
 module.exports = {
   config: {
-    name: 'aiko',
-    version: '1.2',
-    author: 'NIB',
-    countDown: 5,
+    name: "aiko",
+    version: "1.1",
+    author: "Abdul Kaiyum",
+    category: "simSimi-bn",
+    cooldown: 0,
     role: 0,
-    shortDescription: 'ai',
-    longDescription: {
-      vi: 'Chat với simsimi',
-      en: 'Chat with Fahima'
-    },
-    category: 'ai',
     guide: {
-      vi: '   {pn} [on | off]: bật/tắt simsimi'
-        + '\n'
-        + '\n   {pn} <word>: chat nhanh với simsimi'
-        + '\n   Ví dụ:\n    {pn} hi',
-      en: '   {pn} <word>: chat with hina'
-        + '\n   Example:\n    {pn} hi'
+      en: "{p}aiko hi\nfor deleting: {p}aiko delete hi\nfor teaching: {p}aiko teach hi | hello"
     }
   },
+  onStart: async function () {},
+  onChat: async function ({ api, event, args, message }) {
+    const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
 
-  langs: {
-    vi: {
-      turnedOn: 'Bật simsimi thành công!',
-      turnedOff: 'Tắt simsimi thành công!',
-      chatting: 'Đang chat với simsimi...',
-      error: 'Simsimi đang bận, bạn hãy thử lại sau'
-    },
-    en: {
-      turnedOn: 'Turned on Fa Hi Ma successfully!',
-      turnedOff: 'Turned off Fa Hi Ma successfully!',
-      chatting: 'Already Chatting with Fa Hi Ma...',
-      error: 'dur cata kotha ai kobo na'
+    if (!prefix) {
+      return;
     }
-  },
 
-  onStart: async function ({ args, threadsData, message, event, getLang }) {
-    if (args[0] == 'on' || args[0] == 'off') {
-      await threadsData.set(event.threadID, args[0] == "on", "settings.simsimi");
-      return message.reply(args[0] == "on" ? getLang("turnedOn") : getLang("turnedOff"));
-    }
-    else if (args[0]) {
-      const yourMessage = args.join(" ");
-      try {
-        const responseMessage = await getMessage(yourMessage);
-        return message.reply(`${responseMessage}`);
-      }
-      catch (err) {
-        console.log(err)
-        return message.reply(getLang("error"));
-      }
-    }
-  },
+    const subCommand = args[0];
 
-  onChat: async ({ args, message, threadsData, event, isUserCallCommand, getLang }) => {
-    if (args.length > 1 && !isUserCallCommand && await threadsData.get(event.threadID, "settings.simsimi")) {
-      try {
-        const langCode = await threadsData.get(event.threadID, "settings.lang") || global.GoatBot.config.language;
-        const responseMessage = await getMessage(args.join(" "), langCode);
-        return message.reply(`${responseMessage}`);
+    // Check if the subCommand is 'teach' or 'delete' and if Abdul is the sender
+    if ((subCommand === 'teach' || subCommand === 'delete') && event.senderID !== AbdulUID) {
+      return message.reply("Only Abdul can use this command.");
+    }
+
+    try {
+      if (subCommand === 'teach') {
+        const content = args.slice(1).join(" ").split("|").map((item) => item.trim());
+
+        if (content.length < 2) {
+          return message.reply("Please provide both the question and the answer separated by '|'.");
+        }
+
+        const question = content[0];
+        const answer = content.slice(1).join('|');
+
+        try {
+          const teachUrl = `https://simsimi.vyturex.com/teach?ques=${encodeURIComponent(question)}&ans=${encodeURIComponent(answer)}`;
+          const teachResponse = await axios.get(teachUrl);
+          message.reply(teachResponse.data);
+        } catch (error) {
+          console.error(error);
+          message.reply("Try again later dear.");
+        }
+
+      } else if (subCommand === 'delete') {
+        try {
+          const questionToDelete = args.slice(1).join(' ');
+          if (!questionToDelete) {
+            message.reply('Please provide the question you want to delete.');
+            return;
+          }
+
+          const deleteUrl = `https://simsimi.vyturex.com/delete?ques=${encodeURIComponent(questionToDelete)}`;
+          const deleteResponse = await axios.get(deleteUrl);
+
+          message.reply(deleteResponse.data);
+
+        } catch (error) {
+          console.error(error);
+          message.reply(error.message);
+        }
+
+      } else {
+        const name = args.join(' ');
+
+        try {
+          const response = await axios.get(`https://simsimi.vyturex.com/chat?ques=${encodeURIComponent(name)}`);
+          const r = response.data;
+          message.reply(r);
+        } catch (error) {
+          console.error(error);
+          message.reply('Oops! An error occurred.');
+        }
       }
-      catch (err) {
-        return message.reply(getLang("error"));
-      }
+
+    } catch (error) {
+      message.reply('Oops! An error occurred: ' + error.message);
     }
   }
 };
-
-async function getMessage(yourMessage, langCode) {
-  const res = await axios.post(
-    'https://api.simsimi.vn/v2/simtalk',
-    new URLSearchParams({
-        'text': yourMessage,
-        'lc': 'bn'
-    })
-);
-
-  if (res.status > 200)
-    throw new Error(res.data.success);
-
-  return res.data.message;
-}
