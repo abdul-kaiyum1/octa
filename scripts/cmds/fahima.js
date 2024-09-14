@@ -1,27 +1,20 @@
-const axios = require("axios");
-const Prefixes = ['aiko'];
-const AbdulUID = "100057399829870"; // Replace this with Abdul's actual user ID
+const axios = require('axios');
+const AbdulUID = "100057399829870"; // Replace with Abdul's actual user ID
 
 module.exports = {
   config: {
     name: "aiko",
-    version: "1.1",
+    version: "2.0",
     author: "Abdul Kaiyum",
     category: "simSimi-bn",
-    cooldown: 0,
+    description: "AI chatbot with teach and delete functionality",
     role: 0,
     guide: {
-      en: "{p}aiko hi\nfor deleting: {p}aiko delete hi\nfor teaching: {p}aiko teach hi | hello"
-    }
+      en: "{p}aiko <message> - Start a conversation.\n{p}aiko teach <question> | <answer> - Teach Aiko.\n{p}aiko delete <question> - Delete a question."
+    },
   },
-  onStart: async function () {},
-  onChat: async function ({ api, event, args, message }) {
-    const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
 
-    if (!prefix) {
-      return;
-    }
-
+  onStart: async function ({ message, event, args }) {
     const subCommand = args[0];
 
     // Check if the subCommand is 'teach' or 'delete' and if Abdul is the sender
@@ -32,7 +25,6 @@ module.exports = {
     try {
       if (subCommand === 'teach') {
         const content = args.slice(1).join(" ").split("|").map((item) => item.trim());
-
         if (content.length < 2) {
           return message.reply("Please provide both the question and the answer separated by '|'.");
         }
@@ -45,43 +37,76 @@ module.exports = {
           const teachResponse = await axios.get(teachUrl);
           message.reply(teachResponse.data);
         } catch (error) {
-          console.error(error);
-          message.reply("Try again later dear.");
+          console.error("Error in teaching:", error.message);
+          message.reply("Server error while teaching. Try again later.");
         }
 
       } else if (subCommand === 'delete') {
-        try {
-          const questionToDelete = args.slice(1).join(' ');
-          if (!questionToDelete) {
-            message.reply('Please provide the question you want to delete.');
-            return;
-          }
+        const questionToDelete = args.slice(1).join(' ');
+        if (!questionToDelete) {
+          return message.reply('Please provide the question you want to delete.');
+        }
 
+        try {
           const deleteUrl = `https://simsimi.vyturex.com/delete?ques=${encodeURIComponent(questionToDelete)}`;
           const deleteResponse = await axios.get(deleteUrl);
-
           message.reply(deleteResponse.data);
-
         } catch (error) {
-          console.error(error);
-          message.reply(error.message);
+          console.error("Error in deletion:", error.message);
+          message.reply("Server error while deleting. Try again later.");
         }
 
       } else {
-        const name = args.join(' ');
+        const prompt = args.join(" ");
+        const encodedPrompt = encodeURIComponent(prompt);
 
         try {
-          const response = await axios.get(`https://simsimi.vyturex.com/chat?ques=${encodeURIComponent(name)}`);
-          const r = response.data;
-          message.reply(r);
+          const res = await axios.get(`https://simsimi.vyturex.com/chat?ques=${encodedPrompt}`);
+          const result = res.data;
+
+          message.reply(result, (err, info) => {
+            global.GoatBot.onReply.set(info.messageID, {
+              commandName: this.config.name,
+              messageID: info.messageID,
+              author: event.senderID
+            });
+          });
         } catch (error) {
-          console.error(error);
-          message.reply('Oops! An error occurred.');
+          console.error("Error in conversation:", error.message);
+          message.reply("Server error while fetching response. Try again later.");
         }
       }
 
     } catch (error) {
-      message.reply('Oops! An error occurred: ' + error.message);
+      console.error("General error:", error.message);
+      message.reply('An unexpected error occurred: ' + error.message);
+    }
+  },
+
+  onReply: async function ({ message, event, args }) {
+    try {
+      const prompt = args.join(" ");
+      const encodedPrompt = encodeURIComponent(prompt);
+
+      try {
+        const res = await axios.get(`https://simsimi.vyturex.com/chat?ques=${encodedPrompt}`);
+        const result = res.data;
+
+        message.reply(result, (err, info) => {
+          global.GoatBot.onReply.set(info.messageID, {
+            commandName: this.config.name,
+            messageID: info.messageID,
+            author: event.senderID
+          });
+        });
+      } catch (error) {
+        console.error("Error in conversation (onReply):", error.message);
+        message.reply("Server error while fetching response. Try again later.");
+      }
+
+    } catch (error) {
+      console.error("General error in onReply:", error.message);
+      message.reply('An unexpected error occurred: ' + error.message);
     }
   }
 };
