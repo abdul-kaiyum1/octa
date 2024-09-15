@@ -51,7 +51,7 @@ module.exports = {
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
       // Add "aiko" text in the middle of the canvas
-      const text = 'aiko';
+      const text = 'AIKO THE CUTIE';
       ctx.font = ${canvasHeight / 8}px Arial;  // Dynamically adjust text size based on canvas height
       ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
       ctx.textAlign = 'center';
