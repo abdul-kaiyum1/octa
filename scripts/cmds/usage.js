@@ -30,7 +30,7 @@ module.exports = {
     guide: { en: "{pn}" },
   },
 
-  onStart: async function ({ api, args, message, event, role }) {
+  onStart: async function ({ api, args, message, event, role, commands }) {
     if (role != 2) return message.reply("Unauthorized Access");
     try {
       const collection = db.collection('commandUsage');
@@ -49,6 +49,12 @@ module.exports = {
       gradient.addColorStop(1, '#dfe6e9');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+      // Add the "aiko" text in the middle, adjusting size based on canvas width
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.font = `bold ${canvasWidth / 5}px Arial`;
+      ctx.textAlign = 'center';
+      ctx.fillText("aiko", canvasWidth / 2, canvasHeight / 2);
 
       // Add labels and grid lines
       ctx.fillStyle = '#000';
@@ -117,7 +123,7 @@ module.exports = {
     }
   },
 
-  onChat: async function ({ event, message }) {
+  onChat: async function ({ event, message, commands }) {
     const text = event.body;
     if (!text) return;
 
@@ -125,6 +131,10 @@ module.exports = {
     if (text.startsWith(prefix)) {
       const commandText = text.slice(prefix.length).split(" ")[0].toLowerCase();
       if (unlistedCommands.includes(commandText)) return;
+
+      // Only count valid commands
+      const validCommands = commands.map(cmd => cmd.config.name);
+      if (!validCommands.includes(commandText)) return;
 
       const collection = db.collection('commandUsage');
       const existingCommand = await collection.findOne({ name: commandText });
