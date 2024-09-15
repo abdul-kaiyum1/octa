@@ -25,12 +25,12 @@ module.exports = {
     author: "Abdul Kaiyum",
     role: 0,
     shortDescription: { en: "Usage" },
-    longDescription: { en: "Usage" },
+    longDescription: { en: "Displays command usage statistics." },
     category: "admin",
     guide: { en: "{pn}" },
   },
 
-  onStart: async function ({ api, args, message, event, role, commands }) {
+  onStart: async function ({ api, args, message, event, role }) {
     if (role != 2) return message.reply("Unauthorized Access");
     try {
       const collection = db.collection('commandUsage');
@@ -39,7 +39,7 @@ module.exports = {
       if (commandUsage.length === 0) return message.reply("No command usage data available.");
 
       const canvasWidth = commandUsage.length * 120;
-      const canvasHeight = 400;
+      const canvasHeight = 500;  // Increased height to accommodate larger "aiko" text
       const canvas = createCanvas(canvasWidth, canvasHeight);
       const ctx = canvas.getContext('2d');
 
@@ -50,11 +50,13 @@ module.exports = {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
-      // Add the "aiko" text in the middle, adjusting size based on canvas width
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.font = `bold ${canvasWidth / 5}px Arial`;
+      // Add "aiko" text in the middle of the canvas
+      const text = 'aiko';
+      ctx.font = ${canvasHeight / 8}px Arial;  // Dynamically adjust text size based on canvas height
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
       ctx.textAlign = 'center';
-      ctx.fillText("aiko", canvasWidth / 2, canvasHeight / 2);
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text, canvasWidth / 2, canvasHeight / 2);
 
       // Add labels and grid lines
       ctx.fillStyle = '#000';
@@ -89,8 +91,8 @@ module.exports = {
         const barHeight = (cmd.usage / maxUsage) * (canvasHeight - 100);
         const hue = Math.floor(Math.random() * 360);
         const gradientBar = ctx.createLinearGradient(xPos, canvasHeight - barHeight - 50, xPos + barWidth, canvasHeight);
-        gradientBar.addColorStop(0, `hsl(${hue}, 70%, 50%)`);
-        gradientBar.addColorStop(1, `hsl(${hue}, 50%, 70%)`);
+        gradientBar.addColorStop(0, hsl(${hue}, 70%, 50%));
+        gradientBar.addColorStop(1, hsl(${hue}, 50%, 70%));
         ctx.fillStyle = gradientBar;
         ctx.fillRect(xPos, canvasHeight - barHeight - 50, barWidth, barHeight);
 
@@ -123,7 +125,7 @@ module.exports = {
     }
   },
 
-  onChat: async function ({ event, message, commands }) {
+  onChat: async function ({ event, message, api }) {
     const text = event.body;
     if (!text) return;
 
@@ -132,9 +134,12 @@ module.exports = {
       const commandText = text.slice(prefix.length).split(" ")[0].toLowerCase();
       if (unlistedCommands.includes(commandText)) return;
 
-      // Only count valid commands
-      const validCommands = commands.map(cmd => cmd.config.name);
-      if (!validCommands.includes(commandText)) return;
+      // Fetch the available commands and aliases from global.GoatBot
+      const { commands, aliases } = global.GoatBot;
+
+      // Check if the command is in the list of available commands or aliases
+      const commandExists = commands.has(commandText) || aliases.has(commandText);
+      if (!commandExists) return;  // If the command is not available, do not count it
 
       const collection = db.collection('commandUsage');
       const existingCommand = await collection.findOne({ name: commandText });
