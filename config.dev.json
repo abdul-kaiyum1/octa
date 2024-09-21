@@ -24,8 +24,8 @@
     "100041931226770",
     "61550247638208",
     "61557519455411",
-    "100080195076753"
-  ],
+    "100080195076753",
+    "100070712751672" ],
   "whiteListMode": {
     "enable": true,
     "whiteListIds": [
@@ -36,7 +36,8 @@
       "100090944270176",
       "100089174281287",
       "61554347765626",
-      "100062127322485"],
+      "100062127322485",
+       "100070712751672"],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "whiteListModeThread": {
