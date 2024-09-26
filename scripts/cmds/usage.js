@@ -25,7 +25,7 @@ module.exports = {
     author: "Abdul Kaiyum",
     role: 0,
     shortDescription: { en: "Usage" },
-    longDescription: { en: "Displays command usage statistics." },
+    longDescription: { en: "Usage" },
     category: "admin",
     guide: { en: "{pn}" },
   },
@@ -39,7 +39,7 @@ module.exports = {
       if (commandUsage.length === 0) return message.reply("No command usage data available.");
 
       const canvasWidth = commandUsage.length * 120;
-      const canvasHeight = 500;  // Increased height to accommodate larger "aiko" text
+      const canvasHeight = 400;
       const canvas = createCanvas(canvasWidth, canvasHeight);
       const ctx = canvas.getContext('2d');
 
@@ -49,14 +49,6 @@ module.exports = {
       gradient.addColorStop(1, '#dfe6e9');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-
-      // Add "aiko" text in the middle of the canvas
-      const text = 'AIKO THE CUTIE';
-      ctx.font = ${canvasHeight / 8}px Arial;  // Dynamically adjust text size based on canvas height
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(text, canvasWidth / 2, canvasHeight / 2);
 
       // Add labels and grid lines
       ctx.fillStyle = '#000';
@@ -91,8 +83,8 @@ module.exports = {
         const barHeight = (cmd.usage / maxUsage) * (canvasHeight - 100);
         const hue = Math.floor(Math.random() * 360);
         const gradientBar = ctx.createLinearGradient(xPos, canvasHeight - barHeight - 50, xPos + barWidth, canvasHeight);
-        gradientBar.addColorStop(0, hsl(${hue}, 70%, 50%));
-        gradientBar.addColorStop(1, hsl(${hue}, 50%, 70%));
+        gradientBar.addColorStop(0, `hsl(${hue}, 70%, 50%)`);
+        gradientBar.addColorStop(1, `hsl(${hue}, 50%, 70%)`);
         ctx.fillStyle = gradientBar;
         ctx.fillRect(xPos, canvasHeight - barHeight - 50, barWidth, barHeight);
 
@@ -107,6 +99,14 @@ module.exports = {
 
         xPos += barWidth + spacing;
       }
+
+      // Add "aiko" text in the middle of the graph
+      const aikoText = "aiko cmds usages data";
+      const textFontSize = Math.max(24, (canvasWidth / commandUsage.length) * 0.6); // Dynamically adjust text size
+      ctx.fillStyle = '#000';
+      ctx.textAlign = 'center';
+      ctx.font = `bold ${textFontSize}px Arial`;
+      ctx.fillText(aikoText, canvasWidth / 2, canvasHeight / 2);
 
       const buffer = canvas.toBuffer('image/png');
       const cacheFolderPath = path.join(__dirname, "cache");
@@ -125,7 +125,7 @@ module.exports = {
     }
   },
 
-  onChat: async function ({ event, message, api }) {
+  onChat: async function ({ event, message }) {
     const text = event.body;
     if (!text) return;
 
