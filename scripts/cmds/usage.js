@@ -16,7 +16,7 @@ MongoClient.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true 
   .catch(error => console.error('Error connecting to MongoDB:', error));
 
 const unlistedCommands = ["eval", "usage", "restart", "spamkick", "cmd"];
-const maxBarsToShow = 10;
+const maxBarsToShow = 15;
 
 module.exports = {
   config: {
