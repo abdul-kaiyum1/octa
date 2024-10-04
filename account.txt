@@ -1,30 +1,34 @@
 [
   {
     "key": "datr",
-    "value": "Sp3QZtaGK5LNeUm136fjR62g",
+    "value": "IVX-ZmD4Gb4vCDkuiR9-a97i",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-08-30T15:48:26.753Z",
-    "lastAccessed": "2024-08-30T15:48:31.495Z"
+    "creation": "2024-10-04T08:00:19.423Z",
+    "lastAccessed": "2024-10-04T08:00:24.758Z"
   },
   {
     "key": "fr",
-    "value": "0R2O3ZvqEvX4vaT0d.AWUzZSOOi7LpD5VDxU-VgsrTeoY.Bm0J1K..AAA.0.0.Bm0J29.AWWkJXbF8ag",
+    "value": "15NL8XOFC3UaNGYZX.AWWep8R43hCW87F9iXivZ1qmCoY.Bm_596..AAA.0.0.Bm_6CT.AWX47ESZbQQ",
+    "expires": "2025-01-02T08:00:19.000Z",
+    "maxAge": 7776000,
     "domain": "facebook.com",
     "path": "/",
+    "secure": true,
+    "httpOnly": true,
     "hostOnly": false,
-    "creation": "2024-08-30T15:48:26.775Z",
-    "lastAccessed": "2024-08-30T15:48:31.495Z"
+    "creation": "2024-10-04T08:00:19.456Z",
+    "lastAccessed": "2024-10-04T08:00:24.758Z"
   },
   {
     "key": "xs",
-    "value": "6%3ADUMkDFSHJbvqyQ%3A2%3A1724947883%3A-1%3A14405",
+    "value": "37%3ATHQufD6YBXCS_w%3A2%3A1727943967%3A-1%3A14405%3A%3AAcW7Tn9-rxf50DKeTa_adpIGRAywTDXWLlar-kgrog",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-08-30T15:48:26.780Z",
-    "lastAccessed": "2024-08-30T15:48:31.495Z"
+    "creation": "2024-10-04T08:00:19.458Z",
+    "lastAccessed": "2024-10-04T08:00:24.758Z"
   },
   {
     "key": "c_user",
@@ -32,8 +36,8 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-08-30T15:48:26.780Z",
-    "lastAccessed": "2024-08-30T15:48:31.495Z"
+    "creation": "2024-10-04T08:00:19.459Z",
+    "lastAccessed": "2024-10-04T08:00:24.758Z"
   },
   {
     "key": "sb",
@@ -41,7 +45,7 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-08-30T15:48:26.781Z",
-    "lastAccessed": "2024-08-30T15:48:31.495Z"
+    "creation": "2024-10-04T08:00:19.460Z",
+    "lastAccessed": "2024-10-04T08:00:24.758Z"
   }
 ]
