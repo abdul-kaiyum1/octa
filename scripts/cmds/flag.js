@@ -36,7 +36,7 @@ async function getCountryData() {
 module.exports = {
   config: {
     name: "flag",
-    version: "1.1",
+    version: "1.2",
     author: "Abdul Kaiyum",
     role: 0,
     countDown: 30,
@@ -46,7 +46,7 @@ module.exports = {
     guide: { en: "{pn}" },
   },
 
-  onStart: async function ({ message, event, getLang }) {
+  onStart: async function ({ message, event, getLang, api }) {
     const userId = event.senderID;
 
     if (!userData[userId]) {
@@ -68,12 +68,25 @@ module.exports = {
         body: `Guess the country:`,
         attachment: flagImageResponse.data
       }, (err, info) => {
+        if (err) {
+          console.error('Error sending flag image:', err);
+          return message.reply("Failed to fetch the flag image. Please try again.");
+        }
+
         global.GoatBot.onReply.set(info.messageID, {
           commandName: this.config.name,
           messageID: info.messageID,
           author: event.senderID,
           countryName
         });
+
+        // Set timer to unsend the message after 40 seconds
+        setTimeout(() => {
+          api.unsendMessage(info.messageID, (err) => {
+            if (err) console.error('Error unsending message:', err);
+          });
+          global.GoatBot.onReply.delete(info.messageID);
+        }, 40000); // 40 seconds
       });
     } catch (error) {
       console.error('Error fetching flag image:', error);
@@ -81,10 +94,12 @@ module.exports = {
     }
   },
 
-  onReply: async function ({ message, Reply, event, usersData, envCommands }) {
+  onReply: async function ({ message, Reply, event, usersData }) {
     const { author, countryName, messageID } = Reply;
-    if (event.senderID != author)
+
+    if (event.senderID !== author) {
       return message.reply("⚠️ You are not the player of this question");
+    }
 
     if (event.body.toLowerCase().trim() === countryName.toLowerCase().trim()) {
       global.GoatBot.onReply.delete(messageID);
