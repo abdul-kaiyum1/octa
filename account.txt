@@ -1,34 +1,34 @@
 [
   {
     "key": "datr",
-    "value": "IVX-ZmD4Gb4vCDkuiR9-a97i",
+    "value": "VwMFZ2vWy2lfj5lAIdt8V3_q",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-10-04T08:00:19.423Z",
-    "lastAccessed": "2024-10-04T08:00:24.758Z"
+    "creation": "2024-10-09T16:58:35.638Z",
+    "lastAccessed": "2024-10-09T16:58:39.921Z"
   },
   {
     "key": "fr",
-    "value": "15NL8XOFC3UaNGYZX.AWWep8R43hCW87F9iXivZ1qmCoY.Bm_596..AAA.0.0.Bm_6CT.AWX47ESZbQQ",
-    "expires": "2025-01-02T08:00:19.000Z",
+    "value": "1ozLDkemHrcmymWUt.AWVKt-1GFQFsD2KE7LVP9QLkvyQ.BnBrXM..AAA.0.0.BnBrY7.AWVxSjzOMFA",
+    "expires": "2025-01-07T16:58:35.000Z",
     "maxAge": 7776000,
     "domain": "facebook.com",
     "path": "/",
     "secure": true,
     "httpOnly": true,
     "hostOnly": false,
-    "creation": "2024-10-04T08:00:19.456Z",
-    "lastAccessed": "2024-10-04T08:00:24.758Z"
+    "creation": "2024-10-09T16:58:35.661Z",
+    "lastAccessed": "2024-10-09T16:58:39.921Z"
   },
   {
     "key": "xs",
-    "value": "37%3ATHQufD6YBXCS_w%3A2%3A1727943967%3A-1%3A14405%3A%3AAcW7Tn9-rxf50DKeTa_adpIGRAywTDXWLlar-kgrog",
+    "value": "9%3AMgAzIqGk5KFXrQ%3A2%3A1728381820%3A-1%3A14405%3A%3AAcVCSXVVvgZuu_b-_DS4mJl3CDDKgZLYwfPdJ4wLjA",
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-10-04T08:00:19.458Z",
-    "lastAccessed": "2024-10-04T08:00:24.758Z"
+    "creation": "2024-10-09T16:58:35.666Z",
+    "lastAccessed": "2024-10-09T16:58:39.921Z"
   },
   {
     "key": "c_user",
@@ -36,8 +36,8 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-10-04T08:00:19.459Z",
-    "lastAccessed": "2024-10-04T08:00:24.758Z"
+    "creation": "2024-10-09T16:58:35.667Z",
+    "lastAccessed": "2024-10-09T16:58:39.921Z"
   },
   {
     "key": "sb",
@@ -45,7 +45,7 @@
     "domain": "facebook.com",
     "path": "/",
     "hostOnly": false,
-    "creation": "2024-10-04T08:00:19.460Z",
-    "lastAccessed": "2024-10-04T08:00:24.758Z"
+    "creation": "2024-10-09T16:58:35.668Z",
+    "lastAccessed": "2024-10-09T16:58:39.921Z"
   }
 ]
