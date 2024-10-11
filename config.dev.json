@@ -38,7 +38,8 @@
       "61554347765626",
       "100062127322485",
        "100070712751672",
-      "100084568197142"],
+      "100084568197142",
+      "61564570126498"],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "whiteListModeThread": {
